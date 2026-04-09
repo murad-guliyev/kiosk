@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { Layout } from '../../components/Layout/Layout';
 import { VersionCard } from '../../components/VersionCard/VersionCard';
@@ -8,7 +8,6 @@ import { useLang } from '../../lib/LangContext';
 
 export function MoneyDetailPage() {
   const { familyId } = useParams<{ familyId: string }>();
-  const navigate = useNavigate();
   const { lang } = useLang();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
