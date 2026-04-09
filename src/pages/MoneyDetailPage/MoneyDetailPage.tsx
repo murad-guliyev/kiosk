@@ -16,8 +16,13 @@ export function MoneyDetailPage() {
   if (!family) {
     return (
       <Layout>
-        <div className="flex-1 flex items-center justify-center text-text-secondary text-lg">
-          Item not found
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-border-light flex items-center justify-center">
+              <span className="text-3xl">&#x2753;</span>
+            </div>
+            <p className="text-text-secondary text-base">Item not found</p>
+          </div>
         </div>
       </Layout>
     );
@@ -25,22 +30,36 @@ export function MoneyDetailPage() {
 
   return (
     <Layout>
-      <div className="flex-1 overflow-y-auto p-6">
-        <div className="max-w-4xl">
+      <div className="flex-1 overflow-y-auto">
+        {/* Top bar with back button and title */}
+        <div className="px-8 pt-7 pb-5">
           <button
             onClick={() => navigate(-1)}
-            className="mb-6 px-4 py-2 text-sm font-medium text-brand-primary bg-surface-default rounded-lg border border-border-default hover:bg-surface-muted transition-colors cursor-pointer"
+            className="group inline-flex items-center gap-2 text-[13px] font-medium text-text-secondary hover:text-brand-primary transition-colors cursor-pointer mb-4"
           >
-            &larr; {t('backToList', lang)}
+            <span className="w-7 h-7 rounded-full bg-surface-default shadow-card flex items-center justify-center group-hover:bg-brand-primary/5 transition-colors">
+              <span className="text-sm">&larr;</span>
+            </span>
+            {t('backToList', lang)}
           </button>
 
-          <h2 className="text-2xl font-bold mb-6">
+          <h2 className="text-[28px] font-bold text-text-primary tracking-tight">
             {localized(family.title, lang)}
           </h2>
+          {versions.length > 1 && (
+            <p className="text-sm text-text-tertiary mt-1">
+              {versions.length} {t('versions', lang)}
+            </p>
+          )}
+        </div>
 
-          {versions.map((version) => (
-            <VersionCard key={version.versionId} version={version} />
-          ))}
+        {/* Version cards */}
+        <div className="px-8 pb-8">
+          <div className="max-w-4xl space-y-6">
+            {versions.map((version, i) => (
+              <VersionCard key={version.versionId} version={version} index={i} />
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

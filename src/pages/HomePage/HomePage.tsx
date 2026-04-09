@@ -39,7 +39,7 @@ export function HomePage() {
         />
       }
     >
-      <MoneyList families={families} />
+      <MoneyList families={families} categoryId={categoryId} subcategory={subcategory} />
     </Layout>
   );
 }

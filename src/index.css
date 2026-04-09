@@ -3,22 +3,27 @@
 @tailwind utilities;
 
 :root {
-  /* Brand tokens — placeholders for future brandbook */
-  --color-brand-primary: #1a3a5c;
-  --color-brand-secondary: #c8a430;
+  --color-brand-primary: #0f2744;
+  --color-brand-secondary: #c9a84c;
+  --color-brand-accent: #d4af37;
   --color-surface-default: #ffffff;
-  --color-surface-muted: #f4f5f7;
-  --color-surface-sidebar: #1a1a2e;
-  --color-surface-sidebar-hover: #2a2a4e;
-  --color-surface-sidebar-active: #3a3a6e;
-  --color-text-primary: #1a1a2e;
-  --color-text-secondary: #6b7280;
-  --color-text-sidebar: #e2e8f0;
-  --color-text-sidebar-muted: #94a3b8;
-  --color-border-default: #e5e7eb;
-  --radius-card: 12px;
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --color-surface-muted: #f0f2f5;
+  --color-surface-elevated: #ffffff;
+  --color-surface-sidebar: #0a1628;
+  --color-surface-sidebar-hover: #132240;
+  --color-surface-sidebar-active: #1a3358;
+  --color-text-primary: #0f1729;
+  --color-text-secondary: #5a6578;
+  --color-text-tertiary: #8b95a5;
+  --color-text-sidebar: #c8d3e0;
+  --color-text-sidebar-muted: #6b7d94;
+  --color-border-default: #e2e6ec;
+  --color-border-light: #f0f2f5;
+  --radius-card: 16px;
+  --radius-sm: 10px;
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-card-hover: 0 8px 30px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
+  --shadow-elevated: 0 4px 16px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
 }
 
 html, body, #root {
@@ -27,7 +32,32 @@ html, body, #root {
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background-color: var(--color-surface-muted);
   color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+/* Sidebar scrollbar */
+nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }

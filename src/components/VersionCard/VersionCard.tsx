@@ -4,110 +4,138 @@ import { useLang } from '../../lib/LangContext';
 
 interface VersionCardProps {
   version: MoneyVersion;
+  index: number;
 }
 
-export function VersionCard({ version }: VersionCardProps) {
+export function VersionCard({ version, index }: VersionCardProps) {
   const { lang } = useLang();
 
   return (
-    <div className="bg-surface-default rounded-[var(--radius-card)] shadow-[var(--shadow-card)] p-6 mb-6">
-      <h3 className="text-xl font-semibold mb-4">
-        {localized(version.title, lang)}
-      </h3>
+    <div className="bg-surface-default rounded-card shadow-card overflow-hidden">
+      {/* Version header */}
+      <div className="px-6 py-4 flex items-center gap-3 border-b border-border-light">
+        <div className="w-8 h-8 rounded-full bg-brand-primary/5 flex items-center justify-center flex-shrink-0">
+          <span className="text-xs font-bold text-brand-primary">{index + 1}</span>
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-semibold text-text-primary truncate">
+            {localized(version.title, lang)}
+          </h3>
+          {version.year && (
+            <p className="text-xs text-text-tertiary mt-0.5">{version.year}</p>
+          )}
+        </div>
+      </div>
 
-      {/* Images */}
+      {/* Images — side by side, large */}
       {(version.frontImage || version.rearImage) && (
-        <div className="flex gap-6 mb-6 flex-wrap">
+        <div className="grid grid-cols-2 gap-px bg-border-light">
           {version.frontImage && (
-            <div className="flex-1 min-w-[200px]">
-              <p className="text-xs text-text-secondary mb-2 uppercase tracking-wide">
+            <div className="bg-gradient-to-br from-surface-muted to-white p-5 flex flex-col items-center">
+              <span className="text-[10px] uppercase tracking-[0.12em] text-text-tertiary font-semibold mb-3">
                 {t('front', lang)}
-              </p>
+              </span>
               <img
                 src={version.frontImage}
                 alt={`${localized(version.title, lang)} - ${t('front', lang)}`}
-                className="w-full max-h-64 object-contain rounded-lg bg-surface-muted"
+                className="max-h-56 w-auto object-contain drop-shadow-md"
               />
             </div>
           )}
           {version.rearImage && (
-            <div className="flex-1 min-w-[200px]">
-              <p className="text-xs text-text-secondary mb-2 uppercase tracking-wide">
+            <div className="bg-gradient-to-br from-surface-muted to-white p-5 flex flex-col items-center">
+              <span className="text-[10px] uppercase tracking-[0.12em] text-text-tertiary font-semibold mb-3">
                 {t('rear', lang)}
-              </p>
+              </span>
               <img
                 src={version.rearImage}
                 alt={`${localized(version.title, lang)} - ${t('rear', lang)}`}
-                className="w-full max-h-64 object-contain rounded-lg bg-surface-muted"
+                className="max-h-56 w-auto object-contain drop-shadow-md"
               />
             </div>
           )}
         </div>
       )}
 
-      {/* Description */}
-      {version.description && localized(version.description, lang) && (
-        <p className="text-text-secondary mb-4 leading-relaxed">
-          {localized(version.description, lang)}
-        </p>
-      )}
-
-      {/* Overview paragraphs */}
-      {version.overview.length > 0 && (
-        <div className="mb-4 space-y-2">
-          {version.overview.map((item, i) => {
-            const text = localized(item, lang);
-            return text ? (
-              <p key={i} className="text-text-secondary leading-relaxed">{text}</p>
-            ) : null;
-          })}
-        </div>
-      )}
-
-      {/* Technical attributes */}
-      {version.attributes.length > 0 && (
-        <div className="border-t border-border-default pt-4 mb-4">
-          <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-            {version.attributes.map((attr, i) => (
-              <div key={i} className="flex gap-2">
-                <span className="text-text-secondary text-sm font-medium min-w-[120px]">
-                  {localized(attr.label, lang)}:
-                </span>
-                <span className="text-sm">{localized(attr.value, lang)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Security elements */}
-      {version.securityElements.length > 0 && (
-        <div className="border-t border-border-default pt-4 mb-4">
-          <h4 className="text-sm font-semibold mb-2">{t('securityElements', lang)}</h4>
-          <ul className="list-disc list-inside space-y-1">
-            {version.securityElements.map((el, i) => {
-              const text = localized(el, lang);
+      <div className="p-6 space-y-5">
+        {/* Description / Overview */}
+        {version.overview.length > 0 && (
+          <div className="space-y-2">
+            {version.overview.map((item, i) => {
+              const text = localized(item, lang);
               return text ? (
-                <li key={i} className="text-sm text-text-secondary">{text}</li>
+                <p key={i} className="text-[13px] text-text-secondary leading-relaxed">{text}</p>
               ) : null;
             })}
-          </ul>
-        </div>
-      )}
+          </div>
+        )}
 
-      {/* Brochure link */}
-      {version.brochureUrl && (
-        <div className="border-t border-border-default pt-4">
+        {version.description && localized(version.description, lang) && (
+          <p className="text-[13px] text-text-secondary leading-relaxed">
+            {localized(version.description, lang)}
+          </p>
+        )}
+
+        {/* Technical attributes — styled grid */}
+        {version.attributes.length > 0 && (
+          <div className="rounded-sm bg-surface-muted/60 border border-border-light overflow-hidden">
+            {version.attributes.map((attr, i) => {
+              const label = localized(attr.label, lang);
+              const value = localized(attr.value, lang);
+              if (!label || !value) return null;
+              return (
+                <div
+                  key={i}
+                  className={`flex items-baseline px-4 py-2.5 ${
+                    i > 0 ? 'border-t border-border-light' : ''
+                  }`}
+                >
+                  <span className="text-[12px] font-medium text-text-tertiary uppercase tracking-wide w-[160px] flex-shrink-0">
+                    {label}
+                  </span>
+                  <span className="text-[13px] text-text-primary font-medium">{value}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Security elements — collapsible-style */}
+        {version.securityElements.length > 0 && (
+          <div>
+            <h4 className="text-[12px] font-semibold text-text-primary uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span className="w-5 h-5 rounded-full bg-brand-accent/10 flex items-center justify-center">
+                <span className="text-brand-accent text-[10px]">&#x1F6E1;</span>
+              </span>
+              {t('securityElements', lang)}
+            </h4>
+            <div className="space-y-2 pl-7">
+              {version.securityElements.map((el, i) => {
+                const text = localized(el, lang);
+                return text ? (
+                  <div key={i} className="flex items-start gap-2">
+                    <span className="text-brand-accent/40 text-[8px] mt-1.5 flex-shrink-0">{'\u25C6'}</span>
+                    <p className="text-[12px] text-text-secondary leading-relaxed">{text}</p>
+                  </div>
+                ) : null;
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Brochure */}
+        {version.brochureUrl && (
           <a
             href={version.brochureUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-brand-primary font-medium hover:underline"
+            className="inline-flex items-center gap-2 text-[13px] text-brand-primary font-semibold hover:text-brand-accent transition-colors"
           >
-            {t('brochure', lang)} &rarr;
+            <span className="w-6 h-6 rounded-full bg-brand-primary/5 flex items-center justify-center text-xs">&#x1F4C4;</span>
+            {t('brochure', lang)}
           </a>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
