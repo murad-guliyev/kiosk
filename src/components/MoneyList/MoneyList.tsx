@@ -44,7 +44,7 @@ export function MoneyList({ families, categoryId, subcategory }: MoneyListProps)
             {sub ? localized(sub.label, lang) : ''}
           </h2>
           <span className="text-sm text-text-tertiary font-medium">
-            {families.length} {families.length === 1 ? 'item' : 'items'}
+            {families.length} {t('itemCount', lang)}
           </span>
         </div>
       </div>

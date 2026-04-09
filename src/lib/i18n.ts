@@ -33,6 +33,22 @@ const uiStrings: Record<string, LocalizedText> = {
     az: 'Bu kateqoriyada element tapılmadı',
     en: 'No items found in this category',
   },
+  specifications: {
+    az: 'Texniki xüsusiyyətlər',
+    en: 'Specifications',
+  },
+  itemCount: {
+    az: 'element',
+    en: 'items',
+  },
+  itemNotFound: {
+    az: 'Element tapılmadı',
+    en: 'Item not found',
+  },
+  bankSubtitle: {
+    az: 'Azərbaycan Respublikasının Mərkəzi Bankı',
+    en: 'Central Bank of Azerbaijan',
+  },
 };
 
 export function t(key: string, lang: Lang): string {

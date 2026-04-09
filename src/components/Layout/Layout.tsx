@@ -29,7 +29,7 @@ export function Layout({ children, sidebar }: LayoutProps) {
               {t('appTitle', lang)}
             </h1>
             <p className="text-[11px] text-white/40 font-medium tracking-wide uppercase">
-              {lang === 'az' ? 'Azərbaycan Respublikasının Mərkəzi Bankı' : 'Central Bank of Azerbaijan'}
+              {t('bankSubtitle', lang)}
             </p>
           </div>
         </div>

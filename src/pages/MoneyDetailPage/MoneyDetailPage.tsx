@@ -21,7 +21,7 @@ export function MoneyDetailPage() {
             <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-border-light flex items-center justify-center">
               <span className="text-3xl">&#x2753;</span>
             </div>
-            <p className="text-text-secondary text-base">Item not found</p>
+            <p className="text-text-secondary text-base">{t('itemNotFound', lang)}</p>
           </div>
         </div>
       </Layout>
@@ -31,31 +31,86 @@ export function MoneyDetailPage() {
   return (
     <Layout>
       <div className="flex-1 overflow-y-auto">
-        {/* Top bar with back button and title */}
-        <div className="px-8 pt-7 pb-5">
-          <button
-            onClick={() => navigate(-1)}
-            className="group inline-flex items-center gap-2 text-[13px] font-medium text-text-secondary hover:text-brand-primary transition-colors cursor-pointer mb-4"
-          >
-            <span className="w-7 h-7 rounded-full bg-surface-default shadow-card flex items-center justify-center group-hover:bg-brand-primary/5 transition-colors">
-              <span className="text-sm">&larr;</span>
-            </span>
-            {t('backToList', lang)}
-          </button>
+        {/* Header bar — full width, with back + title inline */}
+        <div
+          className="border-b"
+          style={{
+            padding: '20px 40px',
+            borderColor: 'var(--color-border-default)',
+            background: '#FFFFFF',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            {/* Back button */}
+            <button
+              onClick={() => navigate(-1)}
+              className="cursor-pointer"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '36px',
+                height: '36px',
+                borderRadius: '8px',
+                border: '1px solid var(--color-border-default)',
+                background: 'var(--color-surface-default)',
+                color: 'var(--color-text-secondary)',
+                fontSize: '16px',
+                transition: 'all 0.15s',
+                flexShrink: 0,
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.borderColor = 'var(--color-brand-primary)';
+                e.currentTarget.style.color = 'var(--color-brand-primary)';
+                e.currentTarget.style.background = 'var(--color-surface-muted)';
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.borderColor = 'var(--color-border-default)';
+                e.currentTarget.style.color = 'var(--color-text-secondary)';
+                e.currentTarget.style.background = 'var(--color-surface-default)';
+              }}
+            >
+              &larr;
+            </button>
 
-          <h2 className="text-[28px] font-bold text-text-primary tracking-tight">
-            {localized(family.title, lang)}
-          </h2>
-          {versions.length > 1 && (
-            <p className="text-sm text-text-tertiary mt-1">
-              {versions.length} {t('versions', lang)}
-            </p>
-          )}
+            {/* Title + version count */}
+            <div style={{ flex: 1 }}>
+              <h2
+                style={{
+                  fontSize: '22px',
+                  fontWeight: 700,
+                  color: 'var(--color-text-primary)',
+                  margin: 0,
+                  lineHeight: 1.3,
+                }}
+              >
+                {localized(family.title, lang)}
+              </h2>
+            </div>
+
+            {/* Version badge */}
+            {versions.length > 1 && (
+              <div
+                style={{
+                  padding: '4px 14px',
+                  borderRadius: '20px',
+                  background: 'var(--color-surface-muted)',
+                  fontSize: '13px',
+                  fontWeight: 600,
+                  color: 'var(--color-text-tertiary)',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                {versions.length} {t('versions', lang)}
+              </div>
+            )}
+          </div>
         </div>
 
-        {/* Version cards */}
-        <div className="px-8 pb-8">
-          <div className="max-w-4xl space-y-6">
+        {/* Version cards — centered, full width usage */}
+        <div style={{ padding: '32px 40px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', maxWidth: '1100px', margin: '0 auto' }}>
             {versions.map((version, i) => (
               <VersionCard key={version.versionId} version={version} index={i} />
             ))}
