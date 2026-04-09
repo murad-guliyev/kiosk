@@ -1,7 +1,7 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Layout } from '../../components/Layout/Layout';
 import { VersionCard } from '../../components/VersionCard/VersionCard';
-import { getFamily, getVersions } from '../../lib/selectors';
+import { getFamily, getVersions, getSiblings } from '../../lib/selectors';
 import { localized, t } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
 
@@ -12,6 +12,7 @@ export function MoneyDetailPage() {
 
   const family = familyId ? getFamily(familyId) : undefined;
   const versions = familyId ? getVersions(familyId) : [];
+  const { prev, next } = familyId ? getSiblings(familyId) : { prev: null, next: null };
 
   if (!family) {
     return (
@@ -34,9 +35,9 @@ export function MoneyDetailPage() {
         {/* Header bar */}
         <div className="border-b px-4 sm:px-6 lg:px-10 py-4 lg:py-5 bg-white" style={{ borderColor: 'var(--color-border-default)' }}>
           <div className="flex items-center gap-3 sm:gap-4">
-            <button
-              onClick={() => navigate(-1)}
-              className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
+            <Link
+              to="/"
+              className="flex items-center gap-2 no-underline px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
               style={{
                 background: 'var(--color-brand-primary)',
                 color: '#FFFFFF',
@@ -49,7 +50,7 @@ export function MoneyDetailPage() {
                 <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               {t('backToList', lang)}
-            </button>
+            </Link>
 
             <div className="flex-1 min-w-0">
               <h2 className="text-lg sm:text-xl lg:text-[22px] font-bold text-text-primary truncate" style={{ lineHeight: 1.3 }}>
@@ -76,6 +77,70 @@ export function MoneyDetailPage() {
             ))}
           </div>
         </div>
+
+        {/* Footer navigation — prev / next */}
+        {(prev || next) && (
+          <div className="px-4 sm:px-6 lg:px-10 pb-6 sm:pb-8">
+            <div className="flex items-stretch gap-4 max-w-[1100px] mx-auto">
+              {prev && (
+                <Link
+                  to={`/money/${prev.familyId}`}
+                  className="no-underline flex-1 flex items-center gap-3 px-4 sm:px-5 py-4 rounded-xl min-w-0"
+                  style={{
+                    background: 'var(--color-surface-default)',
+                    border: '1px solid var(--color-border-default)',
+                    color: 'var(--color-text-primary)',
+                    transition: 'border-color 0.2s, box-shadow 0.2s',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--color-border-primary)';
+                    e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'var(--color-border-default)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="flex-shrink-0" style={{ color: 'var(--color-brand-primary)' }}>
+                    <path d="M11 4L6 9L11 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-semibold uppercase" style={{ color: 'var(--color-text-tertiary)', letterSpacing: '0.04em' }}>{t('previous', lang)}</div>
+                    <div className="text-[14px] font-semibold truncate mt-0.5">{localized(prev.title, lang)}</div>
+                  </div>
+                </Link>
+              )}
+              {next && (
+                <Link
+                  to={`/money/${next.familyId}`}
+                  className="no-underline flex-1 flex items-center gap-3 px-4 sm:px-5 py-4 rounded-xl min-w-0 justify-end text-right"
+                  style={{
+                    background: 'var(--color-surface-default)',
+                    border: '1px solid var(--color-border-default)',
+                    color: 'var(--color-text-primary)',
+                    transition: 'border-color 0.2s, box-shadow 0.2s',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.borderColor = 'var(--color-border-primary)';
+                    e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.borderColor = 'var(--color-border-default)';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <div className="min-w-0">
+                    <div className="text-[11px] font-semibold uppercase" style={{ color: 'var(--color-text-tertiary)', letterSpacing: '0.04em' }}>{t('next', lang)}</div>
+                    <div className="text-[14px] font-semibold truncate mt-0.5">{localized(next.title, lang)}</div>
+                  </div>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="flex-shrink-0" style={{ color: 'var(--color-brand-primary)' }}>
+                    <path d="M7 4L12 9L7 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </Link>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </Layout>
   );

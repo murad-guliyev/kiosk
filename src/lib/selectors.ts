@@ -25,3 +25,17 @@ export function getVersions(familyId: string): MoneyVersion[] {
       return 0;
     });
 }
+
+export function getSiblings(familyId: string): { prev: MoneyFamily | null; next: MoneyFamily | null } {
+  const family = families.find((f) => f.familyId === familyId);
+  if (!family) return { prev: null, next: null };
+
+  const sameCat = families.filter(
+    (f) => f.categoryId === family.categoryId && f.subcategory === family.subcategory
+  );
+  const idx = sameCat.findIndex((f) => f.familyId === familyId);
+  return {
+    prev: idx > 0 ? sameCat[idx - 1] : null,
+    next: idx < sameCat.length - 1 ? sameCat[idx + 1] : null,
+  };
+}

@@ -45,6 +45,14 @@ const uiStrings: Record<string, LocalizedText> = {
     az: 'Element tapılmadı',
     en: 'Item not found',
   },
+  previous: {
+    az: 'Əvvəlki',
+    en: 'Previous',
+  },
+  next: {
+    az: 'Növbəti',
+    en: 'Next',
+  },
   bankSubtitle: {
     az: 'Azərbaycan Respublikasının Mərkəzi Bankı',
     en: 'Central Bank of Azerbaijan',
