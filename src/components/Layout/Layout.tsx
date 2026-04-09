@@ -1,4 +1,5 @@
 import { ReactNode, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { LanguageToggle } from '../LanguageToggle/LanguageToggle';
 import { t } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
@@ -35,18 +36,20 @@ export function Layout({ children, sidebar }: LayoutProps) {
               </svg>
             </button>
           )}
-          {/* Logo */}
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-            <span className="text-brand-secondary font-bold text-xs sm:text-sm">CB</span>
-          </div>
-          <div>
-            <h1 className="text-[15px] sm:text-[17px] font-semibold text-white tracking-tight">
-              {t('appTitle', lang)}
-            </h1>
-            <p className="hidden sm:block text-[11px] text-white/40 font-medium tracking-wide uppercase">
-              {t('bankSubtitle', lang)}
-            </p>
-          </div>
+          {/* Logo + title — links to home */}
+          <Link to="/" className="flex items-center gap-3 no-underline">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+              <span className="text-brand-secondary font-bold text-xs sm:text-sm">CB</span>
+            </div>
+            <div>
+              <h1 className="text-[15px] sm:text-[17px] font-semibold text-white tracking-tight">
+                {t('appTitle', lang)}
+              </h1>
+              <p className="hidden sm:block text-[11px] text-white/40 font-medium tracking-wide uppercase">
+                {t('bankSubtitle', lang)}
+              </p>
+            </div>
+          </Link>
         </div>
         <div className="relative">
           <LanguageToggle />
@@ -68,19 +71,19 @@ export function Layout({ children, sidebar }: LayoutProps) {
             )}
             <div
               className={`
-                lg:relative lg:translate-x-0 lg:z-auto
+                lg:relative lg:translate-x-0 lg:z-auto lg:h-full
                 fixed top-[56px] sm:top-[64px] lg:top-0 left-0 bottom-0 z-50
                 transition-transform duration-200 ease-out
                 ${menuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
               `}
             >
-              <div onClick={() => setMenuOpen(false)}>
+              <div onClick={() => setMenuOpen(false)} className="h-full">
                 {sidebar}
               </div>
             </div>
           </>
         )}
-        <main className="flex-1 flex overflow-hidden">
+        <main className="flex-1 flex overflow-hidden" style={{ background: 'var(--color-surface-muted)' }}>
           {children}
         </main>
       </div>

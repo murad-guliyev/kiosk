@@ -53,8 +53,8 @@ export function MoneyList({ families, categoryId, subcategory }: MoneyListProps)
       <div className="px-4 sm:px-6 lg:px-8 pb-6 lg:pb-8 pt-3 lg:pt-4">
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))',
-          gap: '16px',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
+          gap: '24px',
         }}>
           {families.map((family) => (
             <MoneyCard key={family.familyId} family={family} />

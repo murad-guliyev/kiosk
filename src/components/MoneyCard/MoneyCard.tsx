@@ -30,7 +30,7 @@ export function MoneyCard({ family }: MoneyCardProps) {
       {/* Image — the hero of the card */}
       <div
         style={{
-          height: '220px',
+          height: '260px',
           background: 'linear-gradient(135deg, #f8f9fb 0%, #eef0f4 100%)',
           display: 'flex',
           alignItems: 'center',

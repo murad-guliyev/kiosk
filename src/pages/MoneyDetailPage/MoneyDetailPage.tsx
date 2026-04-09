@@ -36,24 +36,19 @@ export function MoneyDetailPage() {
           <div className="flex items-center gap-3 sm:gap-4">
             <button
               onClick={() => navigate(-1)}
-              className="cursor-pointer flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0"
+              className="cursor-pointer flex items-center gap-2 px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
               style={{
-                border: '1px solid var(--color-border-default)',
-                background: 'var(--color-surface-default)',
-                color: 'var(--color-text-secondary)',
-                fontSize: '16px',
-                transition: 'all 0.15s',
+                background: 'var(--color-brand-primary)',
+                color: '#FFFFFF',
+                transition: 'opacity 0.15s',
               }}
-              onMouseEnter={e => {
-                e.currentTarget.style.borderColor = 'var(--color-brand-primary)';
-                e.currentTarget.style.color = 'var(--color-brand-primary)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.borderColor = 'var(--color-border-default)';
-                e.currentTarget.style.color = 'var(--color-text-secondary)';
-              }}
+              onMouseEnter={e => { e.currentTarget.style.opacity = '0.85'; }}
+              onMouseLeave={e => { e.currentTarget.style.opacity = '1'; }}
             >
-              &larr;
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              {t('backToList', lang)}
             </button>
 
             <div className="flex-1 min-w-0">

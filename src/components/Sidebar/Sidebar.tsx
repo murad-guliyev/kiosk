@@ -15,8 +15,9 @@ export function Sidebar({ selectedCategory, selectedSubcategory, onSelect }: Sid
     <nav
       className="w-[280px] min-w-[280px] h-full overflow-y-auto flex flex-col border-r"
       style={{
-        background: '#FFFFFF',
+        background: 'var(--color-surface-default)',
         borderColor: 'var(--color-border-default)',
+        boxShadow: '1px 0 8px rgba(0,0,0,0.03)',
       }}
     >
       <div className="flex-1 pt-4 pb-4">
