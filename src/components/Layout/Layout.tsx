@@ -22,7 +22,7 @@ export function Layout({ children, sidebar }: LayoutProps) {
         <div className="relative flex items-center gap-4">
           {/* Logo placeholder */}
           <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-            <span className="text-brand-accent font-bold text-sm">CB</span>
+            <span className="text-brand-secondary font-bold text-sm">CB</span>
           </div>
           <div>
             <h1 className="text-[17px] font-semibold text-white tracking-tight">

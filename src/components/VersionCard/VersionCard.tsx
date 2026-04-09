@@ -104,8 +104,8 @@ export function VersionCard({ version, index }: VersionCardProps) {
         {version.securityElements.length > 0 && (
           <div>
             <h4 className="text-[12px] font-semibold text-text-primary uppercase tracking-wide mb-3 flex items-center gap-2">
-              <span className="w-5 h-5 rounded-full bg-brand-accent/10 flex items-center justify-center">
-                <span className="text-brand-accent text-[10px]">&#x1F6E1;</span>
+              <span className="w-5 h-5 rounded-full bg-brand-secondary/10 flex items-center justify-center">
+                <span className="text-brand-secondary text-[10px]">&#x1F6E1;</span>
               </span>
               {t('securityElements', lang)}
             </h4>
@@ -114,7 +114,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
                 const text = localized(el, lang);
                 return text ? (
                   <div key={i} className="flex items-start gap-2">
-                    <span className="text-brand-accent/40 text-[8px] mt-1.5 flex-shrink-0">{'\u25C6'}</span>
+                    <span className="text-brand-secondary/40 text-[8px] mt-1.5 flex-shrink-0">{'\u25C6'}</span>
                     <p className="text-[12px] text-text-secondary leading-relaxed">{text}</p>
                   </div>
                 ) : null;
@@ -129,7 +129,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
             href={version.brochureUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[13px] text-brand-primary font-semibold hover:text-brand-accent transition-colors"
+            className="inline-flex items-center gap-2 text-[13px] text-brand-primary font-semibold hover:text-brand-secondary transition-colors"
           >
             <span className="w-6 h-6 rounded-full bg-brand-primary/5 flex items-center justify-center text-xs">&#x1F4C4;</span>
             {t('brochure', lang)}

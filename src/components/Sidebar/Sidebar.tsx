@@ -8,29 +8,29 @@ interface SidebarProps {
   onSelect: (categoryId: number, subcategory: 'banknotes' | 'coins') => void;
 }
 
-const categoryIcons: Record<number, string> = {
-  1: '\u25CE',  // circled bullet
-  2: '\u2726',  // star
-  3: '\u25C7',  // diamond
-};
-
-const subcategoryIcons: Record<string, string> = {
-  banknotes: '\u25AD', // rectangle
-  coins: '\u25CB',     // circle
-};
-
 export function Sidebar({ selectedCategory, selectedSubcategory, onSelect }: SidebarProps) {
   const { lang } = useLang();
 
   return (
-    <nav className="w-[280px] min-w-[280px] bg-surface-sidebar h-full overflow-y-auto flex flex-col">
-      <div className="flex-1 pt-6 pb-4">
+    <nav
+      className="w-[280px] min-w-[280px] h-full overflow-y-auto flex flex-col border-r"
+      style={{
+        background: '#FFFFFF',
+        borderColor: 'var(--color-border-default)',
+      }}
+    >
+      <div className="flex-1 pt-4 pb-4">
         {categories.map((cat, catIndex) => (
-          <div key={cat.id} className={catIndex > 0 ? 'mt-2' : ''}>
+          <div key={cat.id} className={catIndex > 0 ? 'mt-1' : ''}>
             {/* Category header */}
-            <div className="px-5 py-2.5 flex items-start gap-2.5">
-              <span className="text-brand-accent/60 text-xs mt-0.5">{categoryIcons[cat.id]}</span>
-              <span className="text-[11px] uppercase tracking-[0.08em] text-text-sidebar-muted font-semibold leading-tight">
+            <div className="px-5 pt-4 pb-2">
+              <span
+                className="text-[11px] uppercase font-bold leading-tight"
+                style={{
+                  letterSpacing: '0.06em',
+                  color: 'var(--color-text-tertiary)',
+                }}
+              >
                 {localized(cat.label, lang)}
               </span>
             </div>
@@ -42,32 +42,61 @@ export function Sidebar({ selectedCategory, selectedSubcategory, onSelect }: Sid
                 <button
                   key={`${cat.id}-${sub.id}`}
                   onClick={() => onSelect(cat.id, sub.id)}
-                  className={`w-full text-left pl-10 pr-5 py-3 text-[13px] transition-all duration-150 cursor-pointer flex items-center gap-2.5 relative ${
-                    isActive
-                      ? 'bg-surface-sidebar-active text-white font-medium'
-                      : 'text-text-sidebar hover:bg-surface-sidebar-hover hover:text-white'
-                  }`}
+                  className="w-full text-left cursor-pointer flex items-center gap-3 relative transition-all duration-150"
+                  style={{
+                    padding: '10px 20px 10px 24px',
+                    fontSize: '14px',
+                    fontWeight: isActive ? 600 : 400,
+                    color: isActive ? 'var(--color-brand-primary)' : 'var(--color-text-secondary)',
+                    background: isActive ? 'var(--color-surface-muted)' : 'transparent',
+                    borderRadius: '0 8px 8px 0',
+                    marginRight: '12px',
+                  }}
+                  onMouseEnter={e => {
+                    if (!isActive) {
+                      e.currentTarget.style.background = 'var(--color-surface-muted)';
+                      e.currentTarget.style.color = 'var(--color-text-primary)';
+                    }
+                  }}
+                  onMouseLeave={e => {
+                    if (!isActive) {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = 'var(--color-text-secondary)';
+                    }
+                  }}
                 >
                   {isActive && (
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[3px] h-5 bg-brand-accent rounded-r-full" />
+                    <div
+                      className="absolute left-0 top-1/2 -translate-y-1/2"
+                      style={{
+                        width: '3px',
+                        height: '20px',
+                        background: 'var(--color-brand-primary)',
+                        borderRadius: '0 3px 3px 0',
+                      }}
+                    />
                   )}
-                  <span className={`text-xs ${isActive ? 'text-brand-accent' : 'text-text-sidebar-muted'}`}>
-                    {subcategoryIcons[sub.id]}
-                  </span>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
+                    {sub.id === 'banknotes' ? (
+                      /* Paper money icon — rectangle with lines */
+                      <>
+                        <rect x="1.5" y="4" width="15" height="10" rx="1.5" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.4" fill="none" />
+                        <circle cx="9" cy="9" r="2.2" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.2" fill="none" />
+                      </>
+                    ) : (
+                      /* Coin icon — circle with inner detail */
+                      <>
+                        <circle cx="9" cy="9" r="7" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.4" fill="none" />
+                        <circle cx="9" cy="9" r="3.5" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1" fill="none" />
+                      </>
+                    )}
+                  </svg>
                   {localized(sub.label, lang)}
                 </button>
               );
             })}
           </div>
         ))}
-      </div>
-
-      {/* Bottom accent line */}
-      <div className="h-px mx-5 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-      <div className="px-5 py-4">
-        <p className="text-[10px] text-text-sidebar-muted/50 tracking-wide">
-          {lang === 'az' ? 'CBAR.AZ' : 'CBAR.AZ'} &middot; 2024
-        </p>
       </div>
     </nav>
   );

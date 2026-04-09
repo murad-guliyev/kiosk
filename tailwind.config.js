@@ -30,7 +30,18 @@ export default {
         border: {
           default: 'var(--color-border-default)',
           light: 'var(--color-border-light)',
+          primary: 'var(--color-border-primary)',
+          secondary: 'var(--color-border-secondary)',
+          strong: 'var(--color-border-strong)',
         },
+        fg: {
+          default: 'var(--color-fg-default)',
+          secondary: 'var(--color-fg-secondary)',
+          muted: 'var(--color-fg-muted)',
+        },
+        positive: 'var(--color-positive)',
+        negative: 'var(--color-negative)',
+        warning: 'var(--color-warning)',
       },
       borderRadius: {
         card: 'var(--radius-card)',

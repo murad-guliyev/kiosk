@@ -3,27 +3,78 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-primary: #0f2744;
-  --color-brand-secondary: #c9a84c;
-  --color-brand-accent: #d4af37;
-  --color-surface-default: #ffffff;
-  --color-surface-muted: #f0f2f5;
-  --color-surface-elevated: #ffffff;
-  --color-surface-sidebar: #0a1628;
-  --color-surface-sidebar-hover: #132240;
-  --color-surface-sidebar-active: #1a3358;
-  --color-text-primary: #0f1729;
-  --color-text-secondary: #5a6578;
-  --color-text-tertiary: #8b95a5;
-  --color-text-sidebar: #c8d3e0;
-  --color-text-sidebar-muted: #6b7d94;
-  --color-border-default: #e2e6ec;
-  --color-border-light: #f0f2f5;
+  /* === Design tokens from Figma (CBAR Design System) === */
+
+  /* Color palettes (from Figma "colros" scales) */
+  /* Primary:   #EDF6FB #D6EAF4 #ADD5E9 #7FBBD9 #4F9FC6 #004976 #003F68 #00355A #002A4A #001F39 */
+  /* Secondary: #E9FAF7 #CFF3EC #A6E8DA #7DDECB #5AD3BF #4BC8B6 #43B7A7 #338B80 #276760 #1A433F */
+  /* Third:     #E0F4FB #B3E1F4 #80CCE9 #5FCAF3 #26A7D7 #0B9ED0 #0889B5 #06688A #044F60 #02313A */
+  /* Neutral:   #F9F9F9 #F0F0F0 #E5E5E5 #D4D4D4 #A3A3A3 #787878 #474747 #333333 #222222 #171717 */
+  /* Yellow:    #FEF8EB #FEF9C3 #F9E39A #F5D96E #F2C952 #F3C67F #D6AA57 #CF9D2B #865F28 #5A3F15 */
+  /* Red:       #FEF2F2 #FEE2E2 #FECACA #FCA5A5 #F87171 #EF4444 #F00000 #991919 #511111 #300C0C */
+  /* Green:     #F0FDF4 #DCFCE7 #BBF7D0 #86EFAC #4ADE80 #22C55E #16A34A #116932 #124A28 #042713 */
+
+  /* Brand */
+  --color-brand-primary: #004976;       /* Primary/600 — text/primary, border/primary, icons/primary */
+  --color-brand-secondary: #4BC8B6;     /* Secondary/600 — teal/mint accent */
+  --color-brand-accent: #CF9D2B;        /* Yellow/800 — gold accent, text/warning-colored */
+  --color-brand-third: #0B9ED0;         /* Third/600 — cyan/blue tertiary brand */
+
+  /* Text */
+  --color-text-primary: #222222;        /* Neutral/900 — text/default */
+  --color-text-secondary: #333333;      /* Neutral/800 — text/secondary */
+  --color-text-tertiary: #787878;       /* Neutral/600 — text/tertiary */
+  --color-text-disabled: #D4D4D4;       /* Neutral/400 — text/disabled */
+  --color-text-muted: #A3A3A3;          /* Neutral/500 — text/muted */
+  --color-text-inverse: #FFFFFF;        /* text/inverse */
+
+  /* Surfaces (Bg/surface) */
+  --color-surface-default: #FFFFFF;     /* bg/default */
+  --color-surface-muted: #F9F9F9;      /* Neutral/100 — surface/subtle gray */
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-subtle: #F0F0F0;     /* Neutral/200 */
+  --color-surface-sidebar: #171717;    /* Neutral/1000 — deepest dark */
+  --color-surface-sidebar-hover: #222222; /* Neutral/900 */
+  --color-surface-sidebar-active: #004976; /* Primary/600 — brand active */
+
+  /* Sidebar text */
+  --color-text-sidebar: #B3E1F4;       /* Third/200 — light cyan on dark */
+  --color-text-sidebar-muted: #7FBBD9; /* Primary/400 */
+
+  /* Foreground */
+  --color-fg-default: #171717;         /* Neutral/1000 — fg/default */
+  --color-fg-secondary: #474747;       /* Neutral/700 — fg/secondary */
+  --color-fg-muted: #787878;           /* Neutral/600 — fg/muted */
+  --color-fg-disabled: #A3A3A3;        /* Neutral/500 — fg/disabled */
+  --color-fg-inverse: #FFFFFF;         /* fg/inverse */
+
+  /* Borders */
+  --color-border-default: #E5E5E5;     /* Neutral/300 — border/subtle/default */
+  --color-border-light: #F0F0F0;       /* Neutral/200 */
+  --color-border-primary: #7FBBD9;     /* Primary/400 — border/colored/primary */
+  --color-border-secondary: #A6E8DA;   /* Secondary/300 — border/colored/secondary */
+  --color-border-strong: #A3A3A3;      /* Neutral/500 */
+  --color-border-subtle-primary: #D6EAF4; /* Primary/200 — border/subtle/primary */
+  --color-border-subtle-secondary: #CFF3EC; /* Secondary/200 — border/subtle/secondary */
+
+  /* Semantic — status colors */
+  --color-positive: #22C55E;           /* Green/600 */
+  --color-positive-text: #16A34A;      /* Green/700 — text/success */
+  --color-positive-surface: #DCFCE7;   /* Green/200 — surface/subtle/success */
+  --color-positive-muted: #F0FDF4;     /* Green/100 — surface/muted/success */
+  --color-negative: #EF4444;           /* Red/600 */
+  --color-negative-strong: #F00000;    /* Red/700 */
+  --color-negative-surface: #FEE2E2;   /* Red/200 — surface/subtle/error */
+  --color-warning: #F3C67F;            /* Yellow/600 — surface/colored/warning */
+  --color-warning-strong: #865F28;     /* Yellow/900 — text/warning, fg/warning */
+  --color-warning-surface: #FEF9C3;    /* Yellow/200 — surface/subtle/warning */
+
+  /* Radii & Shadows */
   --radius-card: 16px;
   --radius-sm: 10px;
-  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.03);
-  --shadow-card-hover: 0 8px 30px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
-  --shadow-elevated: 0 4px 16px rgba(15, 23, 42, 0.06), 0 2px 6px rgba(15, 23, 42, 0.03);
+  --shadow-card: 0 1px 3px rgba(0, 73, 118, 0.04), 0 1px 2px rgba(23, 23, 23, 0.03);
+  --shadow-card-hover: 0 8px 30px rgba(0, 73, 118, 0.10), 0 4px 12px rgba(23, 23, 23, 0.05);
+  --shadow-elevated: 0 4px 16px rgba(0, 73, 118, 0.08), 0 2px 6px rgba(23, 23, 23, 0.04);
 }
 
 html, body, #root {
