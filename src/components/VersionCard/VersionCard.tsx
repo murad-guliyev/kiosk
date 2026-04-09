@@ -25,196 +25,106 @@ export function VersionCard({ version, index }: VersionCardProps) {
       }}
     >
       {/* Version header */}
-      <div
-        style={{
-          padding: '16px 24px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '12px',
-          borderBottom: '1px solid var(--color-border-default)',
-        }}
-      >
+      <div className="px-4 sm:px-6 py-3 sm:py-4 flex items-center gap-3" style={{ borderBottom: '1px solid var(--color-border-default)' }}>
         <div
-          style={{
-            width: '32px',
-            height: '32px',
-            borderRadius: '8px',
-            background: 'var(--color-surface-muted)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '13px',
-            fontWeight: 700,
-            color: 'var(--color-brand-primary)',
-            flexShrink: 0,
-          }}
+          className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+          style={{ background: 'var(--color-surface-muted)', fontSize: '12px', fontWeight: 700, color: 'var(--color-brand-primary)' }}
         >
           {index + 1}
         </div>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <h3 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--color-text-primary)', margin: 0 }}>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-sm sm:text-base font-semibold text-text-primary truncate" style={{ margin: 0 }}>
             {localized(version.title, lang)}
           </h3>
         </div>
         {version.year && (
           <span
-            style={{
-              fontSize: '12px',
-              fontWeight: 600,
-              color: 'var(--color-text-tertiary)',
-              background: 'var(--color-surface-muted)',
-              padding: '3px 10px',
-              borderRadius: '12px',
-              flexShrink: 0,
-            }}
+            className="text-[11px] sm:text-xs font-semibold flex-shrink-0 px-2 sm:px-3 py-0.5 rounded-full"
+            style={{ background: 'var(--color-surface-muted)', color: 'var(--color-text-tertiary)' }}
           >
             {version.year}
           </span>
         )}
       </div>
 
-      {/* Images — large, side by side, taking full width */}
+      {/* Images — side by side on desktop, stacked on mobile */}
       {hasImages && (
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: version.frontImage && version.rearImage ? '1fr 1fr' : '1fr',
-            gap: '1px',
-            background: 'var(--color-border-default)',
-          }}
+          className="grid grid-cols-1 sm:grid-cols-2"
+          style={{ gap: '1px', background: 'var(--color-border-default)' }}
         >
           {version.frontImage && (
-            <div
-              style={{
-                background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)',
-                padding: '24px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontSize: '10px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                  color: 'var(--color-text-tertiary)',
-                  fontWeight: 600,
-                  marginBottom: '12px',
-                }}
-              >
+            <div className="p-4 sm:p-6 flex flex-col items-center" style={{ background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)' }}>
+              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2 sm:mb-3" style={{ color: 'var(--color-text-tertiary)' }}>
                 {t('front', lang)}
               </span>
               <img
                 src={version.frontImage}
                 alt={`${localized(version.title, lang)} - ${t('front', lang)}`}
-                style={{
-                  maxHeight: '280px',
-                  width: 'auto',
-                  maxWidth: '100%',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))',
-                }}
+                className="max-h-44 sm:max-h-56 lg:max-h-72 w-auto object-contain"
+                style={{ maxWidth: '100%', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))' }}
               />
             </div>
           )}
           {version.rearImage && (
-            <div
-              style={{
-                background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)',
-                padding: '24px',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontSize: '10px',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.1em',
-                  color: 'var(--color-text-tertiary)',
-                  fontWeight: 600,
-                  marginBottom: '12px',
-                }}
-              >
+            <div className="p-4 sm:p-6 flex flex-col items-center" style={{ background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)' }}>
+              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2 sm:mb-3" style={{ color: 'var(--color-text-tertiary)' }}>
                 {t('rear', lang)}
               </span>
               <img
                 src={version.rearImage}
                 alt={`${localized(version.title, lang)} - ${t('rear', lang)}`}
-                style={{
-                  maxHeight: '280px',
-                  width: 'auto',
-                  maxWidth: '100%',
-                  objectFit: 'contain',
-                  filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))',
-                }}
+                className="max-h-44 sm:max-h-56 lg:max-h-72 w-auto object-contain"
+                style={{ maxWidth: '100%', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))' }}
               />
             </div>
           )}
         </div>
       )}
 
-      {/* Content area — two columns: overview left, attributes right */}
+      {/* Content — two columns on desktop, stacked on mobile */}
       {(hasOverview || hasAttributes || hasSecurity) && (
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: hasAttributes && hasOverview ? '1fr 1fr' : '1fr',
-            gap: '0',
-          }}
-        >
-          {/* Left column: overview + security */}
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          {/* Left: overview + security */}
           {(hasOverview || hasSecurity) && (
             <div
-              style={{
-                padding: '24px',
-                borderRight: hasAttributes ? '1px solid var(--color-border-default)' : 'none',
-              }}
+              className="p-4 sm:p-6"
+              style={{ borderRight: hasAttributes ? undefined : 'none' }}
             >
-              {/* Overview */}
+              {/* Add border-right only on large screens when attributes exist */}
+              {hasAttributes && (
+                <style>{`@media(min-width:1024px){.ver-left-${index}{border-right:1px solid var(--color-border-default)}}`}</style>
+              )}
+
               {version.overview.length > 0 && (
-                <div style={{ marginBottom: hasSecurity ? '20px' : 0 }}>
+                <div className={hasSecurity ? 'mb-5' : ''}>
                   {version.overview.map((item, i) => {
                     const text = localized(item, lang);
                     return text ? (
-                      <p key={i} style={{ fontSize: '13px', color: 'var(--color-text-secondary)', lineHeight: 1.7, margin: i > 0 ? '8px 0 0' : 0 }}>
-                        {text}
-                      </p>
+                      <p key={i} className="text-[13px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: i > 0 ? '8px 0 0' : 0 }}>{text}</p>
                     ) : null;
                   })}
                 </div>
               )}
 
               {version.description && localized(version.description, lang) && (
-                <p style={{ fontSize: '13px', color: 'var(--color-text-secondary)', lineHeight: 1.7, margin: 0 }}>
+                <p className="text-[13px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>
                   {localized(version.description, lang)}
                 </p>
               )}
 
-              {/* Security elements */}
               {hasSecurity && (
-                <div style={{ marginTop: hasOverview ? '20px' : 0 }}>
-                  <h4
-                    style={{
-                      fontSize: '11px',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.06em',
-                      color: 'var(--color-text-tertiary)',
-                      margin: '0 0 10px',
-                    }}
-                  >
+                <div className={hasOverview ? 'mt-5' : ''}>
+                  <h4 className="text-[11px] font-bold uppercase mb-2" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
                     {t('securityElements', lang)}
                   </h4>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  <div className="flex flex-col gap-1.5">
                     {version.securityElements.map((el, i) => {
                       const text = localized(el, lang);
                       return text ? (
-                        <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                          <span style={{ color: 'var(--color-brand-secondary)', fontSize: '6px', flexShrink: 0, marginTop: '4px' }}>{'\u25CF'}</span>
-                          <p style={{ fontSize: '12px', color: 'var(--color-text-secondary)', lineHeight: 1.6, margin: 0 }}>{text}</p>
+                        <div key={i} className="flex items-baseline gap-2">
+                          <span className="text-[6px] flex-shrink-0 mt-1" style={{ color: 'var(--color-brand-secondary)' }}>{'\u25CF'}</span>
+                          <p className="text-[12px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>{text}</p>
                         </div>
                       ) : null;
                     })}
@@ -222,22 +132,13 @@ export function VersionCard({ version, index }: VersionCardProps) {
                 </div>
               )}
 
-              {/* Brochure */}
               {version.brochureUrl && (
                 <a
                   href={version.brochureUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '6px',
-                    marginTop: '16px',
-                    fontSize: '13px',
-                    fontWeight: 600,
-                    color: 'var(--color-brand-primary)',
-                    textDecoration: 'none',
-                  }}
+                  className="inline-flex items-center gap-1.5 mt-4 text-[13px] font-semibold"
+                  style={{ color: 'var(--color-brand-primary)', textDecoration: 'none' }}
                 >
                   {t('brochure', lang)} &rarr;
                 </a>
@@ -245,28 +146,13 @@ export function VersionCard({ version, index }: VersionCardProps) {
             </div>
           )}
 
-          {/* Right column: technical attributes */}
+          {/* Right: specs */}
           {hasAttributes && (
-            <div style={{ padding: '24px' }}>
-              <h4
-                style={{
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  color: 'var(--color-text-tertiary)',
-                  margin: '0 0 12px',
-                }}
-              >
+            <div className="p-4 sm:p-6 border-t lg:border-t-0 lg:border-l" style={{ borderColor: 'var(--color-border-default)' }}>
+              <h4 className="text-[11px] font-bold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
                 {t('specifications', lang)}
               </h4>
-              <div
-                style={{
-                  borderRadius: '8px',
-                  overflow: 'hidden',
-                  border: '1px solid var(--color-border-default)',
-                }}
-              >
+              <div className="rounded-lg overflow-hidden" style={{ border: '1px solid var(--color-border-default)' }}>
                 {version.attributes.map((attr, i) => {
                   const label = localized(attr.label, lang);
                   const value = localized(attr.value, lang);
@@ -274,58 +160,20 @@ export function VersionCard({ version, index }: VersionCardProps) {
                   return (
                     <div
                       key={i}
+                      className="flex px-3 sm:px-4 py-2.5"
                       style={{
-                        display: 'flex',
-                        padding: '10px 14px',
                         borderTop: i > 0 ? '1px solid var(--color-border-default)' : 'none',
                         background: i % 2 === 0 ? 'var(--color-surface-muted)' : '#FFFFFF',
                       }}
                     >
-                      <span
-                        style={{
-                          fontSize: '12px',
-                          fontWeight: 500,
-                          color: 'var(--color-text-tertiary)',
-                          width: '140px',
-                          flexShrink: 0,
-                        }}
-                      >
+                      <span className="text-[11px] sm:text-[12px] font-medium w-[110px] sm:w-[140px] flex-shrink-0" style={{ color: 'var(--color-text-tertiary)' }}>
                         {label}
                       </span>
-                      <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--color-text-primary)' }}>
+                      <span className="text-[12px] sm:text-[13px] font-medium" style={{ color: 'var(--color-text-primary)' }}>
                         {value}
                       </span>
                     </div>
                   );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* If no overview but has attributes, show security below attributes full width */}
-          {!hasOverview && hasSecurity && hasAttributes && (
-            <div style={{ padding: '0 24px 24px', gridColumn: '1 / -1' }}>
-              <h4
-                style={{
-                  fontSize: '11px',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.06em',
-                  color: 'var(--color-text-tertiary)',
-                  margin: '0 0 10px',
-                }}
-              >
-                {t('securityElements', lang)}
-              </h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                {version.securityElements.map((el, i) => {
-                  const text = localized(el, lang);
-                  return text ? (
-                    <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                      <span style={{ color: 'var(--color-brand-secondary)', fontSize: '6px', flexShrink: 0, marginTop: '4px' }}>{'\u25CF'}</span>
-                      <p style={{ fontSize: '12px', color: 'var(--color-text-secondary)', lineHeight: 1.6, margin: 0 }}>{text}</p>
-                    </div>
-                  ) : null;
                 })}
               </div>
             </div>
