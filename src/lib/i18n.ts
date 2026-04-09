@@ -53,6 +53,10 @@ const uiStrings: Record<string, LocalizedText> = {
     az: 'Növbəti',
     en: 'Next',
   },
+  backToTop: {
+    az: 'Yuxarı',
+    en: 'Back to top',
+  },
   bankSubtitle: {
     az: 'Azərbaycan Respublikasının Mərkəzi Bankı',
     en: 'Central Bank of Azerbaijan',

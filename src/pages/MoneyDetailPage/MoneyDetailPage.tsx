@@ -1,4 +1,5 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
 import { Layout } from '../../components/Layout/Layout';
 import { VersionCard } from '../../components/VersionCard/VersionCard';
 import { getFamily, getVersions, getSiblings } from '../../lib/selectors';
@@ -9,6 +10,16 @@ export function MoneyDetailPage() {
   const { familyId } = useParams<{ familyId: string }>();
   const navigate = useNavigate();
   const { lang } = useLang();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const onScroll = () => setShowScrollTop(el.scrollTop > 400);
+    el.addEventListener('scroll', onScroll, { passive: true });
+    return () => el.removeEventListener('scroll', onScroll);
+  }, []);
 
   const family = familyId ? getFamily(familyId) : undefined;
   const versions = familyId ? getVersions(familyId) : [];
@@ -31,7 +42,7 @@ export function MoneyDetailPage() {
 
   return (
     <Layout>
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto relative" ref={scrollRef}>
         {/* Header bar */}
         <div className="border-b px-4 sm:px-6 lg:px-10 py-4 lg:py-5 bg-white" style={{ borderColor: 'var(--color-border-default)' }}>
           <div className="flex items-center gap-3 sm:gap-4">
@@ -141,6 +152,40 @@ export function MoneyDetailPage() {
             </div>
           </div>
         )}
+
+        {/* Scroll to top — fixed circle on right */}
+        <button
+          onClick={() => scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="cursor-pointer"
+          style={{
+            position: 'sticky',
+            bottom: '28px',
+            float: 'right',
+            marginRight: '28px',
+            marginTop: '-60px',
+            width: '52px',
+            height: '52px',
+            borderRadius: '50%',
+            background: 'var(--color-brand-primary)',
+            color: '#FFFFFF',
+            border: 'none',
+            boxShadow: '0 4px 20px rgba(0,73,118,0.35)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'opacity 0.25s, transform 0.25s',
+            opacity: showScrollTop ? 1 : 0,
+            pointerEvents: showScrollTop ? 'auto' : 'none',
+            transform: showScrollTop ? 'scale(1)' : 'scale(0.7)',
+            zIndex: 30,
+          }}
+          onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; }}
+          onMouseLeave={e => { e.currentTarget.style.transform = showScrollTop ? 'scale(1)' : 'scale(0.7)'; }}
+        >
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 17V5M11 5L5 11M11 5L17 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
       </div>
     </Layout>
   );
