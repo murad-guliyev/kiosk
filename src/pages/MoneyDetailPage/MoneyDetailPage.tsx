@@ -53,7 +53,7 @@ export function MoneyDetailPage() {
             </Link>
 
             <div className="flex-1 min-w-0">
-              <h2 className="text-lg sm:text-xl lg:text-[22px] font-bold text-text-primary truncate" style={{ lineHeight: 1.3 }}>
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary truncate" style={{ lineHeight: 1.3 }}>
                 {localized(family.title, lang)}
               </h2>
             </div>
@@ -106,7 +106,7 @@ export function MoneyDetailPage() {
                   </svg>
                   <div className="min-w-0">
                     <div className="text-[11px] font-semibold uppercase" style={{ color: 'var(--color-text-tertiary)', letterSpacing: '0.04em' }}>{t('previous', lang)}</div>
-                    <div className="text-[14px] font-semibold truncate mt-0.5">{localized(prev.title, lang)}</div>
+                    <div className="text-sm font-semibold truncate mt-0.5">{localized(prev.title, lang)}</div>
                   </div>
                 </Link>
               )}
@@ -131,7 +131,7 @@ export function MoneyDetailPage() {
                 >
                   <div className="min-w-0">
                     <div className="text-[11px] font-semibold uppercase" style={{ color: 'var(--color-text-tertiary)', letterSpacing: '0.04em' }}>{t('next', lang)}</div>
-                    <div className="text-[14px] font-semibold truncate mt-0.5">{localized(next.title, lang)}</div>
+                    <div className="text-sm font-semibold truncate mt-0.5">{localized(next.title, lang)}</div>
                   </div>
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="flex-shrink-0" style={{ color: 'var(--color-brand-primary)' }}>
                     <path d="M7 4L12 9L7 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>

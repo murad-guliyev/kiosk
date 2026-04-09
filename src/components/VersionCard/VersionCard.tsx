@@ -33,7 +33,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
           {index + 1}
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm sm:text-base font-semibold text-text-primary truncate" style={{ margin: 0 }}>
+          <h3 className="font-semibold text-text-primary truncate" style={{ margin: 0, fontSize: '1rem' }}>
             {localized(version.title, lang)}
           </h3>
         </div>
@@ -101,30 +101,30 @@ export function VersionCard({ version, index }: VersionCardProps) {
                   {version.overview.map((item, i) => {
                     const text = localized(item, lang);
                     return text ? (
-                      <p key={i} className="text-[13px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: i > 0 ? '8px 0 0' : 0 }}>{text}</p>
+                      <p key={i} className="text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: i > 0 ? '8px 0 0' : 0 }}>{text}</p>
                     ) : null;
                   })}
                 </div>
               )}
 
               {version.description && localized(version.description, lang) && (
-                <p className="text-[13px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>
                   {localized(version.description, lang)}
                 </p>
               )}
 
               {hasSecurity && (
                 <div className={hasOverview ? 'mt-5' : ''}>
-                  <h4 className="text-[11px] font-bold uppercase mb-2" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
+                  <h4 className="text-xs font-bold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
                     {t('securityElements', lang)}
                   </h4>
-                  <div className="flex flex-col gap-1.5">
+                  <div className="flex flex-col gap-2">
                     {version.securityElements.map((el, i) => {
                       const text = localized(el, lang);
                       return text ? (
-                        <div key={i} className="flex items-baseline gap-2">
-                          <span className="text-[6px] flex-shrink-0 mt-1" style={{ color: 'var(--color-brand-secondary)' }}>{'\u25CF'}</span>
-                          <p className="text-[12px] leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>{text}</p>
+                        <div key={i} className="flex items-baseline gap-2.5">
+                          <span className="text-[6px] flex-shrink-0 mt-1.5" style={{ color: 'var(--color-brand-secondary)' }}>{'\u25CF'}</span>
+                          <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)', margin: 0 }}>{text}</p>
                         </div>
                       ) : null;
                     })}
@@ -149,7 +149,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
           {/* Right: specs */}
           {hasAttributes && (
             <div className="p-4 sm:p-6 border-t lg:border-t-0 lg:border-l" style={{ borderColor: 'var(--color-border-default)' }}>
-              <h4 className="text-[11px] font-bold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
+              <h4 className="text-xs font-bold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
                 {t('specifications', lang)}
               </h4>
               <div className="rounded-lg overflow-hidden" style={{ border: '1px solid var(--color-border-default)' }}>
@@ -166,10 +166,10 @@ export function VersionCard({ version, index }: VersionCardProps) {
                         background: i % 2 === 0 ? 'var(--color-surface-muted)' : '#FFFFFF',
                       }}
                     >
-                      <span className="text-[11px] sm:text-[12px] font-medium w-[110px] sm:w-[140px] flex-shrink-0" style={{ color: 'var(--color-text-tertiary)' }}>
+                      <span className="text-sm font-medium w-[120px] sm:w-[150px] flex-shrink-0" style={{ color: 'var(--color-text-tertiary)' }}>
                         {label}
                       </span>
-                      <span className="text-[12px] sm:text-[13px] font-medium" style={{ color: 'var(--color-text-primary)' }}>
+                      <span className="text-sm font-medium" style={{ color: 'var(--color-text-primary)' }}>
                         {value}
                       </span>
                     </div>

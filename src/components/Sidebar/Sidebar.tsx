@@ -46,7 +46,7 @@ export function Sidebar({ selectedCategory, selectedSubcategory, onSelect }: Sid
                   className="w-full text-left cursor-pointer flex items-center gap-3 relative transition-all duration-150"
                   style={{
                     padding: '10px 20px 10px 24px',
-                    fontSize: '14px',
+                    fontSize: '0.9rem',
                     fontWeight: isActive ? 600 : 400,
                     color: isActive ? 'var(--color-brand-primary)' : 'var(--color-text-secondary)',
                     background: isActive ? 'var(--color-surface-muted)' : 'transparent',

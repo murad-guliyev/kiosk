@@ -90,14 +90,14 @@ export function MoneyCard({ family }: MoneyCardProps) {
 
       {/* Title strip */}
       <div style={{
-        padding: '12px 16px',
+        padding: '14px 16px',
         borderTop: '1px solid var(--color-border-light)',
         textAlign: 'center',
       }}>
         <h3
           className="group-hover:text-brand-primary"
           style={{
-            fontSize: '14px',
+            fontSize: '1rem',
             fontWeight: 600,
             color: 'var(--color-text-primary)',
             lineHeight: 1.3,
