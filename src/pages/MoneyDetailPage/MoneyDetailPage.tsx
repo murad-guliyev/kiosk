@@ -45,7 +45,7 @@ export function MoneyDetailPage() {
       <div className="flex-1 overflow-y-auto relative" ref={scrollRef}>
         {/* Header bar */}
         <div
-          className="px-4 sm:px-6 lg:px-10 py-4 lg:py-5"
+          className="px-4 sm:px-6 lg:px-10 py-4 lg:py-5 anim-header-enter"
           style={{ background: 'linear-gradient(180deg, #001F39 0%, #002A4A 100%)' }}
         >
           <div className="flex items-center gap-3 sm:gap-4 relative">
@@ -90,14 +90,23 @@ export function MoneyDetailPage() {
         <div className="px-4 sm:px-6 lg:px-10 py-5 sm:py-6 lg:py-8">
           <div className="flex flex-col gap-5 sm:gap-6 max-w-[1100px] mx-auto">
             {versions.map((version, i) => (
-              <VersionCard key={version.versionId} version={version} index={i} />
+              <div
+                key={version.versionId}
+                className="anim-card-rise"
+                style={{ animationDelay: `${0.15 + i * 0.1}s` }}
+              >
+                <VersionCard version={version} index={i} />
+              </div>
             ))}
           </div>
         </div>
 
         {/* Footer navigation — prev / next */}
         {(prev || next) && (
-          <div className="px-4 sm:px-6 lg:px-10 pb-6 sm:pb-8">
+          <div
+            className="px-4 sm:px-6 lg:px-10 pb-6 sm:pb-8 anim-slide-up"
+            style={{ animationDelay: `${0.15 + versions.length * 0.1 + 0.1}s` }}
+          >
             <div className="flex items-stretch gap-4 max-w-[1100px] mx-auto">
               {prev && (
                 <Link

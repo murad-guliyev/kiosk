@@ -34,21 +34,57 @@ export function MoneyList({ grouped }: MoneyListProps) {
         return (
           <div key={group.category.id}>
             {/* Category section header */}
-            <div className="px-4 lg:px-8 pt-6 pb-2 flex items-center justify-between">
-              <h2
-                className="text-base font-bold"
-                style={{ color: 'rgba(255,255,255,0.85)' }}
+            <div className="px-4 lg:px-8 pt-7 pb-3">
+              <div
+                className="flex items-center gap-4"
+                style={{ position: 'relative' }}
               >
-                {localized(group.category.label, lang)}
-              </h2>
-              <span className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                {group.families.length} {t('itemCount', lang)}
-              </span>
+                {/* Accent bar */}
+                <div
+                  style={{
+                    width: '4px',
+                    height: '28px',
+                    borderRadius: '2px',
+                    background: 'linear-gradient(180deg, #4BC8B6, #0B9ED0)',
+                    flexShrink: 0,
+                    boxShadow: '0 0 12px rgba(75, 200, 182, 0.4)',
+                  }}
+                />
+
+                {/* Label + count */}
+                <div className="flex-1 flex items-center justify-between">
+                  <h2
+                    style={{
+                      margin: 0,
+                      fontSize: '0.95rem',
+                      fontWeight: 600,
+                      color: 'rgba(255,255,255,0.9)',
+                      letterSpacing: '0.02em',
+                    }}
+                  >
+                    {localized(group.category.label, lang)}
+                  </h2>
+                  <span
+                    style={{
+                      fontSize: '0.75rem',
+                      fontWeight: 500,
+                      color: 'rgba(75, 200, 182, 0.6)',
+                      padding: '3px 10px',
+                      borderRadius: '20px',
+                      background: 'rgba(75, 200, 182, 0.08)',
+                      border: '1px solid rgba(75, 200, 182, 0.15)',
+                    }}
+                  >
+                    {group.families.length} {t('itemCount', lang)}
+                  </span>
+                </div>
+              </div>
+
             </div>
 
             {/* Grid of cards */}
             <div className="px-4 lg:px-8 pb-4 pt-1">
-              <div style={{
+              <div data-category-grid={group.category.id} style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))',
                 gap: '16px',

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 
 interface Particle {
   x: number;
@@ -6,16 +6,99 @@ interface Particle {
   vx: number;
   vy: number;
   r: number;
+  layer: 0 | 1; // 0 = back (dim, slow), 1 = front (bright, normal)
 }
 
-const PARTICLE_COUNT = 100;
-const CONNECTION_DIST = 200;
-const SPEED = 0.4;
+// Front layer
+const FRONT_COUNT = 70;
+const FRONT_SPEED = 0.4;
+const FRONT_CONNECT = 200;
+const FRONT_R_MIN = 1.2;
+const FRONT_R_MAX = 3;
+const FRONT_DOT_ALPHA = 0.75;
+const FRONT_LINE_ALPHA = 0.35;
+
+// Back layer — smaller, dimmer, slower
+const BACK_COUNT = 50;
+const BACK_SPEED = 0.15;
+const BACK_CONNECT = 140;
+const BACK_R_MIN = 0.5;
+const BACK_R_MAX = 1.2;
+const BACK_DOT_ALPHA = 0.25;
+const BACK_LINE_ALPHA = 0.12;
+
+const TOUCH_RADIUS = 200;
+const TOUCH_FORCE = 8;
+
+// Cluster gravity
+const CLUSTER_FORCE = 0.003;
+const CLUSTER_RADIUS = 300;
+const CLUSTER_UPDATE_INTERVAL = 30; // re-read DOM positions every N frames
+
+interface Attractor {
+  x: number;
+  y: number;
+}
+
+// Color cycle: deep blue → teal → cyan → back (CBAR palette)
+const COLORS = [
+  [0, 73, 118],    // deep blue  #004976
+  [75, 200, 182],  // teal       #4BC8B6
+  [11, 158, 208],  // cyan       #0B9ED0
+  [75, 200, 182],  // teal again (smooth loop)
+];
+const COLOR_CYCLE_DURATION = 600; // frames per color transition (~10s at 60fps)
+
+function lerpColor(a: number[], b: number[], t: number): number[] {
+  return [
+    a[0] + (b[0] - a[0]) * t,
+    a[1] + (b[1] - a[1]) * t,
+    a[2] + (b[2] - a[2]) * t,
+  ];
+}
+
+function getLineColor(frame: number): number[] {
+  const totalCycle = COLOR_CYCLE_DURATION * COLORS.length;
+  const pos = (frame % totalCycle) / COLOR_CYCLE_DURATION;
+  const idx = Math.floor(pos);
+  const t = pos - idx;
+  const from = COLORS[idx % COLORS.length];
+  const to = COLORS[(idx + 1) % COLORS.length];
+  return lerpColor(from, to, t);
+}
+
+interface GlowPulse {
+  x: number;
+  y: number;
+  radius: number;
+  maxRadius: number;
+  alpha: number;
+}
 
 export function AnimatedBg() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particles = useRef<Particle[]>([]);
   const animId = useRef<number>(0);
+  const frame = useRef<number>(0);
+  const glowPulses = useRef<GlowPulse[]>([]);
+  const attractors = useRef<Attractor[]>([]);
+  const touchPoint = useRef<{ x: number; y: number; active: boolean; fade: number }>({
+    x: 0, y: 0, active: false, fade: 0,
+  });
+
+  const handleTouch = useCallback((e: TouchEvent | MouseEvent) => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+    touchPoint.current = {
+      x: clientX - rect.left,
+      y: clientY - rect.top,
+      active: true,
+      fade: 1,
+    };
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -23,22 +106,36 @@ export function AnimatedBg() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    const parent = canvas.parentElement;
+    if (!parent) return;
+
     const resize = () => {
-      const parent = canvas.parentElement;
-      if (!parent) return;
       canvas.width = parent.clientWidth;
       canvas.height = parent.clientHeight;
     };
 
     const initParticles = () => {
       particles.current = [];
-      for (let i = 0; i < PARTICLE_COUNT; i++) {
+      // Back layer
+      for (let i = 0; i < BACK_COUNT; i++) {
         particles.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * SPEED,
-          vy: (Math.random() - 0.5) * SPEED,
-          r: Math.random() * 2 + 1,
+          vx: (Math.random() - 0.5) * BACK_SPEED,
+          vy: (Math.random() - 0.5) * BACK_SPEED,
+          r: Math.random() * (BACK_R_MAX - BACK_R_MIN) + BACK_R_MIN,
+          layer: 0,
+        });
+      }
+      // Front layer
+      for (let i = 0; i < FRONT_COUNT; i++) {
+        particles.current.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * FRONT_SPEED,
+          vy: (Math.random() - 0.5) * FRONT_SPEED,
+          r: Math.random() * (FRONT_R_MAX - FRONT_R_MIN) + FRONT_R_MIN,
+          layer: 1,
         });
       }
     };
@@ -48,9 +145,48 @@ export function AnimatedBg() {
       const pts = particles.current;
       const w = canvas.width;
       const h = canvas.height;
+      const tp = touchPoint.current;
+
+      // Touch repulsion (affects both layers, front more than back)
+      if (tp.fade > 0.01) {
+        for (const p of pts) {
+          const dx = p.x - tp.x;
+          const dy = p.y - tp.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < TOUCH_RADIUS && dist > 0) {
+            const layerMult = p.layer === 1 ? 1 : 0.3;
+            const force = (1 - dist / TOUCH_RADIUS) * TOUCH_FORCE * tp.fade * layerMult;
+            p.vx += (dx / dist) * force * 0.05;
+            p.vy += (dy / dist) * force * 0.05;
+          }
+        }
+        // Ripple glow — uses current cycle color
+        const rc = getLineColor(frame.current);
+        const gradient = ctx.createRadialGradient(tp.x, tp.y, 0, tp.x, tp.y, TOUCH_RADIUS);
+        gradient.addColorStop(0, `rgba(${rc[0]}, ${rc[1]}, ${rc[2]}, ${0.15 * tp.fade})`);
+        gradient.addColorStop(0.5, `rgba(${rc[0]}, ${rc[1]}, ${rc[2]}, ${0.05 * tp.fade})`);
+        gradient.addColorStop(1, 'transparent');
+        ctx.beginPath();
+        ctx.arc(tp.x, tp.y, TOUCH_RADIUS, 0, Math.PI * 2);
+        ctx.fillStyle = gradient;
+        ctx.fill();
+        tp.fade *= 0.96;
+        if (tp.fade < 0.01) tp.active = false;
+      }
+
+      const t = frame.current;
 
       // Move particles
       for (const p of pts) {
+        const baseSpeed = p.layer === 1 ? FRONT_SPEED : BACK_SPEED;
+        p.vx *= 0.99;
+        p.vy *= 0.99;
+        const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+        if (speed < baseSpeed * 0.3) {
+          p.vx += (Math.random() - 0.5) * 0.02;
+          p.vy += (Math.random() - 0.5) * 0.02;
+        }
+
         p.x += p.vx;
         p.y += p.vy;
         if (p.x < 0) p.x = w;
@@ -59,29 +195,145 @@ export function AnimatedBg() {
         if (p.y > h) p.y = 0;
       }
 
-      // Draw connections
+      // Cluster gravity — update attractor positions periodically
+      if (t % CLUSTER_UPDATE_INTERVAL === 0) {
+        const canvasRect = canvas.getBoundingClientRect();
+        const grids = document.querySelectorAll('[data-category-grid]');
+        attractors.current = [];
+        grids.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          attractors.current.push({
+            x: rect.left + rect.width / 2 - canvasRect.left,
+            y: rect.top + rect.height / 2 - canvasRect.top,
+          });
+        });
+      }
+
+      // Apply gentle pull toward attractors
+      if (attractors.current.length > 0) {
+        const strength = CLUSTER_FORCE;
+        for (const p of pts) {
+          // Find nearest attractor
+          let minDist = Infinity;
+          let nearestA: Attractor | null = null;
+          for (const a of attractors.current) {
+            const dx = a.x - p.x;
+            const dy = a.y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < minDist) {
+              minDist = dist;
+              nearestA = a;
+            }
+          }
+          if (nearestA && minDist < CLUSTER_RADIUS && minDist > 20) {
+            const dx = nearestA.x - p.x;
+            const dy = nearestA.y - p.y;
+            const pull = (1 - minDist / CLUSTER_RADIUS) * strength;
+            p.vx += dx / minDist * pull;
+            p.vy += dy / minDist * pull;
+          }
+        }
+      }
+
+      // Draw & update glow pulses from card taps
+      const pulses = glowPulses.current;
+      for (let i = pulses.length - 1; i >= 0; i--) {
+        const gp = pulses[i];
+        gp.radius += 4;
+        gp.alpha *= 0.97;
+
+        if (gp.alpha < 0.01 || gp.radius > gp.maxRadius) {
+          pulses.splice(i, 1);
+          continue;
+        }
+
+        const gc = getLineColor(frame.current);
+        // Expanding ring
+        ctx.beginPath();
+        ctx.arc(gp.x, gp.y, gp.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${gc[0]}, ${gc[1]}, ${gc[2]}, ${gp.alpha * 0.5})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+
+        // Inner glow fill
+        const grad = ctx.createRadialGradient(gp.x, gp.y, 0, gp.x, gp.y, gp.radius);
+        grad.addColorStop(0, `rgba(${gc[0]}, ${gc[1]}, ${gc[2]}, ${gp.alpha * 0.15})`);
+        grad.addColorStop(0.7, `rgba(${gc[0]}, ${gc[1]}, ${gc[2]}, ${gp.alpha * 0.04})`);
+        grad.addColorStop(1, 'transparent');
+        ctx.beginPath();
+        ctx.arc(gp.x, gp.y, gp.radius, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        // Push nearby particles outward
+        for (const p of pts) {
+          const dx = p.x - gp.x;
+          const dy = p.y - gp.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < gp.radius + 30 && dist > gp.radius - 30 && dist > 0) {
+            const force = gp.alpha * 0.3;
+            p.vx += (dx / dist) * force;
+            p.vy += (dy / dist) * force;
+          }
+        }
+      }
+
+      // Color cycle
+      frame.current++;
+      const color = getLineColor(frame.current);
+      const [cr, cg, cb] = color;
+
+      // --- Draw back layer first ---
       for (let i = 0; i < pts.length; i++) {
+        if (pts[i].layer !== 0) continue;
         for (let j = i + 1; j < pts.length; j++) {
+          if (pts[j].layer !== 0) continue;
           const dx = pts[i].x - pts[j].x;
           const dy = pts[i].y - pts[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < CONNECTION_DIST) {
-            const alpha = (1 - dist / CONNECTION_DIST) * 0.35;
+          if (dist < BACK_CONNECT) {
+            const alpha = (1 - dist / BACK_CONNECT) * BACK_LINE_ALPHA;
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(75, 200, 182, ${alpha})`;
+            ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${alpha})`;
+            ctx.lineWidth = 0.4;
+            ctx.stroke();
+          }
+        }
+      }
+      for (const p of pts) {
+        if (p.layer !== 0) continue;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${BACK_DOT_ALPHA})`;
+        ctx.fill();
+      }
+
+      // --- Draw front layer on top ---
+      for (let i = 0; i < pts.length; i++) {
+        if (pts[i].layer !== 1) continue;
+        for (let j = i + 1; j < pts.length; j++) {
+          if (pts[j].layer !== 1) continue;
+          const dx = pts[i].x - pts[j].x;
+          const dy = pts[i].y - pts[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < FRONT_CONNECT) {
+            const alpha = (1 - dist / FRONT_CONNECT) * FRONT_LINE_ALPHA;
+            ctx.beginPath();
+            ctx.moveTo(pts[i].x, pts[i].y);
+            ctx.lineTo(pts[j].x, pts[j].y);
+            ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${alpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }
       }
-
-      // Draw particles
       for (const p of pts) {
+        if (p.layer !== 1) continue;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
+        ctx.fillStyle = `rgba(255, 255, 255, ${FRONT_DOT_ALPHA})`;
         ctx.fill();
       }
 
@@ -92,14 +344,36 @@ export function AnimatedBg() {
     initParticles();
     draw();
 
+    parent.addEventListener('touchstart', handleTouch, { passive: true });
+    parent.addEventListener('touchmove', handleTouch, { passive: true });
+    parent.addEventListener('mousedown', handleTouch);
+
+    // Card glow pulse listener
+    const handleCardGlow = (e: Event) => {
+      const { x, y } = (e as CustomEvent).detail;
+      const rect = canvas.getBoundingClientRect();
+      glowPulses.current.push({
+        x: x - rect.left,
+        y: y - rect.top,
+        radius: 0,
+        maxRadius: 350,
+        alpha: 1,
+      });
+    };
+    window.addEventListener('card-glow', handleCardGlow);
+
     const ro = new ResizeObserver(resize);
-    ro.observe(canvas.parentElement!);
+    ro.observe(parent);
 
     return () => {
       cancelAnimationFrame(animId.current);
+      parent.removeEventListener('touchstart', handleTouch);
+      parent.removeEventListener('touchmove', handleTouch);
+      parent.removeEventListener('mousedown', handleTouch);
+      window.removeEventListener('card-glow', handleCardGlow);
       ro.disconnect();
     };
-  }, []);
+  }, [handleTouch]);
 
   return (
     <canvas
