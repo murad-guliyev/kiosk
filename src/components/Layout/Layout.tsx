@@ -31,9 +31,10 @@ export function Layout({ children, sidebar }: LayoutProps) {
         )}
 
         {/* Body — animated background */}
-        <main className="flex-1 flex overflow-hidden animated-bg">
+        <main className="flex-1 relative overflow-hidden animated-bg">
           <AnimatedBg />
-          <div className="flex-1 flex overflow-hidden relative z-[1]">
+          {/* Content layer — above the animation */}
+          <div className="relative z-[2] flex h-full overflow-hidden">
             {children}
           </div>
         </main>

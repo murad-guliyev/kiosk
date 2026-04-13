@@ -28,7 +28,7 @@ export function MoneyList({ grouped }: MoneyListProps) {
   }
 
   return (
-    <div className="flex-1 overflow-y-auto">
+    <div className="flex-1 overflow-y-auto anim-page-fade">
       {grouped.map((group) => {
         if (group.families.length === 0) return null;
         return (
