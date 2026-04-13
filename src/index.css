@@ -188,39 +188,60 @@ body {
    ============================================================ */
 
 @keyframes page-fade-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
 }
 
 @keyframes page-slide-up {
-  from { opacity: 0; transform: translateY(40px); }
+  from { opacity: 0; transform: translateY(50px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes header-slide-down {
-  from { opacity: 0; transform: translateY(-20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  0%   { opacity: 0; transform: translateY(-12px); }
+  60%  { opacity: 1; }
+  100% { transform: translateY(0); }
 }
 
 @keyframes card-rise {
-  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  from { opacity: 0; transform: translateY(40px) scale(0.97); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* Page exit — fade out + slight scale down */
+@keyframes page-exit {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.97); }
+}
+
+.anim-page-exit {
+  animation: page-exit 0.3s cubic-bezier(0.4, 0, 1, 1) both;
+}
+
 .anim-page-fade {
-  animation: page-fade-in 0.4s ease-out both;
+  animation: page-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .anim-slide-up {
-  animation: page-slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: page-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .anim-header-enter {
-  animation: header-slide-down 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: header-slide-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Back button: slide in from left */
+@keyframes btn-slide-in {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.anim-btn-enter {
+  animation: btn-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
 }
 
 .anim-card-rise {
-  animation: card-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: card-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Tab animations */

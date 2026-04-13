@@ -12,7 +12,18 @@ export function MoneyDetailPage() {
   const { lang } = useLang();
   const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const handleBack = () => {
+    const el = containerRef.current;
+    if (el) {
+      el.classList.add('anim-page-exit');
+      setTimeout(() => navigate(-1), 300);
+    } else {
+      navigate(-1);
+    }
+  };
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -43,34 +54,28 @@ export function MoneyDetailPage() {
 
   return (
     <Layout>
-      <div className="flex-1 overflow-y-auto relative" ref={scrollRef}>
+      <div className="flex-1 overflow-y-auto relative" ref={(el) => { scrollRef.current = el; containerRef.current = el; }}>
         {/* Header bar */}
         <div
           className="px-4 sm:px-6 lg:px-10 py-4 lg:py-5 anim-header-enter"
           style={{ background: 'linear-gradient(180deg, #001F39 0%, #002A4A 100%)' }}
         >
-          <div className="flex items-center gap-3 sm:gap-4 relative">
+          <div className="flex items-center relative">
             <button
-              onClick={() => navigate(-1)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
+              onClick={handleBack}
+              className="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium anim-btn-enter"
               style={{
-                background: 'rgba(75,200,182,0.15)',
-                border: '1px solid rgba(75,200,182,0.3)',
+                background: 'rgba(75,200,182,0.12)',
+                border: '1px solid rgba(75,200,182,0.25)',
                 color: '#4BC8B6',
                 cursor: 'pointer',
               }}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                 <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               {t('backToList', lang)}
             </button>
-
-            <div className="flex-1 min-w-0">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold truncate" style={{ lineHeight: 1.3, color: '#fff' }}>
-                {localized(family.title, lang)}
-              </h2>
-            </div>
 
             {/* Versions badge & language toggle — hidden for now
             {versions.length > 1 && (
