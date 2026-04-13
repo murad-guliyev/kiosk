@@ -26,6 +26,11 @@ export function getVersions(familyId: string): MoneyVersion[] {
     });
 }
 
+export function getRearImage(familyId: string): string | null {
+  const v = versions.find((v) => v.familyId === familyId && v.rearImage);
+  return v?.rearImage ?? null;
+}
+
 export function getSiblings(familyId: string): { prev: MoneyFamily | null; next: MoneyFamily | null } {
   const family = families.find((f) => f.familyId === familyId);
   if (!family) return { prev: null, next: null };

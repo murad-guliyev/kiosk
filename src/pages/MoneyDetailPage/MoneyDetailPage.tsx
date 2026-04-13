@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { Layout } from '../../components/Layout/Layout';
 import { VersionCard } from '../../components/VersionCard/VersionCard';
@@ -10,6 +10,7 @@ import { useLang } from '../../lib/LangContext';
 export function MoneyDetailPage() {
   const { familyId } = useParams<{ familyId: string }>();
   const { lang } = useLang();
+  const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -49,20 +50,21 @@ export function MoneyDetailPage() {
           style={{ background: 'linear-gradient(180deg, #001F39 0%, #002A4A 100%)' }}
         >
           <div className="flex items-center gap-3 sm:gap-4 relative">
-            <Link
-              to="/"
-              className="flex items-center gap-2 no-underline px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
               style={{
                 background: 'rgba(75,200,182,0.15)',
                 border: '1px solid rgba(75,200,182,0.3)',
                 color: '#4BC8B6',
+                cursor: 'pointer',
               }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               {t('backToList', lang)}
-            </Link>
+            </button>
 
             <div className="flex-1 min-w-0">
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold truncate" style={{ lineHeight: 1.3, color: '#fff' }}>

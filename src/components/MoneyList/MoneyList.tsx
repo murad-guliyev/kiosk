@@ -56,9 +56,9 @@ export function MoneyList({ grouped }: MoneyListProps) {
                   <h2
                     style={{
                       margin: 0,
-                      fontSize: '0.95rem',
-                      fontWeight: 600,
-                      color: 'rgba(255,255,255,0.9)',
+                      fontSize: '1.3rem',
+                      fontWeight: 700,
+                      color: '#fff',
                       letterSpacing: '0.02em',
                     }}
                   >
@@ -89,8 +89,8 @@ export function MoneyList({ grouped }: MoneyListProps) {
                 gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 220px), 1fr))',
                 gap: '16px',
               }}>
-                {group.families.map((family) => (
-                  <MoneyCard key={family.familyId} family={family} />
+                {group.families.map((family, i) => (
+                  <MoneyCard key={family.familyId} family={family} index={i} />
                 ))}
               </div>
             </div>

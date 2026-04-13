@@ -3,33 +3,41 @@ import { useNavigate } from 'react-router-dom';
 import { MoneyFamily } from '../../lib/types';
 import { localized } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
+import { getRearImage } from '../../lib/selectors';
 
 interface MoneyCardProps {
   family: MoneyFamily;
+  index?: number;
 }
 
-export function MoneyCard({ family }: MoneyCardProps) {
+export function MoneyCard({ family, index = 0 }: MoneyCardProps) {
   const { lang } = useLang();
   const navigate = useNavigate();
   const tapped = useRef(false);
+  const isCoin = family.subcategory === 'coins';
+  const rearImage = isCoin ? getRearImage(family.familyId) : null;
 
   const handleTap = useCallback((e: React.MouseEvent | React.TouchEvent) => {
-    // Prevent double-fire from touch + click
     if (tapped.current) return;
     tapped.current = true;
-
     e.preventDefault();
 
     const clientX = 'touches' in e ? e.touches[0]?.clientX ?? 0 : e.clientX;
     const clientY = 'touches' in e ? e.touches[0]?.clientY ?? 0 : e.clientY;
     window.dispatchEvent(new CustomEvent('card-glow', { detail: { x: clientX, y: clientY } }));
 
-    // Short delay so the glow pulse is visible before navigating
     setTimeout(() => {
       navigate(`/money/${family.familyId}`);
       tapped.current = false;
     }, 250);
   }, [navigate, family.familyId]);
+
+  const imgStyle = {
+    maxWidth: '90%',
+    maxHeight: '90%',
+    objectFit: 'contain' as const,
+    filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.4))',
+  };
 
   return (
     <a
@@ -38,8 +46,8 @@ export function MoneyCard({ family }: MoneyCardProps) {
       onClick={handleTap}
       onTouchStart={handleTap}
     >
-      {/* Image — floating directly on the dark background */}
       <div
+        className={isCoin && rearImage ? 'coin-scene' : ''}
         style={{
           height: '140px',
           display: 'flex',
@@ -48,16 +56,34 @@ export function MoneyCard({ family }: MoneyCardProps) {
         }}
       >
         {family.thumbnailImage ? (
-          <img
-            src={family.thumbnailImage}
-            alt={localized(family.title, lang)}
-            style={{
-              maxWidth: '90%',
-              maxHeight: '90%',
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.4))',
-            }}
-          />
+          isCoin && rearImage ? (
+            /* Two-sided rotating coin */
+            <div className="coin-flipper" style={{ width: '120px', height: '120px' }}>
+              {/* Front face */}
+              <div className="coin-face">
+                <img
+                  src={family.thumbnailImage}
+                  alt={localized(family.title, lang)}
+                  style={imgStyle}
+                />
+              </div>
+              {/* Back face */}
+              <div className="coin-face coin-face-back">
+                <img
+                  src={rearImage}
+                  alt={localized(family.title, lang) + ' rear'}
+                  style={imgStyle}
+                />
+              </div>
+            </div>
+          ) : (
+            /* Static image (banknotes or coins without rear) */
+            <img
+              src={family.thumbnailImage}
+              alt={localized(family.title, lang)}
+              style={imgStyle}
+            />
+          )
         ) : (
           <div style={{
             width: '56px',
@@ -75,7 +101,6 @@ export function MoneyCard({ family }: MoneyCardProps) {
         )}
       </div>
 
-      {/* Title */}
       <h3
         style={{
           fontSize: '0.78rem',

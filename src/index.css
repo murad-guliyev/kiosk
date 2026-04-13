@@ -223,6 +223,59 @@ body {
   animation: card-rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Tab animations */
+@keyframes tab-shimmer {
+  0%   { transform: translateX(-150%) skewX(-15deg); }
+  100% { transform: translateX(250%) skewX(-15deg); }
+}
+
+@keyframes tab-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(75,200,182,0.08), 0 0 10px rgba(11,158,208,0.05), inset 0 1px 0 rgba(255,255,255,0.08); }
+  50%      { box-shadow: 0 0 35px rgba(75,200,182,0.18), 0 0 20px rgba(11,158,208,0.1), inset 0 1px 0 rgba(255,255,255,0.12); }
+}
+
+@keyframes tab-accent-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes tab-icon-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(75,200,182,0.1); }
+  50%      { box-shadow: 0 0 22px rgba(75,200,182,0.22); }
+}
+
+/* Slow coin rotation */
+@keyframes coin-spin {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.coin-scene {
+  perspective: 600px;
+}
+
+.coin-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: coin-spin 8s linear infinite;
+}
+
+.coin-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+}
+
+.coin-face-back {
+  transform: rotateY(180deg);
+}
+
 /* Card tap animation */
 @keyframes card-tap-pulse {
   0%   { transform: scale(1); }

@@ -30,15 +30,6 @@ const BACK_LINE_ALPHA = 0.12;
 const TOUCH_RADIUS = 200;
 const TOUCH_FORCE = 8;
 
-// Cluster gravity
-const CLUSTER_FORCE = 0.003;
-const CLUSTER_RADIUS = 300;
-const CLUSTER_UPDATE_INTERVAL = 30; // re-read DOM positions every N frames
-
-interface Attractor {
-  x: number;
-  y: number;
-}
 
 // Color cycle: deep blue → teal → cyan → back (CBAR palette)
 const COLORS = [
@@ -81,7 +72,6 @@ export function AnimatedBg() {
   const animId = useRef<number>(0);
   const frame = useRef<number>(0);
   const glowPulses = useRef<GlowPulse[]>([]);
-  const attractors = useRef<Attractor[]>([]);
   const touchPoint = useRef<{ x: number; y: number; active: boolean; fade: number }>({
     x: 0, y: 0, active: false, fade: 0,
   });
@@ -193,46 +183,6 @@ export function AnimatedBg() {
         if (p.x > w) p.x = 0;
         if (p.y < 0) p.y = h;
         if (p.y > h) p.y = 0;
-      }
-
-      // Cluster gravity — update attractor positions periodically
-      if (t % CLUSTER_UPDATE_INTERVAL === 0) {
-        const canvasRect = canvas.getBoundingClientRect();
-        const grids = document.querySelectorAll('[data-category-grid]');
-        attractors.current = [];
-        grids.forEach((el) => {
-          const rect = el.getBoundingClientRect();
-          attractors.current.push({
-            x: rect.left + rect.width / 2 - canvasRect.left,
-            y: rect.top + rect.height / 2 - canvasRect.top,
-          });
-        });
-      }
-
-      // Apply gentle pull toward attractors
-      if (attractors.current.length > 0) {
-        const strength = CLUSTER_FORCE;
-        for (const p of pts) {
-          // Find nearest attractor
-          let minDist = Infinity;
-          let nearestA: Attractor | null = null;
-          for (const a of attractors.current) {
-            const dx = a.x - p.x;
-            const dy = a.y - p.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < minDist) {
-              minDist = dist;
-              nearestA = a;
-            }
-          }
-          if (nearestA && minDist < CLUSTER_RADIUS && minDist > 20) {
-            const dx = nearestA.x - p.x;
-            const dy = nearestA.y - p.y;
-            const pull = (1 - minDist / CLUSTER_RADIUS) * strength;
-            p.vx += dx / minDist * pull;
-            p.vy += dy / minDist * pull;
-          }
-        }
       }
 
       // Draw & update glow pulses from card taps
