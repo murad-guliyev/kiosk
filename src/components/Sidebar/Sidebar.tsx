@@ -1,103 +1,122 @@
-import { categories } from '../../lib/categories';
-import { localized } from '../../lib/i18n';
+import { t } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
+// import { LanguageToggle } from '../LanguageToggle/LanguageToggle';
 
 interface SidebarProps {
-  selectedCategory: number;
   selectedSubcategory: 'banknotes' | 'coins';
-  onSelect: (categoryId: number, subcategory: 'banknotes' | 'coins') => void;
+  onSelect: (subcategory: 'banknotes' | 'coins') => void;
 }
 
-export function Sidebar({ selectedCategory, selectedSubcategory, onSelect }: SidebarProps) {
+export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
   const { lang } = useLang();
 
   return (
     <nav
-      className="w-[280px] min-w-[280px] h-full overflow-y-auto flex flex-col border-r"
-      style={{
-        background: 'var(--color-surface-default)',
-        borderColor: 'var(--color-border-default)',
-        boxShadow: '1px 0 8px rgba(0,0,0,0.03)',
-      }}
+      className="w-full flex-shrink-0"
+      style={{ background: 'linear-gradient(180deg, #001F39 0%, #002A4A 100%)' }}
     >
-      <div className="flex-1 pt-4 pb-4">
-        {categories.map((cat, catIndex) => (
-          <div key={cat.id} className={catIndex > 0 ? 'mt-1' : ''}>
-            {/* Category header */}
-            <div className="px-5 pt-4 pb-2">
-              <span
-                className="text-[11px] uppercase font-bold leading-tight"
-                style={{
-                  letterSpacing: '0.06em',
-                  color: 'var(--color-text-tertiary)',
-                }}
-              >
-                {localized(cat.label, lang)}
-              </span>
-            </div>
 
-            {/* Subcategory buttons */}
-            {cat.subcategories.map((sub) => {
-              const isActive = selectedCategory === cat.id && selectedSubcategory === sub.id;
-              return (
-                <button
-                  key={`${cat.id}-${sub.id}`}
-                  onClick={() => onSelect(cat.id, sub.id)}
-                  className="w-full text-left cursor-pointer flex items-center gap-3 relative transition-all duration-150"
+      <div className="relative flex items-center gap-4 py-4 px-4">
+        {(['banknotes', 'coins'] as const).map((sub) => {
+          const isActive = selectedSubcategory === sub;
+          return (
+            <button
+              key={sub}
+              onClick={() => onSelect(sub)}
+              className="flex-1 flex items-center justify-center gap-4 relative"
+              style={{
+                border: 'none',
+                borderRadius: '16px',
+                padding: '22px 32px',
+                fontSize: '1.15rem',
+                fontWeight: 600,
+                letterSpacing: '0.02em',
+                color: isActive ? '#fff' : 'rgba(255,255,255,0.4)',
+                background: isActive
+                  ? 'linear-gradient(135deg, rgba(75,200,182,0.2) 0%, rgba(0,73,118,0.4) 100%)'
+                  : 'rgba(255,255,255,0.03)',
+                backdropFilter: isActive ? 'blur(8px)' : undefined,
+                transition: 'all 0.25s ease',
+                overflow: 'hidden',
+              }}
+            >
+              {/* Glow border for active */}
+              {isActive && (
+                <div
                   style={{
-                    padding: '10px 20px 10px 24px',
-                    fontSize: '0.9rem',
-                    fontWeight: isActive ? 600 : 400,
-                    color: isActive ? 'var(--color-brand-primary)' : 'var(--color-text-secondary)',
-                    background: isActive ? 'var(--color-surface-muted)' : 'transparent',
-                    borderRadius: '0 8px 8px 0',
-                    marginRight: '12px',
+                    position: 'absolute',
+                    inset: 0,
+                    borderRadius: '16px',
+                    border: '1px solid rgba(75,200,182,0.4)',
+                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.1), 0 0 20px rgba(75,200,182,0.15)',
+                    pointerEvents: 'none',
                   }}
-                  onMouseEnter={e => {
-                    if (!isActive) {
-                      e.currentTarget.style.background = 'var(--color-surface-muted)';
-                      e.currentTarget.style.color = 'var(--color-text-primary)';
-                    }
+                />
+              )}
+
+              {/* Accent line on left */}
+              {isActive && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    top: '20%',
+                    bottom: '20%',
+                    width: '3px',
+                    borderRadius: '0 3px 3px 0',
+                    background: 'linear-gradient(180deg, #4BC8B6, #0B9ED0)',
                   }}
-                  onMouseLeave={e => {
-                    if (!isActive) {
-                      e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = 'var(--color-text-secondary)';
-                    }
+                />
+              )}
+
+              <svg width="28" height="28" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
+                {sub === 'banknotes' ? (
+                  <>
+                    <rect x="1.5" y="4" width="15" height="10" rx="1.5"
+                      stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.3)'}
+                      strokeWidth="1.3" fill="none" />
+                    <circle cx="9" cy="9" r="2.2"
+                      stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.3)'}
+                      strokeWidth="1.1" fill="none" />
+                  </>
+                ) : (
+                  <>
+                    <circle cx="9" cy="9" r="7"
+                      stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.3)'}
+                      strokeWidth="1.3" fill="none" />
+                    <circle cx="9" cy="9" r="3.5"
+                      stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.3)'}
+                      strokeWidth="1" fill="none" />
+                  </>
+                )}
+              </svg>
+
+              {t(sub, lang)}
+
+              {/* Subtle shine sweep on active */}
+              {isActive && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    right: '-30%',
+                    width: '50%',
+                    height: '100%',
+                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent)',
+                    transform: 'skewX(-15deg)',
+                    pointerEvents: 'none',
                   }}
-                >
-                  {isActive && (
-                    <div
-                      className="absolute left-0 top-1/2 -translate-y-1/2"
-                      style={{
-                        width: '3px',
-                        height: '20px',
-                        background: 'var(--color-brand-primary)',
-                        borderRadius: '0 3px 3px 0',
-                      }}
-                    />
-                  )}
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" style={{ flexShrink: 0 }}>
-                    {sub.id === 'banknotes' ? (
-                      /* Paper money icon — rectangle with lines */
-                      <>
-                        <rect x="1.5" y="4" width="15" height="10" rx="1.5" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.4" fill="none" />
-                        <circle cx="9" cy="9" r="2.2" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.2" fill="none" />
-                      </>
-                    ) : (
-                      /* Coin icon — circle with inner detail */
-                      <>
-                        <circle cx="9" cy="9" r="7" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1.4" fill="none" />
-                        <circle cx="9" cy="9" r="3.5" stroke={isActive ? 'var(--color-brand-primary)' : 'var(--color-text-tertiary)'} strokeWidth="1" fill="none" />
-                      </>
-                    )}
-                  </svg>
-                  {localized(sub.label, lang)}
-                </button>
-              );
-            })}
-          </div>
-        ))}
+                />
+              )}
+            </button>
+          );
+        })}
+
+        {/* Language toggle — hidden for now
+        <div className="flex-shrink-0">
+          <LanguageToggle />
+        </div>
+        */}
       </div>
     </nav>
   );

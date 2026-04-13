@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MoneyVersion } from '../../lib/types';
 import { localized, t } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
@@ -10,6 +11,7 @@ interface VersionCardProps {
 export function VersionCard({ version, index }: VersionCardProps) {
   const { lang } = useLang();
   const hasImages = version.frontImage || version.rearImage;
+  const [rearIsPortrait, setRearIsPortrait] = useState(false);
   const hasAttributes = version.attributes.length > 0;
   const hasOverview = version.overview.length > 0 || (version.description && localized(version.description, lang));
   const hasSecurity = version.securityElements.length > 0;
@@ -47,46 +49,85 @@ export function VersionCard({ version, index }: VersionCardProps) {
         )}
       </div>
 
-      {/* Images — side by side on desktop, stacked on mobile */}
+      {/* Images — side by side */}
       {hasImages && (
         <div
           className="grid grid-cols-1 sm:grid-cols-2"
-          style={{ gap: '1px', background: 'var(--color-border-default)' }}
+          style={{ borderBottom: '1px solid var(--color-border-default)' }}
         >
           {version.frontImage && (
-            <div className="p-4 sm:p-6 flex flex-col items-center" style={{ background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)' }}>
-              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2 sm:mb-3" style={{ color: 'var(--color-text-tertiary)' }}>
+            <div
+              className="p-3 sm:p-4 flex flex-col items-center justify-center"
+              style={{
+                background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)',
+                borderRight: version.rearImage ? '1px solid var(--color-border-default)' : undefined,
+                minHeight: rearIsPortrait ? '150px' : '180px',
+              }}
+            >
+              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2" style={{ color: 'var(--color-text-tertiary)' }}>
                 {t('front', lang)}
               </span>
               <img
                 src={version.frontImage}
                 alt={`${localized(version.title, lang)} - ${t('front', lang)}`}
-                className="max-h-44 sm:max-h-56 lg:max-h-72 w-auto object-contain"
-                style={{ maxWidth: '100%', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))' }}
+                className={rearIsPortrait ? 'max-h-24 sm:max-h-32 lg:max-h-36 w-auto object-contain' : 'max-h-32 sm:max-h-40 lg:max-h-48 w-auto object-contain'}
+                style={{ maxWidth: '90%', filter: 'drop-shadow(0 3px 10px rgba(0,0,0,0.10))' }}
               />
             </div>
           )}
           {version.rearImage && (
-            <div className="p-4 sm:p-6 flex flex-col items-center" style={{ background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)' }}>
-              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2 sm:mb-3" style={{ color: 'var(--color-text-tertiary)' }}>
+            <div
+              className="p-3 sm:p-4 flex flex-col items-center justify-center overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, #F8FAFB 0%, #F0F4F6 100%)',
+                minHeight: '150px',
+              }}
+            >
+              <span className="text-[10px] uppercase tracking-[0.1em] font-semibold mb-2" style={{ color: 'var(--color-text-tertiary)' }}>
                 {t('rear', lang)}
               </span>
-              <img
-                src={version.rearImage}
-                alt={`${localized(version.title, lang)} - ${t('rear', lang)}`}
-                className="max-h-44 sm:max-h-56 lg:max-h-72 w-auto object-contain"
-                style={{ maxWidth: '100%', filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.12))' }}
-              />
+              {rearIsPortrait ? (
+                /* Portrait image rotated to landscape — use a square wrapper so the rotated image fits */
+                <div style={{ width: '90%', maxWidth: '400px', aspectRatio: '1.7 / 1', position: 'relative' }}>
+                  <img
+                    src={version.rearImage}
+                    alt={`${localized(version.title, lang)} - ${t('rear', lang)}`}
+                    style={{
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      transform: 'translate(-50%, -50%) rotate(90deg)',
+                      maxWidth: '170%',
+                      maxHeight: '100%',
+                      objectFit: 'contain',
+                      filter: 'drop-shadow(0 3px 10px rgba(0,0,0,0.10))',
+                    }}
+                  />
+                </div>
+              ) : (
+                <img
+                  src={version.rearImage}
+                  alt={`${localized(version.title, lang)} - ${t('rear', lang)}`}
+                  className="max-h-32 sm:max-h-40 lg:max-h-48 w-auto object-contain"
+                  onLoad={(e) => {
+                    const img = e.currentTarget;
+                    if (img.naturalHeight > img.naturalWidth * 1.2) {
+                      setRearIsPortrait(true);
+                    }
+                  }}
+                  style={{ maxWidth: '90%', filter: 'drop-shadow(0 3px 10px rgba(0,0,0,0.10))' }}
+                />
+              )}
             </div>
           )}
         </div>
       )}
 
       {/* Content — two columns on desktop, stacked on mobile */}
-      {(hasOverview || hasAttributes || hasSecurity) && (
+      {(hasOverview || hasAttributes) && (
         <div className="grid grid-cols-1 lg:grid-cols-2">
-          {/* Left: overview + security */}
-          {(hasOverview || hasSecurity) && (
+          {/* Left: overview */}
+          {hasOverview && (
             <div
               className="p-4 sm:p-6"
               style={{ borderRight: hasAttributes ? undefined : 'none' }}
@@ -113,6 +154,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
                 </p>
               )}
 
+              {/* Security elements — hidden for now, kept for future restoration
               {hasSecurity && (
                 <div className={hasOverview ? 'mt-5' : ''}>
                   <h4 className="text-xs font-bold uppercase mb-3" style={{ letterSpacing: '0.06em', color: 'var(--color-text-tertiary)' }}>
@@ -131,6 +173,7 @@ export function VersionCard({ version, index }: VersionCardProps) {
                   </div>
                 </div>
               )}
+              */}
 
               {version.brochureUrl && (
                 <a

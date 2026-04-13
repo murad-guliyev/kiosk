@@ -61,6 +61,14 @@ const uiStrings: Record<string, LocalizedText> = {
     az: 'Azərbaycan Respublikasının Mərkəzi Bankı',
     en: 'Central Bank of Azerbaijan',
   },
+  banknotes: {
+    az: 'Kağız pullar',
+    en: 'Banknotes',
+  },
+  coins: {
+    az: 'Metal pullar',
+    en: 'Coins',
+  },
 };
 
 export function t(key: string, lang: Lang): string {

@@ -5,6 +5,7 @@ import { VersionCard } from '../../components/VersionCard/VersionCard';
 import { getFamily, getVersions, getSiblings } from '../../lib/selectors';
 import { localized, t } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
+// import { LanguageToggle } from '../../components/LanguageToggle/LanguageToggle';
 
 export function MoneyDetailPage() {
   const { familyId } = useParams<{ familyId: string }>();
@@ -43,18 +44,19 @@ export function MoneyDetailPage() {
     <Layout>
       <div className="flex-1 overflow-y-auto relative" ref={scrollRef}>
         {/* Header bar */}
-        <div className="border-b px-4 sm:px-6 lg:px-10 py-4 lg:py-5 bg-white" style={{ borderColor: 'var(--color-border-default)' }}>
-          <div className="flex items-center gap-3 sm:gap-4">
+        <div
+          className="px-4 sm:px-6 lg:px-10 py-4 lg:py-5"
+          style={{ background: 'linear-gradient(180deg, #001F39 0%, #002A4A 100%)' }}
+        >
+          <div className="flex items-center gap-3 sm:gap-4 relative">
             <Link
               to="/"
               className="flex items-center gap-2 no-underline px-3 py-2 rounded-lg flex-shrink-0 text-[13px] font-medium"
               style={{
-                background: 'var(--color-brand-primary)',
-                color: '#FFFFFF',
-                transition: 'opacity 0.15s',
+                background: 'rgba(75,200,182,0.15)',
+                border: '1px solid rgba(75,200,182,0.3)',
+                color: '#4BC8B6',
               }}
-              onMouseEnter={e => { e.currentTarget.style.opacity = '0.85'; }}
-              onMouseLeave={e => { e.currentTarget.style.opacity = '1'; }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -63,19 +65,24 @@ export function MoneyDetailPage() {
             </Link>
 
             <div className="flex-1 min-w-0">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary truncate" style={{ lineHeight: 1.3 }}>
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold truncate" style={{ lineHeight: 1.3, color: '#fff' }}>
                 {localized(family.title, lang)}
               </h2>
             </div>
 
+            {/* Versions badge & language toggle — hidden for now
             {versions.length > 1 && (
               <div className="hidden sm:block flex-shrink-0 px-3 py-1 rounded-full text-[13px] font-semibold" style={{
-                background: 'var(--color-surface-muted)',
-                color: 'var(--color-text-tertiary)',
+                background: 'rgba(255,255,255,0.08)',
+                color: 'rgba(255,255,255,0.5)',
               }}>
                 {versions.length} {t('versions', lang)}
               </div>
             )}
+            <div className="flex-shrink-0">
+              <LanguageToggle />
+            </div>
+            */}
           </div>
         </div>
 
@@ -102,14 +109,6 @@ export function MoneyDetailPage() {
                     color: 'var(--color-text-primary)',
                     transition: 'border-color 0.2s, box-shadow 0.2s',
                   }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-primary)';
-                    e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-default)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" className="flex-shrink-0" style={{ color: 'var(--color-brand-primary)' }}>
                     <path d="M11 4L6 9L11 14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
@@ -128,15 +127,6 @@ export function MoneyDetailPage() {
                     background: 'var(--color-surface-default)',
                     border: '1px solid var(--color-border-default)',
                     color: 'var(--color-text-primary)',
-                    transition: 'border-color 0.2s, box-shadow 0.2s',
-                  }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-primary)';
-                    e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = 'var(--color-border-default)';
-                    e.currentTarget.style.boxShadow = 'none';
                   }}
                 >
                   <div className="min-w-0">
@@ -178,8 +168,6 @@ export function MoneyDetailPage() {
             transform: showScrollTop ? 'scale(1)' : 'scale(0.7)',
             zIndex: 30,
           }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = showScrollTop ? 'scale(1)' : 'scale(0.7)'; }}
         >
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
             <path d="M11 17V5M11 5L5 11M11 5L17 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

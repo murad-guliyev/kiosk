@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { MoneyFamily } from '../../lib/types';
-import { localized, t } from '../../lib/i18n';
+import { localized } from '../../lib/i18n';
 import { useLang } from '../../lib/LangContext';
 
 interface MoneyCardProps {
@@ -13,30 +13,16 @@ export function MoneyCard({ family }: MoneyCardProps) {
   return (
     <Link
       to={`/money/${family.familyId}`}
-      className="group block rounded-card overflow-hidden no-underline bg-surface-default"
-      style={{
-        boxShadow: 'var(--shadow-card)',
-        transition: 'box-shadow 0.3s, transform 0.3s',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = 'var(--shadow-card-hover)';
-        e.currentTarget.style.transform = 'translateY(-2px)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = 'var(--shadow-card)';
-        e.currentTarget.style.transform = 'translateY(0)';
-      }}
+      className="block no-underline"
+      style={{ textAlign: 'center' }}
     >
-      {/* Image — the hero of the card */}
+      {/* Image — floating directly on the dark background */}
       <div
         style={{
-          height: '260px',
-          background: 'linear-gradient(135deg, #f8f9fb 0%, #eef0f4 100%)',
+          height: '140px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          position: 'relative',
-          overflow: 'hidden',
         }}
       >
         {family.thumbnailImage ? (
@@ -44,70 +30,42 @@ export function MoneyCard({ family }: MoneyCardProps) {
             src={family.thumbnailImage}
             alt={localized(family.title, lang)}
             style={{
-              maxWidth: '85%',
-              maxHeight: '85%',
+              maxWidth: '90%',
+              maxHeight: '90%',
               objectFit: 'contain',
-              filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.15))',
-              transition: 'transform 0.5s ease',
+              filter: 'drop-shadow(0 4px 16px rgba(0,0,0,0.4))',
             }}
-            className="group-hover:scale-110"
           />
         ) : (
           <div style={{
-            width: '80px',
-            height: '80px',
+            width: '56px',
+            height: '56px',
             borderRadius: '50%',
-            background: 'rgba(255,255,255,0.6)',
+            background: 'rgba(255,255,255,0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <span style={{ fontSize: '32px', color: 'var(--color-text-tertiary)' }}>
+            <span style={{ fontSize: '24px', color: 'rgba(255,255,255,0.3)' }}>
               {family.subcategory === 'coins' ? '\u25CB' : '\u25AD'}
             </span>
           </div>
         )}
-
-        {/* Version count badge */}
-        {family.versionCount > 1 && (
-          <div style={{
-            position: 'absolute',
-            top: '10px',
-            right: '10px',
-            background: 'rgba(15, 39, 68, 0.85)',
-            backdropFilter: 'blur(4px)',
-            color: 'white',
-            fontSize: '10px',
-            fontWeight: 700,
-            padding: '3px 8px',
-            borderRadius: '20px',
-            letterSpacing: '0.03em',
-          }}>
-            {family.versionCount} {t('versions', lang)}
-          </div>
-        )}
       </div>
 
-      {/* Title strip */}
-      <div style={{
-        padding: '14px 16px',
-        borderTop: '1px solid var(--color-border-light)',
-        textAlign: 'center',
-      }}>
-        <h3
-          className="group-hover:text-brand-primary"
-          style={{
-            fontSize: '1rem',
-            fontWeight: 600,
-            color: 'var(--color-text-primary)',
-            lineHeight: 1.3,
-            transition: 'color 0.2s',
-            margin: 0,
-          }}
-        >
-          {localized(family.title, lang)}
-        </h3>
-      </div>
+      {/* Title */}
+      <h3
+        style={{
+          fontSize: '0.78rem',
+          fontWeight: 500,
+          color: 'rgba(255,255,255,0.7)',
+          lineHeight: 1.3,
+          margin: '6px 0 0',
+          padding: '0 4px',
+        }}
+      >
+        {localized(family.title, lang)}
+      </h3>
     </Link>
   );
 }
