@@ -164,8 +164,6 @@ export function AnimatedBg() {
         if (tp.fade < 0.01) tp.active = false;
       }
 
-      const t = frame.current;
-
       // Move particles
       for (const p of pts) {
         const baseSpeed = p.layer === 1 ? FRONT_SPEED : BACK_SPEED;

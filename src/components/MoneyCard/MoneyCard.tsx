@@ -10,7 +10,7 @@ interface MoneyCardProps {
   index?: number;
 }
 
-export function MoneyCard({ family, index = 0 }: MoneyCardProps) {
+export function MoneyCard({ family }: MoneyCardProps) {
   const { lang } = useLang();
   const navigate = useNavigate();
   const tapped = useRef(false);

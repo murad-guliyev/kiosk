@@ -11,8 +11,8 @@ export function MoneyDetailPage() {
   const { familyId } = useParams<{ familyId: string }>();
   const { lang } = useLang();
   const navigate = useNavigate();
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   const handleBack = () => {
