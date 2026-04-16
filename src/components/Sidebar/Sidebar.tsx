@@ -13,7 +13,9 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
   return (
     <nav
       className="w-full flex-shrink-0"
-      style={{ background: 'linear-gradient(180deg, #000D1A 0%, #001529 100%)' }}
+      style={{
+        background: 'rgba(0, 20, 40, 0.68)',
+      }}
     >
       <div className="relative flex items-stretch gap-3 py-3 px-4">
         {(['banknotes', 'coins'] as const).map((sub) => {
@@ -21,7 +23,14 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
           return (
             <button
               key={sub}
-              onClick={() => onSelect(sub)}
+              onClick={(e) => {
+                const el = e.currentTarget;
+                el.classList.remove('tab-press');
+                // Force reflow so the animation re-runs on repeat taps
+                void el.offsetWidth;
+                el.classList.add('tab-press');
+                onSelect(sub);
+              }}
               className="flex-1 relative"
               style={{
                 border: 'none',
@@ -34,7 +43,7 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
                 transition: 'all 0.3s ease',
               }}
             >
-              {/* Glow border — pulses when active */}
+              {/* Static glow border when active — no infinite animation */}
               <div
                 style={{
                   position: 'absolute',
@@ -43,21 +52,18 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
                   border: isActive
                     ? '1px solid rgba(75,200,182,0.3)'
                     : '1px solid rgba(255,255,255,0.06)',
-                  animation: isActive ? 'tab-glow-pulse 4s ease-in-out infinite' : 'none',
                   pointerEvents: 'none',
                   transition: 'border 0.3s ease',
                 }}
               />
 
-              {/* Top accent line — shifts colors when active */}
+              {/* Static top accent line when active */}
               <div
                 style={{
                   height: '2px',
                   background: isActive
-                    ? 'linear-gradient(90deg, transparent, #4BC8B6, #4BC8B6, #0B9ED0, #4BC8B6, transparent)'
+                    ? 'linear-gradient(90deg, transparent, #4BC8B6, #0B9ED0, transparent)'
                     : 'transparent',
-                  backgroundSize: isActive ? '200% 100%' : '100% 100%',
-                  animation: isActive ? 'tab-accent-shift 6s ease-in-out infinite' : 'none',
                   transition: 'background 0.3s ease',
                 }}
               />
@@ -88,34 +94,57 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
                     border: isActive
                       ? '1px solid rgba(75,200,182,0.25)'
                       : '1px solid rgba(255,255,255,0.06)',
-                    animation: isActive ? 'tab-icon-glow 3s ease-in-out infinite' : 'none',
                     transition: 'all 0.3s ease',
                   }}
                 >
-                  <svg width="24" height="24" viewBox="0 0 18 18" fill="none">
-                    {sub === 'banknotes' ? (
-                      <>
-                        <rect x="1.5" y="4" width="15" height="10" rx="1.5"
-                          stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.25)'}
-                          strokeWidth="1.3" fill="none" />
-                        <circle cx="9" cy="9" r="2.2"
-                          stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.25)'}
-                          strokeWidth="1.1" fill="none" />
-                      </>
-                    ) : (
-                      <>
-                        <circle cx="9" cy="9" r="7"
-                          stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.25)'}
-                          strokeWidth="1.3" fill="none" />
-                        <circle cx="9" cy="9" r="3.5"
-                          stroke={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.25)'}
-                          strokeWidth="1" fill="none" />
-                      </>
-                    )}
-                  </svg>
+                  {sub === 'banknotes' ? (
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+                      {/* Clean, clearly-a-banknote icon: wide rounded rectangle with ₼ in the center */}
+                      <rect
+                        x="3" y="9" width="26" height="14" rx="2"
+                        fill={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.22)'}
+                      />
+                      <rect
+                        x="5" y="11" width="22" height="10" rx="1"
+                        fill="none"
+                        stroke={isActive ? 'rgba(0,30,50,0.6)' : 'rgba(0,0,0,0.25)'}
+                        strokeWidth="0.8"
+                      />
+                      <text
+                        x="16" y="20"
+                        textAnchor="middle"
+                        fontSize="9"
+                        fontWeight="700"
+                        fontFamily="system-ui, sans-serif"
+                        fill={isActive ? '#00334A' : 'rgba(0,0,0,0.55)'}
+                      >₼</text>
+                    </svg>
+                  ) : (
+                    <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
+                      {/* Clean, clearly-a-coin icon: solid circle with ₼ in the center */}
+                      <circle
+                        cx="16" cy="16" r="12"
+                        fill={isActive ? '#4BC8B6' : 'rgba(255,255,255,0.22)'}
+                      />
+                      <circle
+                        cx="16" cy="16" r="9.5"
+                        fill="none"
+                        stroke={isActive ? 'rgba(0,30,50,0.6)' : 'rgba(0,0,0,0.25)'}
+                        strokeWidth="0.8"
+                      />
+                      <text
+                        x="16" y="20"
+                        textAnchor="middle"
+                        fontSize="12"
+                        fontWeight="700"
+                        fontFamily="system-ui, sans-serif"
+                        fill={isActive ? '#00334A' : 'rgba(0,0,0,0.55)'}
+                      >₼</text>
+                    </svg>
+                  )}
                 </div>
 
-                {/* Label + subtitle */}
+                {/* Label */}
                 <div style={{ textAlign: 'left' }}>
                   <div
                     style={{
@@ -129,38 +158,9 @@ export function Sidebar({ selectedSubcategory, onSelect }: SidebarProps) {
                   >
                     {t(sub, lang)}
                   </div>
-                  <div
-                    style={{
-                      fontSize: '0.7rem',
-                      fontWeight: 400,
-                      color: isActive ? 'rgba(75, 200, 182, 0.65)' : 'rgba(255,255,255,0.2)',
-                      marginTop: '2px',
-                      transition: 'color 0.3s ease',
-                    }}
-                  >
-                    {sub === 'banknotes'
-                      ? (lang === 'az' ? 'Kağız pul nişanları' : 'Paper currency')
-                      : (lang === 'az' ? 'Metal pul nişanları' : 'Metal currency')
-                    }
-                  </div>
                 </div>
               </div>
 
-              {/* Animated shimmer sweep on active */}
-              {isActive && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    width: '40%',
-                    height: '100%',
-                    background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06), rgba(75,200,182,0.04), transparent)',
-                    animation: 'tab-shimmer 5s ease-in-out infinite',
-                    pointerEvents: 'none',
-                  }}
-                />
-              )}
             </button>
           );
         })}

@@ -7,8 +7,8 @@
       "en": "1 AZN (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/banknotes_1_front.jpg",
-    "rearImage": "/assets/money/banknotes_1_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_1-azn_2006_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_1-azn_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -118,138 +118,10 @@
       {
         "az": "1 MANAT nominallı kağız pul nişanı “mədəniyyət və incəsənət” mövzusuna həsr olunmuşdur. Pul nişanının ön tərəfində Azərbaycan milli musiqi alətlərinin qrafik təsviri: Tar, Kamança və Dəf, arxa fonda isə qədim Azərbaycan xalçasının naxışları təsvir olunmuşdur. Nominalın arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Azərbaycanın milli ornamentləri təsvir olunmuşdur.",
         "en": "1 MANAT denominated banknote is dedicated to ‘Culture and art’. The obverse of the banknote depicts schematic graphs of the typical Azerbaijani instruments: Tar, Kamancha and Daf, with the ancient Azerbaijani carpet patterns on the background. The reverse of the banknote depicts a stylized map showing the integration of Azerbaijan to Europe and national ornaments of Azerbaijan."
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "120 mm x 70 mm"
-      },
-      {
-        "az": "",
-        "en": "Culture and art"
       }
     ],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/banknotes/detail/1"
-  },
-  {
-    "versionId": "banknotes-100",
-    "familyId": "cat1-banknotes-1-azn",
-    "title": {
-      "az": "1 AZN (2021)",
-      "en": "1 AZN (2021)"
-    },
-    "year": 2021,
-    "frontImage": "/assets/money/banknotes_100_front.jpg",
-    "rearImage": "/assets/money/banknotes_100_rear.jpg",
-    "description": null,
-    "attributes": [
-      {
-        "label": {
-          "az": "Nominalı",
-          "en": "Denomination"
-        },
-        "value": {
-          "az": "1 AZN (2021)",
-          "en": "1 manat (2021)"
-        }
-      },
-      {
-        "label": {
-          "az": "Rəngi",
-          "en": "Colour"
-        },
-        "value": {
-          "az": "göyümtül boz",
-          "en": "Grey"
-        }
-      },
-      {
-        "label": {
-          "az": "Ölçüləri",
-          "en": "Dimension"
-        },
-        "value": {
-          "az": "120 mm x 70 mm",
-          "en": "120 mm x 70 mm"
-        }
-      },
-      {
-        "label": {
-          "az": "Dizayn mövzusu",
-          "en": "Motif"
-        },
-        "value": {
-          "az": "mədəniyyət və incəsənət",
-          "en": "Culture and art"
-        }
-      }
-    ],
-    "securityElements": [
-      {
-        "az": "Su nişanı – pul nişanını işığa tutduqda Azərbaycan Respublikasının Dövlət Gerbi və nominalın rəqəmi təsvir olunmuş su nişanı görünür.",
-        "en": "Watermark – The Coat of Arms of the Republic of Azerbaijan and denomination visible at light."
-      },
-      {
-        "az": "Spark Live – dinamik işıq effekti saçan və qızılıdan yaşıla dəyişən musiqi açarının təsviri əks olunmuşdur. Pul nişanını çevirdikdə elementin üzərində olan halqalar hərəkət effekti yaradır.",
-        "en": "Spark Live – Image of a music key that delivers dynamic light effects and color changing properties from gold to green. When tilting the note, rings in the motive seem to move."
-      },
-      {
-        "az": "Sayrışan rəngli boyalar – “1” rəqəmi və “AZN” yazısı göy və qızılı rənglərdən ibarət sayrışan boyalarla əks etdirilmişdir.",
-        "en": "Iridescent ink – Iridescent ink of blue and gold reflect the ‘1’ and the letters ‘AZN’."
-      },
-      {
-        "az": "RollingStar mühafizə sapı – metal görünüşə malik olan mühafizə sapının üzərində “1” rəqəmi və “AMB” yazısı əks olunmuşdur. Pul nişanını hərəkət etdirməklə dinamik işıq effekti və qızılıdan yaşıla rəng dəyişmə görünür.",
-        "en": "RollingStar security thread – ‘1’ and ‘CBA’ engraved on metal view security thread. When tilting the note, dynamic light effects and color changing properties from gold to green is visible."
-      },
-      {
-        "az": "Qabarıq çap – pul nişanının müəyyən sahələrində barmaqla hiss olunan qabarıq çap elementləri mövcuddur.",
-        "en": "Tactile printing – in specific areas of the note, a raised print can be felt by running the fingers over it."
-      },
-      {
-        "az": "Görmə qüsuru olanlar üçün tanıma elementi – pulun ön tərəfində sağ və sol kənarlarda görmə qüsuru olanlar üçün nominalı müəyyən etməyə imkan verən xətlər yerləşir.",
-        "en": "Visually impaired recognition feature – Lines on the right and left of the obverse of the note can help blind and sight impaired persons to recognize the value of the note."
-      },
-      {
-        "az": "Surətçıxarmaya qarşı xətlər strukturu – moar effekti yaradan xətlər strukturu.",
-        "en": "Anti-copy screen – Moiré creating line pattern."
-      },
-      {
-        "az": "Mikromətn – böyüdücü şüşə ilə baxdıqda “Azərbaycan Respublikası” sözləri və digər mətnlər oxunur.",
-        "en": "Micro text – The words ‘Azərbaycan Respublikası’ and other texts visible under a magnifier."
-      },
-      {
-        "az": "Rənglərin bölgüsü – bir element daxilində rənglərin bir-birinə keçidini müşahidə etmək mümkündür.",
-        "en": "Split colors – are visible within one element."
-      },
-      {
-        "az": "Mürəkkəbsiz çap – pulun üzərində mürəkkəbsiz çap edilmiş iri “AMB” yazısı mövcuddur və toxunulan zaman hiss olunur.",
-        "en": "Blind embossing – lofty ‘AMB (CBA)’ is visible when looking at the obverse of the banknote and can be felt when touching."
-      },
-      {
-        "az": "Seriya nömrəsi – banknotun arxa tərəfində biri üfüqi, digəri isə şaquli olan iki ədəd seriya nömrəsi yerləşir. Hər bir banknotun seriya nömrəsi təkrarlanmayandır.",
-        "en": "Serial number – on the reverse side of the banknote there are two serial numbers: one horizontal and the other vertical. The serial number of each banknote is unique."
-      },
-      {
-        "az": "Təhlükəsizlik lifləri – pulun səthi boyunca ultrabənövşəyi işıq altında görünən müxtəlif rəngli liflər yerləşir.",
-        "en": "Security fibers – various color security fibers are visible under UV-light."
-      },
-      {
-        "az": "Ultrabənövşəyi (UB) işıqda görünən elementlər – pul nişanının ön və arxa tərəflərində pulun həqiqiliyinin müəyyən edilməsi üçün nəzərdə tutulmuş və ultrabənövşəyi işıq altında görünən elementlər mövcuddur.",
-        "en": "Ultraviolet (UV) properties – elements on obverse and reverse sides designed to determine the authenticity of the note are visible under UV-light."
-      }
-    ],
-    "overview": [
-      {
-        "az": "Azərbaycan Mərkəzi Bankı yenilənmiş dizayna və beynəlxalq təcrübədə mövcud olan ən son mühafizə elementlərinə malik 1 manatlıq kağız pul nişanının yeni versiyasını təqdim etmişdir. Yenilənmiş 1 manatlıq pul nişanı mövcud milli pul nişanlarımızın həsr olunduğu “Müstəqil Azərbaycan” konsepsiyası çərçivəsində “Mədəniyyət və incəsənət” mövzusunu saxlamışdır.",
-        "en": "The Central Bank of Azerbaijan introduced an upgraded 1 manat banknote with the latest security elements available in an international practice. The upgraded 1 manat banknote maintained the ‘Culture and art’ motif within the ‘Independent Azerbaijan’ concept our currency is dedicated to."
-      }
-    ],
-    "brochureUrl": null,
-    "sourceUrl": "https://cbar.az/moneymarks/banknotes/detail/100"
   },
   {
     "versionId": "banknotes-227",
@@ -259,8 +131,8 @@
       "en": "1 AZN (2023)"
     },
     "year": 2023,
-    "frontImage": "/assets/money/banknotes_227_front.png",
-    "rearImage": "/assets/money/banknotes_227_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_1-azn_2023_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_1-azn_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -370,10 +242,6 @@
       {
         "az": "Yenilənmiş 1 manatlığın digər dizayn elementləri və texniki parametrləri 2021-ci ildə Mərkəzi Bank tərəfindən tədavülə buraxılmış yenilənmiş 1 manatlıq kağız pul nişanına müvafiq olaraq dəyişməz saxlanılmışdır.",
         "en": "Other design elements and technical parameters of the renewed 1 manat banknote have been left unchanged as in the same denomination banknote issued to circulation by the Central Bank in 2021."
-      },
-      {
-        "az": "",
-        "en": "120 mm x 70 mm"
       }
     ],
     "brochureUrl": null,
@@ -387,8 +255,8 @@
       "en": "5 AZN (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/banknotes_2_front.jpg",
-    "rearImage": "/assets/money/banknotes_2_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_5-azn_2006_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_5-azn_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -498,18 +366,6 @@
       {
         "az": "5 MANAT nominallı kağız pul nişanı “yazı və ədəbiyyat” mövzusuna həsr olunmuşdur. Pul nişanının ön tərəfində görkəmli ədəbi simalar, qədim kitablar və dövlət himnindən parça, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri, Qobustan qaya hieroqlifləri və Orxon – Yenisey əlifbası təsvir olunmuşdur.",
         "en": "5 MANAT denominated banknote is dedicated to ‘Literature and writings’. The obverse of the banknote depicts well-known literary persons, ancient books and a part of the national anthem, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe, Gobustan rock hieroglyphs and the Orkhon-Yenisei alphabet."
-      },
-      {
-        "az": "127 mm x 70 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "127 mm x 70 mm"
-      },
-      {
-        "az": "yazı və ədəbiyyat",
-        "en": "Writing and literature"
       }
     ],
     "brochureUrl": null,
@@ -523,8 +379,8 @@
       "en": "5 AZN (2021)"
     },
     "year": 2021,
-    "frontImage": "/assets/money/banknotes_101_front.jpg",
-    "rearImage": "/assets/money/banknotes_101_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_5-azn_2021_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_5-azn_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -626,22 +482,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı yenilənmiş dizayna və beynəlxalq təcrübədə mövcud olan ən son mühafizə elementlərinə malik 5 manatlıq kağız pul nişanının yeni versiyasını təqdim etmişdir. Yenilənmiş 5 manatlıq pul nişanı mövcud milli pul nişanlarımızın həsr olunduğu “Müstəqil Azərbaycan” konsepsiyası çərçivəsində “Yazı və ədəbiyyat” mövzusunu saxlamışdır.",
         "en": "The Central Bank of Azerbaijan introduced an upgraded 5 manat banknote with the latest security elements available in an international practice. The upgraded 5 manat banknote maintained the ‘Literature and writings’ motif within the ‘Independent Azerbaijan’ concept our currency is dedicated to."
-      },
-      {
-        "az": "5 manat (2021)",
-        "en": "Denomination"
-      },
-      {
-        "az": "127 mm x 70 mm",
-        "en": "5 manat (2021)"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "127 mm x 70 mm"
-      },
-      {
-        "az": "yazı və ədəbiyyat",
-        "en": "Literature and writings"
       }
     ],
     "brochureUrl": null,
@@ -655,8 +495,8 @@
       "en": "10 AZN (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/banknotes_3_front.jpg",
-    "rearImage": "/assets/money/banknotes_3_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_10-azn_2006_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_10-azn_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -770,18 +610,6 @@
       {
         "az": "10 MANAT nominallı kağız pul nişanı “tarix” mövzusuna həsr olunmuşdur. Pul nişanının ön tərəfində İçəri Şəhərin qala divarlarının fonunda Qədim Bakı, Şirvanşahlar Sarayı və Qız Qalası, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Azərbaycan xalçasının tipik naxışları təsvir olunmuşdur.",
         "en": "10 MANAT denominated banknote is dedicated to ‘History’. The obverse of the banknote depicts Ancient Baku with the fortress walls of the Icheri Sheher (Old City) on the background, the Shirvanshahs Palace and the Maiden Tower, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe and typical ornaments of Azerbaijani carpets."
-      },
-      {
-        "az": "10 manat (2005)",
-        "en": "Denomination"
-      },
-      {
-        "az": "134 mm x 70 mm",
-        "en": "10 manat (2005)"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "134 mm x 70 mm"
       }
     ],
     "brochureUrl": null,
@@ -795,8 +623,8 @@
       "en": "10 AZN (2019)"
     },
     "year": 2019,
-    "frontImage": "/assets/money/banknotes_95_front.png",
-    "rearImage": "/assets/money/banknotes_95_rear.png",
+    "frontImage": "/assets/money/circulation_banknotes_10-azn_2019_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_10-azn_2019_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -906,18 +734,6 @@
       {
         "az": "2019-cu ildə Azərbaycan Mərkəzi Bankı tərəfindən 10 manatlıq pul nişanı yenilənərək yeni, daha təkmil mühafizə sistemləri ilə təchiz olunmuş və 18 mart 2019-cu il tarixindən tədavülə buraxılmışdır. Yeni 10 manatlıq pul nişanının mövzusu “tarix” olaraq saxlanılmışdır. Pul nişanının ön tərəfində İçəri Şəhərin qala divarlarının fonunda Qədim Bakı, Şirvanşahlar Sarayı və Qız Qalası, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Azərbaycan xalçasının naxışları təsvir olunmuşdur.",
         "en": "The Central Bank of Azerbaijan updated 10 manat banknote with new and more advanced security features and issued to circulation on 18 March 2019. New 10 manat banknote retained the ‘History’ motif. The obverse of the banknote depicts Ancient Baku with the fortress walls of the Icheri Sheher (Old City) on the background, the Shirvanshahs Palace and the Maiden Tower, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe and ornaments of Azerbaijani carpets."
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "10 manat (2019)"
-      },
-      {
-        "az": "",
-        "en": "134 mm x 70 mm"
       }
     ],
     "brochureUrl": null,
@@ -931,8 +747,8 @@
       "en": "10 AZN (2022)"
     },
     "year": 2022,
-    "frontImage": "/assets/money/banknotes_217_front.jpg",
-    "rearImage": "/assets/money/banknotes_217_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_10-azn_2022_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_10-azn_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1038,18 +854,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı yeni dizayna və beynəlxalq təcrübədə mövcud olan ən son mühafizə elementlərinə malik 10 manatlıq kağız pul nişanının yenilənmiş versiyasını təqdim etmişdir. Yenilənmiş 10 manatlıq pul nişanı mövcud milli pul nişanlarımızın həsr olunduğu “Müstəqil Azərbaycan” konsepsiyası çərçivəsində “Tarix” mövzusunu saxlamışdır.",
         "en": "The Central Bank of Azerbaijan presented upgraded 10 manat banknote with a new design and the latest security elements available in an international practice. The renewed 10 manat banknote retained the ‘History’ motif within the ‘Independent Azerbaijan’ concept our currency dedicated to."
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "10 manat (2022)"
-      },
-      {
-        "az": "",
-        "en": "134 mm x 70 mm"
       }
     ],
     "brochureUrl": null,
@@ -1063,8 +867,8 @@
       "en": "20 AZN (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/banknotes_5_front.jpg",
-    "rearImage": "/assets/money/banknotes_5_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_20-azn_2006_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_20-azn_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1178,14 +982,6 @@
       {
         "az": "20 MANAT nominallı kağız pul nişanı “Qarabağ” mövzusuna həsr olunmuşdur. Pul nişanının ön tərəfində qüdrət nişanəsi – qılınc, dəbilqə, qalxan və sülh rəmzi “Xarı Bülbül”, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Azərbaycanın milli naxışları təsvir olunmuşdur.",
         "en": "20 MANAT denominated banknote is dedicated to ‘Garabagh’. The obverse of the banknote depicts a symbol of power – sword, helmet, shield and a symbol of Peace ‘Khari Bulbul’ flower, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe and national Azerbaijani ornaments."
-      },
-      {
-        "az": "141 mm x 70 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "141 mm x 70 mm"
       }
     ],
     "brochureUrl": null,
@@ -1199,8 +995,8 @@
       "en": "20 AZN (2022)"
     },
     "year": 2022,
-    "frontImage": "/assets/money/banknotes_150_front.png",
-    "rearImage": "/assets/money/banknotes_150_rear.png",
+    "frontImage": "/assets/money/circulation_banknotes_20-azn_2022_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_20-azn_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1319,8 +1115,8 @@
       "en": "50 AZN (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/banknotes_6_front.jpg",
-    "rearImage": "/assets/money/banknotes_6_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_50-azn_2006_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_50-azn_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1434,162 +1230,10 @@
       {
         "az": "50 MANAT nominallı kağız pul nişanı “təhsil və gələcək” mövzusuna həsr olunmuşdur. Pul nişanının ön tərəfində gələcəyin timsalı gənclər, yüksəliş əlaməti pillələr, güc və işıq nişanəsi günəş, elm rəmzi kimyəvi və riyazi simvollar, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Qədim Azərbaycan xalçasının naxışları təsvir olunmuşdur.",
         "en": "50 MANAT denominated banknote is dedicated to ‘Education and future’. The obverse of the banknote depicts a symbol of future – youth, symbol of rising – stairs, symbol of power and light – the sun, symbol of science – chemical and mathematical elements, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe and patterns from ancient Azerbaijani carpets."
-      },
-      {
-        "az": "148 mm x 70 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "148 mm x 70 mm"
-      },
-      {
-        "az": "təhsil və gələcək",
-        "en": "Education and future"
       }
     ],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/banknotes/detail/6"
-  },
-  {
-    "versionId": "banknotes-102",
-    "familyId": "cat1-banknotes-50-azn",
-    "title": {
-      "az": "50 AZN (2021)",
-      "en": "50 AZN (2021)"
-    },
-    "year": 2021,
-    "frontImage": "/assets/money/banknotes_102_front.jpg",
-    "rearImage": "/assets/money/banknotes_102_rear.jpg",
-    "description": null,
-    "attributes": [
-      {
-        "label": {
-          "az": "Nominalı",
-          "en": "Denomination"
-        },
-        "value": {
-          "az": "50 manat (2021)",
-          "en": "50 manat (2021)"
-        }
-      },
-      {
-        "label": {
-          "az": "Rəngi",
-          "en": "Colour"
-        },
-        "value": {
-          "az": "sarı",
-          "en": "Yellow"
-        }
-      },
-      {
-        "label": {
-          "az": "Ölçüləri",
-          "en": "Dimension"
-        },
-        "value": {
-          "az": "148 mm x 70 mm",
-          "en": "148 mm x 70 mm"
-        }
-      },
-      {
-        "label": {
-          "az": "Dizayn mövzusu",
-          "en": "Motif"
-        },
-        "value": {
-          "az": "təhsil və gələcək",
-          "en": "Education and future"
-        }
-      }
-    ],
-    "securityElements": [
-      {
-        "az": "Su nişanı – pul nişanını işığa tutduqda Azərbaycan Respublikasının Dövlət Gerbi və nominalın rəqəmi təsvir olunmuş su nişanı görünür.",
-        "en": "Watermark – The Coat of Arms of the Republic of Azerbaijan and denomination visible at light."
-      },
-      {
-        "az": "Spark Live – dinamik işıq effekti saçan və qızılıdan yaşıla dəyişən məktəblilərin təsviri əks olunmuşdur. Pul nişanını çevirdikdə elementin üzərində olan halqalar hərəkət effekti yaradır.",
-        "en": "Spark Live – Image of an inkstand that delivers dynamic light effects and color changing properties from gold to green. When tilting the note, rings in the motive seem to move."
-      },
-      {
-        "az": "Sayrışan rəngli boyalar – “50” rəqəmi və “AZN” yazısı göy və qızılı rənglərdən ibarət sayrışan boyalarla əks etdirilmişdir.",
-        "en": "Iridescent ink – Iridescent ink of blue and gold reflect the ‘50’ and the letters ‘AZN’."
-      },
-      {
-        "az": "RollingStar mühafizə sapı – metal görünüşə malik olan mühafizə sapının üzərində “50” rəqəmi və “AMB” yazısı əks olunmuşdur. Pul nişanını hərəkət etdirməklə dinamik işıq effekti və qızılıdan yaşıla rəng dəyişmə görünür.",
-        "en": "RollingStar security thread – ‘50’ and ‘CBA’ engraved on metal view security thread. When tilting the note, dynamic light effects and color changing properties from gold to green is visible."
-      },
-      {
-        "az": "RollingStar Lead (Hologram) – holoqram üzərində 3D hərəkət effektli tələbə, təhsili və gələcəyi simvolizə edən pillələr və təhsil müəssisəsinin giriş qapısı əks olunur. Elementin yuxarı hissəsində manat simvolunun nominalın rəqəminə dəyişməsi əks olunur. Pulu çevirdikdə elementin qızılıdan yaşıla rəng dəyişməsini görmək olar.",
-        "en": "RollingStar Lead (Hologram) – A holographic foil stripe shows stairs symbolizing students, education and future and an entrance to an educational institution on a 3D background. Switch of denomination number to Manat sign is visible on the upper part of the element. By tilting the banknote a color change from gold to green gets visible."
-      },
-      {
-        "az": "Qabarıq çap – pul nişanının müəyyən sahələrində barmaqla hiss olunan qabarıq çap elementləri mövcuddur.",
-        "en": "Tactile printing – in specific areas of the note, a raised print can be felt by running the fingers over it."
-      },
-      {
-        "az": "Görmə qüsuru olanlar üçün tanıma elementi – pulun ön tərəfində sağ və sol kənarlarda görmə qüsuru olanlar üçün nominalı müəyyən etməyə imkan verən xətlər yerləşir.",
-        "en": "Visually impaired recognition feature – Lines on the right and left of the obverse of the note can help blind and sight impaired persons to recognize the value of the note."
-      },
-      {
-        "az": "Surətçıxarmaya qarşı xətlər strukturu – moar effekti yaradan xətlər strukturu.",
-        "en": "Anti-copy screen – Moiré creating line pattern."
-      },
-      {
-        "az": "Mikromətn – böyüdücü şüşə ilə baxdıqda “Azərbaycan Respublikası” sözləri və digər mətnlər oxunur.",
-        "en": "Micro text – The words ‘Azərbaycan Respublikası’ and other texts visible under a magnifier."
-      },
-      {
-        "az": "Rənglərin bölgüsü – bir element daxilində rənglərin bir-birinə keçidini müşahidə etmək mümkündür.",
-        "en": "Split colors – are visible within one element."
-      },
-      {
-        "az": "Mürəkkəbsiz çap – pulun üzərində mürəkkəbsiz çap edilmiş iri “AMB” yazısı mövcuddur və toxunulan zaman hiss olunur.",
-        "en": "Blind embossing – lofty ‘AMB (CBA)’ is visible when looking at the obverse of the banknote and can be felt when touching."
-      },
-      {
-        "az": "Seriya nömrəsi – banknotun arxa tərəfində biri üfüqi, digəri isə şaquli olan iki ədəd seriya nömrəsi yerləşir. Hər bir banknotun seriya nömrəsi təkrarlanmayandır.",
-        "en": "Serial number – on the reverse side of the banknote there are two serial numbers: one horizontal and the other vertical. The serial number of each banknote is unique."
-      },
-      {
-        "az": "Gizli təsvir - pul nişanını çevirərək kitab təsvirini görmək mümkündür.",
-        "en": "Intaglio print - The image of a book is visible when tilting the note."
-      },
-      {
-        "az": "Təhlükəsizlik lifləri – pulun səthi boyunca ultrabənövşəyi işıq altında görünən müxtəlif rəngli liflər yerləşir.",
-        "en": "Security fibers – various color security fibers are visible under UV-light."
-      },
-      {
-        "az": "Ultrabənövşəyi (UB) işıqda görünən elementlər – pul nişanının ön və arxa tərəflərində pulun həqiqiliyinin müəyyən edilməsi üçün nəzərdə tutulmuş və ultrabənövşəyi işıq altında görünən elementlər mövcuddur.",
-        "en": "Ultraviolet (UV) properties – elements on obverse and reverse sides designed to determine the authenticity of the note are visible under UV-light."
-      }
-    ],
-    "overview": [
-      {
-        "az": "Azərbaycan Mərkəzi Bankı yenilənmiş dizayna və beynəlxalq təcrübədə mövcud olan ən son mühafizə elementlərinə malik 50 manatlıq kağız pul nişanının yeni versiyasını təqdim etmişdir. Yenilənmiş 50 manatlıq pul nişanı mövcud milli pul nişanlarımızın həsr olunduğu “Müstəqil Azərbaycan” konsepsiyası çərçivəsində “Təhsil və Gələcək” mövzusunu saxlamışdır.",
-        "en": "The Central Bank of Azerbaijan introduced an upgraded 50 manat banknote with the latest security elements available in an international practice. The upgraded 50 manat banknote maintained the ‘Education and future’ motif within the ‘Independent Azerbaijan’ concept our currency is dedicated to."
-      },
-      {
-        "az": "50 manat (2021)",
-        "en": "Denomination"
-      },
-      {
-        "az": "148 mm x 70 mm",
-        "en": "50 manat (2021)"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "148 mm x 70 mm"
-      },
-      {
-        "az": "təhsil və gələcək",
-        "en": "Education and future"
-      }
-    ],
-    "brochureUrl": null,
-    "sourceUrl": "https://cbar.az/moneymarks/banknotes/detail/102"
   },
   {
     "versionId": "banknotes-230",
@@ -1599,8 +1243,8 @@
       "en": "50 AZN (2025)"
     },
     "year": 2025,
-    "frontImage": "/assets/money/banknotes_230_front.png",
-    "rearImage": "/assets/money/banknotes_230_rear.png",
+    "frontImage": "/assets/money/circulation_banknotes_50-azn_2025_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_50-azn_2025_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1722,22 +1366,6 @@
       {
         "az": "Qeyd edək ki, yenilənmiş 50 manatlıq kağız pul nişanı hazırda tədavüldə olan eyni nominallı pul nişanları ilə paralel olaraq dövriyyədə olacaqdır.",
         "en": "The upgraded 50-manat banknotes will circulate in parallel with the existing banknotes of the same denomination."
-      },
-      {
-        "az": "50 manat (2025)",
-        "en": "Denomination"
-      },
-      {
-        "az": "148 mm x 70 mm",
-        "en": "50 manat (2025)"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "148 mm x 70 mm"
-      },
-      {
-        "az": "təhsil və gələcək",
-        "en": "Education and future"
       }
     ],
     "brochureUrl": null,
@@ -1751,8 +1379,8 @@
       "en": "100 AZN"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_7_front.jpg",
-    "rearImage": "/assets/money/banknotes_7_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_100-azn_noyear_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_100-azn_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1870,18 +1498,6 @@
       {
         "az": "100 MANAT nominallı pul nişanı “İqtisadiyyat və İnkişaf” mövzusuna həsr olumuşdur. Pul nişanının ön tərəfində inkişafın qədimdən bu günə memarlıq rəmzləri, Azərbaycan manatının və iqtisadi artımın simvolları, arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və Azərbaycan xalçasının səciyyəvi naxışları təsvir olunmuşdur.",
         "en": "100 MANAT denominated banknote is dedicated to ‘Economy and Development’. The obverse of the banknote depicts architectural symbols of development since ancient times up today, symbols of the Azerbaijani Manat and economic growth, while the reverse depicts stylized maps showing the integration of Azerbaijan to Europe and typical patterns from an Azerbaijani carpet."
-      },
-      {
-        "az": "155 mm x 70 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "155 mm x 70 mm"
-      },
-      {
-        "az": "iqtisadiyyat və inkişaf",
-        "en": "Economy and growth"
       }
     ],
     "brochureUrl": null,
@@ -1895,8 +1511,8 @@
       "en": "200 AZN"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_78_front.jpg",
-    "rearImage": "/assets/money/banknotes_78_rear.jpg",
+    "frontImage": "/assets/money/circulation_banknotes_200-azn_noyear_front.webp",
+    "rearImage": "/assets/money/circulation_banknotes_200-azn_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -1998,18 +1614,6 @@
       {
         "az": "200 MANAT nominallı pul nişanı Azərbaycan Mərkəzi Bankı tərəfindən 24 may 2018-ci il tarixində tədavülə buraxılmışdır. Pul nişanı mövcud konsepsiya çərçivəsində tədavülə buraxılan 7-ci nominaldır. Pul nişanının dizayn mövzusu “modern arxitektura” ya həsr olunmuşdur. Pul nişanının dizaynının əsas motivi müasir Bakının əsas memarlıq nümunələrindən biri olan Heydər Əliyev Mərkəzidir. Pul nişanının ön tərəfində Mərkəzin təsviri və bir sıra interyer və eksteryer dizayn elementləri əks etdirilmişdir. Arxa tərəfində isə Azərbaycan-Avropa inteqrasiyasının xəritələrlə təsviri və bir sıra milli xalça naxışları əks olunmuşdur. Pul nişanı 4 pilləli mühafizə sisteminə malik olmaqla ən müasir və təhlükəsiz mühafizə elementləri ilə təchiz edilmişdir.",
         "en": "200 MANAT denominated banknote was issued to circulation by the Central Bank of Azerbaijan on 24 May 2018. 200 manat banknote is the 7th issued denomination within the existing conception. Motif of the banknote is ‘Modern Architecture’. Main motive of the design is the Heydar Aliyev Center. The obverse of the banknote depicts the image and several interior and exterior design elements of the Center, while the reverse side depicts stylized maps showing the integration of Azerbaijan to Europe and several national carpet patterns. The banknote with four levels of security is equipped with the most state-of-art security elements."
-      },
-      {
-        "az": "160 mm x 70 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "160 mm x 70 mm"
-      },
-      {
-        "az": "modern arxitektura",
-        "en": "Modern Architecture"
       }
     ],
     "brochureUrl": null,
@@ -2023,8 +1627,8 @@
       "en": "1 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_8_front.png",
-    "rearImage": "/assets/money/coins_8_rear.png",
+    "frontImage": "/assets/money/circulation_coins_1-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_1-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2088,26 +1692,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 1 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 1 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 16.25 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 2.8 qr",
-        "en": "Diameter: 16.25 mm"
-      },
-      {
-        "az": "",
-        "en": "Weight: 2.8 gr"
-      },
-      {
-        "az": "",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2121,8 +1705,8 @@
       "en": "1 Gapik (2024)"
     },
     "year": 2024,
-    "frontImage": "/assets/money/coins_228_front.png",
-    "rearImage": "/assets/money/coins_228_rear.png",
+    "frontImage": "/assets/money/circulation_coins_1-qəpik_2024_front.webp",
+    "rearImage": "/assets/money/circulation_coins_1-qəpik_2024_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2186,26 +1770,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Dövlət Gerbinin təsviri, eləcə də pul nişanının buraxılış ili əks edilmişdir) malik 1 qəpiklik metal pul nişanı 2024-cü ilin may ayından tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 1 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in May 2024. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 16.25 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 2.8 qr",
-        "en": "Diameter: 16.25 mm"
-      },
-      {
-        "az": "",
-        "en": "Weight: 2.8 gr"
-      },
-      {
-        "az": "",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2219,8 +1783,8 @@
       "en": "3 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_9_front.png",
-    "rearImage": "/assets/money/coins_9_rear.png",
+    "frontImage": "/assets/money/circulation_coins_3-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_3-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2284,30 +1848,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 3 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 3 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 18 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 3.45 qr",
-        "en": "Diameter: 18 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 3.45 qr"
-      },
-      {
-        "az": "Yazı və ədəbiyyat",
-        "en": "Writing and literature"
-      },
-      {
-        "az": "Mislə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2321,8 +1861,8 @@
       "en": "3 Gapik (2024)"
     },
     "year": 2024,
-    "frontImage": "/assets/money/coins_229_front.png",
-    "rearImage": "/assets/money/coins_229_rear.png",
+    "frontImage": "/assets/money/circulation_coins_3-qəpik_2024_front.webp",
+    "rearImage": "/assets/money/circulation_coins_3-qəpik_2024_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2386,30 +1926,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Respublikasının Dövlət Gerbinin təsviri, eləcə də pul nişanının istehsal ili əks edilmişdir) malik 3 qəpiklik metal pul nişanı 2024-cü ilin dekabr ayında tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 3 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in December 2024. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 18 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 3.45 qr",
-        "en": "Diameter: 18 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 3.45 gr"
-      },
-      {
-        "az": "Yazı və ədəbiyyat",
-        "en": "Writing and literature"
-      },
-      {
-        "az": "Mislə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2423,8 +1939,8 @@
       "en": "5 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_10_front.png",
-    "rearImage": "/assets/money/coins_10_rear.png",
+    "frontImage": "/assets/money/circulation_coins_5-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_5-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2488,26 +2004,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 5 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 5 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 19.75 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 4.85 qr",
-        "en": "Diameter: 19.75 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 4.85 gr"
-      },
-      {
-        "az": "Mislə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2521,8 +2017,8 @@
       "en": "5 Gapik (2023)"
     },
     "year": 2023,
-    "frontImage": "/assets/money/coins_226_front.png",
-    "rearImage": "/assets/money/coins_226_rear.png",
+    "frontImage": "/assets/money/circulation_coins_5-qəpik_2023_front.webp",
+    "rearImage": "/assets/money/circulation_coins_5-qəpik_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2586,26 +2082,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Dövlət Gerbinin təsviri, eləcə də pul nişanının buraxılış ili əks edilmişdir) malik 5 qəpiklik metal pul nişanı 2023-cü ilin sentyabr ayından tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 5 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in September 2023. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Diametri: 19.75 mm",
-        "en": "Denomination"
-      },
-      {
-        "az": "Çəkisi: 4.85 qr",
-        "en": "Diameter: 19.75 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 4.85 gr"
-      },
-      {
-        "az": "Mislə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Copper plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2619,8 +2095,8 @@
       "en": "10 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_11_front.png",
-    "rearImage": "/assets/money/coins_11_rear.png",
+    "frontImage": "/assets/money/circulation_coins_10-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_10-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2684,26 +2160,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 10 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 10 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Qızılı rəng",
-        "en": "Denomination"
-      },
-      {
-        "az": "Diametri: 22.25 mm",
-        "en": "Diameter: 22.25 mm"
-      },
-      {
-        "az": "Çəkisi: 5.25 qr",
-        "en": "Weight: 5.25 gr"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Composition"
-      },
-      {
-        "az": "Latuna örtülmüş polad",
-        "en": "Brass plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2717,8 +2173,8 @@
       "en": "10 Gapik (2022)"
     },
     "year": 2022,
-    "frontImage": "/assets/money/coins_218_front.png",
-    "rearImage": "/assets/money/coins_218_rear.png",
+    "frontImage": "/assets/money/circulation_coins_10-qəpik_2022_front.webp",
+    "rearImage": "/assets/money/circulation_coins_10-qəpik_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2782,26 +2238,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Dövlət Gerbinin təsviri, eləcə də pul nişanının buraxılış ili əks edilmişdir) malik 10 qəpiklik metal pul nişanı 2022-ci ilin iyul ayından tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 10 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in July 2022. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Qızılı rəng",
-        "en": "Diameter: 22.25 mm"
-      },
-      {
-        "az": "Diametri: 22.25 mm",
-        "en": "Weight: 5.25 gr"
-      },
-      {
-        "az": "Çəkisi: 5.25 qr",
-        "en": "Composition"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Brass plated steel"
-      },
-      {
-        "az": "Latuna örtülmüş polad",
-        "en": "Latuna örtülmüş polad"
       }
     ],
     "brochureUrl": null,
@@ -2815,8 +2251,8 @@
       "en": "20 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_12_front.png",
-    "rearImage": "/assets/money/coins_12_rear.png",
+    "frontImage": "/assets/money/circulation_coins_20-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_20-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2880,30 +2316,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 20 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 20 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Qızılı rəng",
-        "en": "Denomination"
-      },
-      {
-        "az": "Diametri: 24.25 mm",
-        "en": "Diameter: 24.25 mm"
-      },
-      {
-        "az": "Çəkisi: 6.6 qr",
-        "en": "Weight: 6.6 qr"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Education and future"
-      },
-      {
-        "az": "Təhsil və gələcək",
-        "en": "Composition"
-      },
-      {
-        "az": "Latuna örtülmüş polad",
-        "en": "Brass plated steel"
       }
     ],
     "brochureUrl": null,
@@ -2917,8 +2329,8 @@
       "en": "20 Gapik (2021)"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_220_front.png",
-    "rearImage": "/assets/money/coins_220_rear.png",
+    "frontImage": "/assets/money/circulation_coins_20-qəpik_2021_front.webp",
+    "rearImage": "/assets/money/circulation_coins_20-qəpik_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -2982,30 +2394,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Dövlət Gerbinin təsviri, eləcə də pul nişanının buraxılış ili əks edilmişdir) malik 20 qəpiklik metal pul nişanı 2021-ci ilin dekabr ayından tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 20 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in July 2022. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Qızılı rəng",
-        "en": "Denomination"
-      },
-      {
-        "az": "Diametri: 24.25 mm",
-        "en": "Diameter: 24.25 mm"
-      },
-      {
-        "az": "Çəkisi: 6.6 qr",
-        "en": "Weight: 6.6 qr"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Education and future"
-      },
-      {
-        "az": "Təhsil və gələcək",
-        "en": "Composition"
-      },
-      {
-        "az": "Latuna örtülmüş polad",
-        "en": "Brass plated steel"
       }
     ],
     "brochureUrl": null,
@@ -3019,8 +2407,8 @@
       "en": "50 Gapik (2006)"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_13_front.png",
-    "rearImage": "/assets/money/coins_13_rear.png",
+    "frontImage": "/assets/money/circulation_coins_50-qəpik_2006_front.webp",
+    "rearImage": "/assets/money/circulation_coins_50-qəpik_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3084,34 +2472,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən 50 qəpiklik metal pul nişanı 2006-cı ildən tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued 50 gapik coins to circulation in 2006. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Bi-color (iki rəngli) Orta hissə - qızılı, kənar- gümüşü rəng",
-        "en": "Denomination"
-      },
-      {
-        "az": "Diametri: 25.5 mm",
-        "en": "Bi-color (middle – brass, outer ring – silver)"
-      },
-      {
-        "az": "Çəkisi: 7.7 qr",
-        "en": "Diameter: 25.5 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 7.7 gr"
-      },
-      {
-        "az": "İqtisadiyyat və inkişaf",
-        "en": "Economy and growth"
-      },
-      {
-        "az": "Bi-metal (ikili metal) Latun və nikellə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Bimetal (two-color metal) – brass and nickel plated steel"
       }
     ],
     "brochureUrl": null,
@@ -3125,8 +2485,8 @@
       "en": "50 Gapik (2022)"
     },
     "year": 2022,
-    "frontImage": "/assets/money/coins_219_front.png",
-    "rearImage": "/assets/money/coins_219_rear.png",
+    "frontImage": "/assets/money/circulation_coins_50-qəpik_2022_front.webp",
+    "rearImage": "/assets/money/circulation_coins_50-qəpik_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3190,34 +2550,6 @@
       {
         "az": "Azərbaycan Mərkəzi Bankı tərəfindən yenilənmiş dizayna (arxa tərəfində yeni dizayn elementləri kimi Azərbaycan Dövlət Gerbinin təsviri, eləcə də pul nişanının buraxılış ili əks edilmişdir) malik 50 qəpiklik metal pul nişanı 2022-ci ilin iyul ayından tədavülə buraxılmışdır. Milli valyuta metal pul nişanlarının dizayn mövzusu nominallar üzrə kağız pul nişanlarının dizayn mövzusuna uyğun olaraq hazırlanmışdır.",
         "en": "The Central Bank of Azerbaijan issued renewed 50 gapik coins to circulation (the reverse side features the image of the Coat of Arms and the manufacturing year as new design elements) in July 2022. The design motif of national currency coins has been aligned to the motif of banknotes across denominations."
-      },
-      {
-        "az": "Bi-color (iki rəngli) Orta hissə - qızılı, kənar- gümüşü rəng",
-        "en": "Denomination"
-      },
-      {
-        "az": "Diametri: 25.5 mm",
-        "en": "Bi-color (middle – brass, outer ring – silver)"
-      },
-      {
-        "az": "Çəkisi: 7.7 qr",
-        "en": "Diameter: 25.5 mm"
-      },
-      {
-        "az": "Dizayn mövzusu",
-        "en": "Weight: 7.7 gr"
-      },
-      {
-        "az": "İqtisadiyyat və inkişaf",
-        "en": "Economy and growth"
-      },
-      {
-        "az": "Bi-metal (ikili metal) Latun və nikellə örtülmüş polad",
-        "en": "Composition"
-      },
-      {
-        "az": "",
-        "en": "Bimetal (two-color metal) – brass and nickel plated steel"
       }
     ],
     "brochureUrl": null,
@@ -3231,8 +2563,8 @@
       "en": "Commemorative banknote dedicated to ‘VICTORY’"
     },
     "year": 2021,
-    "frontImage": "/assets/money/banknotes_147_front.png",
-    "rearImage": "/assets/money/banknotes_147_rear.png",
+    "frontImage": "/assets/money/commemorative_banknotes_147_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_banknotes_147_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3313,10 +2645,6 @@
       {
         "az": "Buraxılış ili",
         "en": "The commemorative banknote is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -3330,8 +2658,8 @@
       "en": "Heydar Aliyev – the bullion coin / 1 Oz - gold"
     },
     "year": 2023,
-    "frontImage": "/assets/money/coins_222_front.png",
-    "rearImage": "/assets/money/coins_222_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_222_2023_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_222_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3408,14 +2736,6 @@
       {
         "az": "İnvestisiya məqsədli pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The bullion coins are the legal tender in the territory of the Republic of Azerbaijan with their face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "Release year"
       }
     ],
     "brochureUrl": null,
@@ -3429,8 +2749,8 @@
       "en": "Heydar Aliyev – the bullion coin / 1/2 Oz - gold"
     },
     "year": 2023,
-    "frontImage": "/assets/money/coins_223_front.png",
-    "rearImage": "/assets/money/coins_223_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_223_2023_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_223_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3507,14 +2827,6 @@
       {
         "az": "İnvestisiya məqsədli pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The bullion coins are the legal tender in the territory of the Republic of Azerbaijan with their face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "Release year"
       }
     ],
     "brochureUrl": null,
@@ -3528,8 +2840,8 @@
       "en": "Heydar Aliyev – the bullion coin / 1/4 Oz - gold"
     },
     "year": 2023,
-    "frontImage": "/assets/money/coins_224_front.png",
-    "rearImage": "/assets/money/coins_224_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_224_2023_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_224_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3606,14 +2918,6 @@
       {
         "az": "İnvestisiya məqsədli pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The bullion coins are the legal tender in the territory of the Republic of Azerbaijan with their face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "Release year"
       }
     ],
     "brochureUrl": null,
@@ -3627,8 +2931,8 @@
       "en": "Heydar Aliyev – the bullion coin / 1/10 Oz - gold"
     },
     "year": 2023,
-    "frontImage": "/assets/money/coins_225_front.png",
-    "rearImage": "/assets/money/coins_225_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_225_2023_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_225_2023_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3705,14 +3009,6 @@
       {
         "az": "İnvestisiya məqsədli pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The bullion coins are the legal tender in the territory of the Republic of Azerbaijan with their face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "Release year"
       }
     ],
     "brochureUrl": null,
@@ -3726,8 +3022,8 @@
       "en": "National Olympic Committee 30 years - silver"
     },
     "year": 2022,
-    "frontImage": "/assets/money/coins_221_front.png",
-    "rearImage": "/assets/money/coins_221_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_221_2022_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_221_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3828,14 +3124,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış limiti",
-        "en": "Release limit"
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
       }
     ],
     "brochureUrl": null,
@@ -3849,8 +3137,8 @@
       "en": "World Cup Qatar 2022 – gold"
     },
     "year": 2022,
-    "frontImage": "/assets/money/coins_184_front.png",
-    "rearImage": "/assets/money/coins_184_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_184_2022_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_184_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -3937,10 +3225,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
       }
     ],
     "brochureUrl": null,
@@ -3954,8 +3238,8 @@
       "en": "World Cup Qatar 2022 – silver"
     },
     "year": 2022,
-    "frontImage": "/assets/money/coins_183_front.png",
-    "rearImage": "/assets/money/coins_183_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_183_2022_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_183_2022_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4042,14 +3326,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4063,8 +3339,8 @@
       "en": "12 piece Victory set"
     },
     "year": null,
-    "frontImage": "/assets/money/coins_149_front.png",
-    "rearImage": "/assets/money/coins_149_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_149_noyear_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_149_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4178,8 +3454,8 @@
       "en": "2 piece Victory set"
     },
     "year": null,
-    "frontImage": "/assets/money/coins_148_front.png",
-    "rearImage": "/assets/money/coins_148_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_148_noyear_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_148_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4279,8 +3555,8 @@
       "en": "Commemorative coin dedicated to ‘VICTORY’ – gold"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_135_front.png",
-    "rearImage": "/assets/money/coins_135_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_135_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_135_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4381,14 +3657,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4402,8 +3670,8 @@
       "en": "Commemorative coin dedicated to ‘VICTORY’ – silver"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_136_front.png",
-    "rearImage": "/assets/money/coins_136_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_136_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_136_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4504,14 +3772,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4525,8 +3785,8 @@
       "en": "Commemorative coin dedicated to the town of SHUSHA"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_137_front.png",
-    "rearImage": "/assets/money/coins_137_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_137_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_137_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4627,14 +3887,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4648,8 +3900,8 @@
       "en": "Commemorative coin dedicated to the district of JABRAIL"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_138_front.png",
-    "rearImage": "/assets/money/coins_138_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_138_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_138_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4750,14 +4002,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4771,8 +4015,8 @@
       "en": "Commemorative coin dedicated to the district of GUBADLY"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_140_front.png",
-    "rearImage": "/assets/money/coins_140_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_140_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_140_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4873,14 +4117,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -4894,8 +4130,8 @@
       "en": "Commemorative coin dedicated to the district of AGDAM"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_139_front.png",
-    "rearImage": "/assets/money/coins_139_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_139_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_139_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -4996,14 +4232,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5017,8 +4245,8 @@
       "en": "Commemorative coin dedicated to the district of ZANGILAN"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_141_front.png",
-    "rearImage": "/assets/money/coins_141_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_141_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_141_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5119,14 +4347,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5140,8 +4360,8 @@
       "en": "Commemorative coin dedicated to the district of FUZULI"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_142_front.png",
-    "rearImage": "/assets/money/coins_142_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_142_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_142_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5242,14 +4462,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5263,8 +4475,8 @@
       "en": "Commemorative coin dedicated to the district of LACHIN"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_143_front.png",
-    "rearImage": "/assets/money/coins_143_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_143_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_143_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5365,14 +4577,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5386,8 +4590,8 @@
       "en": "Commemorative coin dedicated to the district of KALBAJAR"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_144_front.png",
-    "rearImage": "/assets/money/coins_144_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_144_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_144_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5488,14 +4692,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5509,8 +4705,8 @@
       "en": "Commemorative coin dedicated to the district of KHOJAVAND"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_145_front.png",
-    "rearImage": "/assets/money/coins_145_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_145_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_145_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5611,14 +4807,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5632,8 +4820,8 @@
       "en": "Commemorative coin dedicated to the settlement of SUGOVUSHAN"
     },
     "year": 2021,
-    "frontImage": "/assets/money/coins_146_front.png",
-    "rearImage": "/assets/money/coins_146_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_146_2021_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_146_2021_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5734,14 +4922,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release year"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -5755,8 +4935,8 @@
       "en": "Baku State University 100 years - silver"
     },
     "year": 2019,
-    "frontImage": "/assets/money/coins_98_front.png",
-    "rearImage": "/assets/money/coins_98_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_98_2019_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_98_2019_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5847,14 +5027,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "1 troy ounce (31.1 gr.)"
       }
     ],
     "brochureUrl": null,
@@ -5868,8 +5040,8 @@
       "en": "Azerbaijan State Oil Fund 20 years -Silver"
     },
     "year": 2019,
-    "frontImage": "/assets/money/coins_97_front.png",
-    "rearImage": "/assets/money/coins_97_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_97_2019_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_97_2019_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -5960,14 +5132,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "1 troy ounce (31.1 gr.)"
       }
     ],
     "brochureUrl": null,
@@ -5981,8 +5145,8 @@
       "en": "Azerbaijan Central Banking 100 years - Silver"
     },
     "year": 2019,
-    "frontImage": "/assets/money/coins_96_front.png",
-    "rearImage": "/assets/money/coins_96_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_96_2019_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_96_2019_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6073,14 +5237,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "1 troy ounce (31.1 gr.)"
       }
     ],
     "brochureUrl": null,
@@ -6094,8 +5250,8 @@
       "en": "Heydar Aliyev 95 years - Gold set"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_63_front.png",
-    "rearImage": "/assets/money/coins_63_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_63_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_63_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6249,8 +5405,8 @@
       "en": "Heydar Aliyev - 95 years Gold"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_64_front.png",
-    "rearImage": "/assets/money/coins_64_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_64_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_64_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6354,8 +5510,8 @@
       "en": "Heydar Aliyev 95 years - Gold/Platinum"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_65_front.png",
-    "rearImage": "/assets/money/coins_65_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_65_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_65_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6446,10 +5602,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Buraxılış ili"
       }
     ],
     "brochureUrl": null,
@@ -6463,8 +5615,8 @@
       "en": "APR 100 years - Gold set"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_66_front.png",
-    "rearImage": "/assets/money/coins_66_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_66_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_66_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6668,8 +5820,8 @@
       "en": "APR 100 years 1t/ounce - Gold"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_67_front.png",
-    "rearImage": "/assets/money/coins_67_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_67_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_67_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6773,8 +5925,8 @@
       "en": "APR 100 years - ¾ t / ounce - Gold"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_68_front.png",
-    "rearImage": "/assets/money/coins_68_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_68_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_68_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6878,8 +6030,8 @@
       "en": "APR 100 years - 1/2 t / ounce - Gold"
     },
     "year": 2018,
-    "frontImage": "/assets/money/coins_69_front.png",
-    "rearImage": "/assets/money/coins_69_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_69_2018_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_69_2018_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -6983,8 +6135,8 @@
       "en": "Contract of the Century - 20 years - Gold"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_33_front.png",
-    "rearImage": "/assets/money/coins_33_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_33_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_33_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7084,8 +6236,8 @@
       "en": "Contract of the Century 20 years - Silver"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_49_front.png",
-    "rearImage": "/assets/money/coins_49_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_49_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_49_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7189,8 +6341,8 @@
       "en": "TANAP - Silver"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_50_front.png",
-    "rearImage": "/assets/money/coins_50_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_50_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_50_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7290,8 +6442,8 @@
       "en": "Azerspace - Silver"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_51_front.png",
-    "rearImage": "/assets/money/coins_51_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_51_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_51_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7391,8 +6543,8 @@
       "en": "Baku-Tbilisi-Kars - Silver"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_52_front.png",
-    "rearImage": "/assets/money/coins_52_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_52_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_52_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7496,8 +6648,8 @@
       "en": "Nakhchivan AR 90 years - Gold"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_53_front.png",
-    "rearImage": "/assets/money/coins_53_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_53_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_53_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7601,8 +6753,8 @@
       "en": "European Games - Gold set"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_54_front.png",
-    "rearImage": "/assets/money/coins_54_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_54_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_54_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7716,8 +6868,8 @@
       "en": "European Games - Silver set"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_70_front.png",
-    "rearImage": "/assets/money/coins_70_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_70_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_70_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7831,8 +6983,8 @@
       "en": "European Games - Silver/ wrestling"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_80_front.png",
-    "rearImage": "/assets/money/coins_80_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_80_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_80_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -7946,8 +7098,8 @@
       "en": "European Games - Silver/ archery"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_85_front.png",
-    "rearImage": "/assets/money/coins_85_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_85_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_85_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8061,8 +7213,8 @@
       "en": "European Games - Silver/ diving"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_86_front.png",
-    "rearImage": "/assets/money/coins_86_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_86_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_86_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8176,8 +7328,8 @@
       "en": "European Games - Silver/ gymnastics"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_87_front.png",
-    "rearImage": "/assets/money/coins_87_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_87_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_87_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8291,8 +7443,8 @@
       "en": "European Games - Silver/ canoe"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_88_front.png",
-    "rearImage": "/assets/money/coins_88_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_88_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_88_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8406,8 +7558,8 @@
       "en": "European Games - Cupro-nickel/ wrestling"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_71_front.png",
-    "rearImage": "/assets/money/coins_71_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_71_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_71_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8508,10 +7660,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan in its face value."
-      },
-      {
-        "az": "Kupro-nikel",
-        "en": "Kupro-nikel"
       }
     ],
     "brochureUrl": null,
@@ -8525,8 +7673,8 @@
       "en": "European Games - Cupro-nickel/ archery"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_81_front.png",
-    "rearImage": "/assets/money/coins_81_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_81_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_81_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8627,10 +7775,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan in its face value."
-      },
-      {
-        "az": "Kupro-nikel",
-        "en": "Kupro-nikel"
       }
     ],
     "brochureUrl": null,
@@ -8644,8 +7788,8 @@
       "en": "European Games - Cupro-nickel/ diving"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_82_front.png",
-    "rearImage": "/assets/money/coins_82_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_82_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_82_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8759,8 +7903,8 @@
       "en": "European Games - Cupro-nickel/ gymnastics"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_83_front.png",
-    "rearImage": "/assets/money/coins_83_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_83_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_83_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8874,8 +8018,8 @@
       "en": "European Games - Cupro-nickel/ canoe"
     },
     "year": 2015,
-    "frontImage": "/assets/money/coins_84_front.png",
-    "rearImage": "/assets/money/coins_84_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_84_2015_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_84_2015_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -8989,8 +8133,8 @@
       "en": "Heydar Aliyev 90 years - 32.3 ounces Gold"
     },
     "year": 2013,
-    "frontImage": "/assets/money/coins_72_front.png",
-    "rearImage": "/assets/money/coins_72_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_72_2013_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_72_2013_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9081,18 +8225,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "32.3 ounce (1005gr)"
       }
     ],
     "brochureUrl": null,
@@ -9106,8 +8238,8 @@
       "en": "Heydar Aliyev 90 years - 10 ounces Gold"
     },
     "year": 2013,
-    "frontImage": "/assets/money/coins_28_front.png",
-    "rearImage": "/assets/money/coins_28_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_28_2013_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_28_2013_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9198,18 +8330,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan at its face value."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "10 ounce (313gr)"
       }
     ],
     "brochureUrl": null,
@@ -9223,8 +8343,8 @@
       "en": "Heydar Aliyev 90 years - 1 ounce Gold"
     },
     "year": 2013,
-    "frontImage": "/assets/money/coins_73_front.png",
-    "rearImage": "/assets/money/coins_73_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_73_2013_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_73_2013_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9315,18 +8435,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.21 gr)"
       }
     ],
     "brochureUrl": null,
@@ -9340,8 +8448,8 @@
       "en": "Central Bank 20 years - Silver"
     },
     "year": 2012,
-    "frontImage": "/assets/money/coins_55_front.png",
-    "rearImage": "/assets/money/coins_55_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_55_2012_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_55_2012_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9445,8 +8553,8 @@
       "en": "State Independence 20 years - Gold"
     },
     "year": 2011,
-    "frontImage": "/assets/money/coins_31_front.png",
-    "rearImage": "/assets/money/coins_31_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_31_2011_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_31_2011_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9550,8 +8658,8 @@
       "en": "National Press 135 years - Silver"
     },
     "year": 2010,
-    "frontImage": "/assets/money/coins_56_front.png",
-    "rearImage": "/assets/money/coins_56_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_56_2010_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_56_2010_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9646,14 +8754,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "Release date"
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.1 gr)"
       }
     ],
     "brochureUrl": null,
@@ -9667,8 +8767,8 @@
       "en": "Nakhchivan AR 85 years - Gold"
     },
     "year": 2009,
-    "frontImage": "/assets/money/coins_62_front.png",
-    "rearImage": "/assets/money/coins_62_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_62_2009_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_62_2009_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9759,18 +8859,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.1 gr)"
       }
     ],
     "brochureUrl": null,
@@ -9784,8 +8872,8 @@
       "en": "Nakhchivan AR 85 years - Silver"
     },
     "year": 2009,
-    "frontImage": "/assets/money/coins_57_front.png",
-    "rearImage": "/assets/money/coins_57_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_57_2009_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_57_2009_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -9876,18 +8964,6 @@
       {
         "az": "Yubiley pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.1 gr)"
       }
     ],
     "brochureUrl": null,
@@ -9901,8 +8977,8 @@
       "en": "Nizami Ganjavi - Gold"
     },
     "year": 2008,
-    "frontImage": "/assets/money/coins_34_front.png",
-    "rearImage": "/assets/money/coins_34_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_34_2008_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_34_2008_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10006,8 +9082,8 @@
       "en": "Bulbul - Gold"
     },
     "year": 2008,
-    "frontImage": "/assets/money/coins_58_front.png",
-    "rearImage": "/assets/money/coins_58_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_58_2008_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_58_2008_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10098,18 +9174,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.1 gr)"
       }
     ],
     "brochureUrl": null,
@@ -10123,8 +9187,8 @@
       "en": "Uzeyir Hajibayov - Gold"
     },
     "year": 2008,
-    "frontImage": "/assets/money/coins_59_front.png",
-    "rearImage": "/assets/money/coins_59_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_59_2008_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_59_2008_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10219,18 +9283,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
-      },
-      {
-        "az": "",
-        "en": "1 ounce (31.1 gr)"
       }
     ],
     "brochureUrl": null,
@@ -10244,8 +9296,8 @@
       "en": "Heydar Aliyev 85 years Gold"
     },
     "year": 2008,
-    "frontImage": "/assets/money/coins_27_front.png",
-    "rearImage": "/assets/money/coins_27_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_27_2008_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_27_2008_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10349,8 +9401,8 @@
       "en": "2006 FIFA - Silver"
     },
     "year": 2006,
-    "frontImage": "/assets/money/coins_60_front.png",
-    "rearImage": "/assets/money/coins_60_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_60_2006_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_60_2006_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10441,14 +9493,6 @@
       {
         "az": "Xatirə pul nişanı Azərbaycan Respublikası ərazisində nominal dəyəri ilə qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -10462,8 +9506,8 @@
       "en": "National currency gapiks - Gold set"
     },
     "year": 2005,
-    "frontImage": "/assets/money/coins_61_front.png",
-    "rearImage": "/assets/money/coins_61_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_61_2005_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_61_2005_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10540,14 +9584,6 @@
       {
         "az": "Xatirə pul nişanı nominal dəyəri ilə Azərbaycan Respublikası ərazisində qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -10561,8 +9597,8 @@
       "en": "Heydar Aliyev 80 years - set"
     },
     "year": null,
-    "frontImage": "/assets/money/coins_26_front.png",
-    "rearImage": "/assets/money/coins_26_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_26_noyear_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_26_noyear_rear.webp",
     "description": null,
     "attributes": [],
     "securityElements": [],
@@ -10599,8 +9635,8 @@
       "en": "Heydar Aliyev 80 years - Platinum"
     },
     "year": 2004,
-    "frontImage": "/assets/money/coins_74_front.png",
-    "rearImage": "/assets/money/coins_74_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_74_2004_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_74_2004_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10687,8 +9723,8 @@
       "en": "Heydar Aliyev 80 years - Gold"
     },
     "year": 2004,
-    "frontImage": "/assets/money/coins_75_front.png",
-    "rearImage": "/assets/money/coins_75_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_75_2004_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_75_2004_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10775,8 +9811,8 @@
       "en": "Heydar Aliyev 80 years - Silver"
     },
     "year": 2004,
-    "frontImage": "/assets/money/coins_76_front.png",
-    "rearImage": "/assets/money/coins_76_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_76_2004_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_76_2004_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10863,8 +9899,8 @@
       "en": "Kitabi-Dede Gorgud 1300 years - Gold"
     },
     "year": 1300,
-    "frontImage": "/assets/money/coins_29_front.png",
-    "rearImage": "/assets/money/coins_29_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_29_1300_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_29_1300_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -10980,8 +10016,8 @@
       "en": "Kitabi-Dede Gorgud 1300 years - Silver"
     },
     "year": 1300,
-    "frontImage": "/assets/money/coins_30_front.png",
-    "rearImage": "/assets/money/coins_30_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_30_1300_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_30_1300_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11097,8 +10133,8 @@
       "en": "Mahammad Fuzuli 500 years - Silver"
     },
     "year": 1996,
-    "frontImage": "/assets/money/coins_32_front.png",
-    "rearImage": "/assets/money/coins_32_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_32_1996_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_32_1996_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11189,14 +10225,6 @@
       {
         "az": "Yubiley pul nişanı nominal dəyəri ilə Azərbaycan Respublikası ərazisində qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -11210,8 +10238,8 @@
       "en": "Mahammad Fuzuli 500 years - Gold"
     },
     "year": 1996,
-    "frontImage": "/assets/money/coins_94_front.png",
-    "rearImage": "/assets/money/coins_94_rear.png",
+    "frontImage": "/assets/money/commemorative_coins_94_1996_front.webp",
+    "rearImage": "/assets/money/commemorative_coins_94_1996_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11302,14 +10330,6 @@
       {
         "az": "Yubiley pul nişanın nominal dəyəri ilə Azərbaycan Respublikası ərazisində qanuni ödəniş vasitəsidir.",
         "en": "The commemorative coin is a legal tender in the territory of the Republic of Azerbaijan."
-      },
-      {
-        "az": "Buraxılış ili",
-        "en": "Release date"
-      },
-      {
-        "az": "",
-        "en": "Denomination"
       }
     ],
     "brochureUrl": null,
@@ -11323,8 +10343,8 @@
       "en": "1 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_35_front.png",
-    "rearImage": "/assets/money/banknotes_35_rear.png",
+    "frontImage": "/assets/money/withdrawn_banknotes_1-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_1-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11356,8 +10376,8 @@
       "en": "5 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_36_front.png",
-    "rearImage": "/assets/money/banknotes_36_rear.png",
+    "frontImage": "/assets/money/withdrawn_banknotes_5-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_5-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11389,8 +10409,8 @@
       "en": "10 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_37_front.png",
-    "rearImage": "/assets/money/banknotes_37_rear.png",
+    "frontImage": "/assets/money/withdrawn_banknotes_10-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_10-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11422,8 +10442,8 @@
       "en": "50 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_38_front.jpg",
-    "rearImage": "/assets/money/banknotes_38_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_50-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_50-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11455,8 +10475,8 @@
       "en": "100 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_39_front.jpg",
-    "rearImage": "/assets/money/banknotes_39_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_100-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_100-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11488,8 +10508,8 @@
       "en": "250 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_40_front.png",
-    "rearImage": "/assets/money/banknotes_40_rear.png",
+    "frontImage": "/assets/money/withdrawn_banknotes_250-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_250-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11521,8 +10541,8 @@
       "en": "500 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_41_front.jpg",
-    "rearImage": "/assets/money/banknotes_41_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_500-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_500-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11554,8 +10574,8 @@
       "en": "1000 manat - 1993"
     },
     "year": 1993,
-    "frontImage": "/assets/money/banknotes_42_front.jpg",
-    "rearImage": "/assets/money/banknotes_42_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_1000-manat_1993_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_1000-manat_1993_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11587,8 +10607,8 @@
       "en": "1000 manat - 2001"
     },
     "year": 2001,
-    "frontImage": "/assets/money/banknotes_79_front.jpg",
-    "rearImage": "/assets/money/banknotes_79_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_1000-manat_2001_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_1000-manat_2001_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11620,8 +10640,8 @@
       "en": "10000 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_43_front.jpg",
-    "rearImage": "/assets/money/banknotes_43_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_10000-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_10000-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11653,8 +10673,8 @@
       "en": "50000 manat"
     },
     "year": null,
-    "frontImage": "/assets/money/banknotes_44_front.jpg",
-    "rearImage": "/assets/money/banknotes_44_rear.jpg",
+    "frontImage": "/assets/money/withdrawn_banknotes_50000-manat_noyear_front.webp",
+    "rearImage": "/assets/money/withdrawn_banknotes_50000-manat_noyear_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11686,8 +10706,8 @@
       "en": "5 gapik - Bronze - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_45_front.png",
-    "rearImage": "/assets/money/coins_45_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_5-qəpik_1992_front.webp",
+    "rearImage": "/assets/money/withdrawn_coins_5-qəpik_1992_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11742,12 +10762,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/45"
   },
@@ -11759,8 +10774,8 @@
       "en": "5 gapik - Aluminium - AZM"
     },
     "year": 1993,
-    "frontImage": "/assets/money/coins_89_front.png",
-    "rearImage": "/assets/money/coins_89_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_5-qəpik_1993_front.webp",
+    "rearImage": "/assets/money/withdrawn_coins_5-qəpik_1993_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11815,12 +10830,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/89"
   },
@@ -11832,8 +10842,8 @@
       "en": "10 gapik - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_46_front.png",
-    "rearImage": "/assets/money/coins_46_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_10-qəpik_1992_front.webp",
+    "rearImage": "/assets/money/withdrawn_coins_10-qəpik_1992_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -11888,12 +10898,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/46"
   },
@@ -11905,8 +10910,8 @@
       "en": "20 gapik - Bronze - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_91_front.png",
-    "rearImage": "/assets/money/coins_91_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_20-qəpik_1992_front_coins-91.webp",
+    "rearImage": "/assets/money/withdrawn_coins_20-qəpik_1992_rear_coins-91.webp",
     "description": null,
     "attributes": [
       {
@@ -11961,12 +10966,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/91"
   },
@@ -11978,8 +10978,8 @@
       "en": "20 gapik - Aluminium - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_90_front.png",
-    "rearImage": "/assets/money/coins_90_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_20-qəpik_1992_front_coins-90.webp",
+    "rearImage": "/assets/money/withdrawn_coins_20-qəpik_1992_rear_coins-90.webp",
     "description": null,
     "attributes": [
       {
@@ -12034,12 +11034,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/90"
   },
@@ -12051,8 +11046,8 @@
       "en": "50 gapik - Nickel - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_92_front.png",
-    "rearImage": "/assets/money/coins_92_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_50-qəpik_1992_front_coins-92.webp",
+    "rearImage": "/assets/money/withdrawn_coins_50-qəpik_1992_rear_coins-92.webp",
     "description": null,
     "attributes": [
       {
@@ -12107,12 +11102,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/92"
   },
@@ -12124,8 +11114,8 @@
       "en": "50 gapik - Aluminium- 1992 - AZM"
     },
     "year": 1992,
-    "frontImage": "/assets/money/coins_48_front.png",
-    "rearImage": "/assets/money/coins_48_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_50-qəpik_1992_front_coins-48.webp",
+    "rearImage": "/assets/money/withdrawn_coins_50-qəpik_1992_rear_coins-48.webp",
     "description": null,
     "attributes": [
       {
@@ -12180,12 +11170,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/48"
   },
@@ -12197,8 +11182,8 @@
       "en": "50 gapik - Aluminium- 1993 - AZM"
     },
     "year": 1993,
-    "frontImage": "/assets/money/coins_93_front.png",
-    "rearImage": "/assets/money/coins_93_rear.png",
+    "frontImage": "/assets/money/withdrawn_coins_50-qəpik_1993_front.webp",
+    "rearImage": "/assets/money/withdrawn_coins_50-qəpik_1993_rear.webp",
     "description": null,
     "attributes": [
       {
@@ -12253,12 +11238,7 @@
       }
     ],
     "securityElements": [],
-    "overview": [
-      {
-        "az": "",
-        "en": "Release date"
-      }
-    ],
+    "overview": [],
     "brochureUrl": null,
     "sourceUrl": "https://cbar.az/moneymarks/coins/detail/93"
   }

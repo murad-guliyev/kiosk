@@ -1,0 +1,4 @@
+include:
+  - project: devops-linux-team/ci-cd
+    ref: 1.0.0
+    file: pipelines/npm.gitlab-ci.yml

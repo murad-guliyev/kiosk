@@ -1,0 +1,12 @@
+app:
+  listenPort: 80
+
+service:
+  enabled: true
+
+ingress:
+  enabled: true
+
+pod:
+  annotations:
+    prometheus.io/scrape: "true"

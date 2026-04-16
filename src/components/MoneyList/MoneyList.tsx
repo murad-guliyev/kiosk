@@ -28,7 +28,7 @@ export function MoneyList({ grouped }: MoneyListProps) {
   }
 
   return (
-    <div className="flex-1 overflow-y-auto anim-page-fade">
+    <div className="flex-1">
       {grouped.map((group) => {
         if (group.families.length === 0) return null;
         return (
@@ -39,19 +39,7 @@ export function MoneyList({ grouped }: MoneyListProps) {
                 className="flex items-center gap-4"
                 style={{ position: 'relative' }}
               >
-                {/* Accent bar */}
-                <div
-                  style={{
-                    width: '4px',
-                    height: '28px',
-                    borderRadius: '2px',
-                    background: 'linear-gradient(180deg, #4BC8B6, #0B9ED0)',
-                    flexShrink: 0,
-                    boxShadow: '0 0 12px rgba(75, 200, 182, 0.4)',
-                  }}
-                />
-
-                {/* Label + count */}
+                {/* Label */}
                 <div className="flex-1 flex items-center justify-between">
                   <h2
                     style={{
@@ -64,19 +52,6 @@ export function MoneyList({ grouped }: MoneyListProps) {
                   >
                     {localized(group.category.label, lang)}
                   </h2>
-                  <span
-                    style={{
-                      fontSize: '0.75rem',
-                      fontWeight: 500,
-                      color: 'rgba(75, 200, 182, 0.6)',
-                      padding: '3px 10px',
-                      borderRadius: '20px',
-                      background: 'rgba(75, 200, 182, 0.08)',
-                      border: '1px solid rgba(75, 200, 182, 0.15)',
-                    }}
-                  >
-                    {group.families.length} {t('itemCount', lang)}
-                  </span>
                 </div>
               </div>
 

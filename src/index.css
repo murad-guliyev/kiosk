@@ -187,93 +187,98 @@ body {
    Page transition animations
    ============================================================ */
 
-@keyframes page-fade-in {
-  from { opacity: 0; transform: scale(0.98); }
-  to   { opacity: 1; transform: scale(1); }
+/* Compositor-only entrance: opacity + translate/scale. No blur, no brightness
+   filter, no 3D perspective rotations — all of which force expensive
+   per-frame repaints on low-end Android GPUs. */
+@keyframes page-zoom-in {
+  from { opacity: 0; transform: translate3d(0, 20px, 0) scale(0.985); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
 }
 
 @keyframes page-slide-up {
-  from { opacity: 0; transform: translateY(50px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 30px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-@keyframes header-slide-down {
-  0%   { opacity: 0; transform: translateY(-12px); }
-  60%  { opacity: 1; }
-  100% { transform: translateY(0); }
+@keyframes header-drop {
+  from { opacity: 0; transform: translate3d(0, -16px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-@keyframes card-rise {
-  from { opacity: 0; transform: translateY(40px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+@keyframes card-flip-in {
+  from { opacity: 0; transform: translate3d(0, 40px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-/* Page exit — fade out + slight scale down */
 @keyframes page-exit {
-  from { opacity: 1; transform: scale(1); }
-  to   { opacity: 0; transform: scale(0.97); }
+  from { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+  to   { opacity: 0; transform: translate3d(0, -10px, 0) scale(0.98); }
 }
 
 .anim-page-exit {
-  animation: page-exit 0.3s cubic-bezier(0.4, 0, 1, 1) both;
+  animation: page-exit 0.25s cubic-bezier(0.55, 0, 0.95, 0.3) both;
 }
 
 .anim-page-fade {
-  animation: page-fade-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: page-zoom-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
 }
 
 .anim-slide-up {
-  animation: page-slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: page-slide-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .anim-header-enter {
-  animation: header-slide-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: header-drop 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Back button: slide in from left */
 @keyframes btn-slide-in {
-  from { opacity: 0; transform: translateX(-16px); }
-  to   { opacity: 1; transform: translateX(0); }
+  from { opacity: 0; transform: translate3d(-16px, 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 .anim-btn-enter {
-  animation: btn-slide-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  animation: btn-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
 }
 
 .anim-card-rise {
-  animation: card-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: card-flip-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: transform, opacity;
 }
 
-/* Tab animations */
-@keyframes tab-shimmer {
-  0%   { transform: translateX(-150%) skewX(-15deg); }
-  100% { transform: translateX(250%) skewX(-15deg); }
+/* Tab content switch — GPU-only animation (compositor does all the work):
+   just translateX + opacity on translate3d, no blur/scale/filter that would
+   force per-frame repaints of the image-heavy list. Direction is set per
+   render via the --tab-slide-from CSS variable. */
+@keyframes tab-content-enter {
+  from { opacity: 0; transform: translate3d(var(--tab-slide-from, 40px), 0, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-@keyframes tab-glow-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(75,200,182,0.08), 0 0 10px rgba(11,158,208,0.05), inset 0 1px 0 rgba(255,255,255,0.08); }
-  50%      { box-shadow: 0 0 35px rgba(75,200,182,0.18), 0 0 20px rgba(11,158,208,0.1), inset 0 1px 0 rgba(255,255,255,0.12); }
+.anim-tab-switch {
+  animation: tab-content-enter 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
-@keyframes tab-accent-shift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Tab button press feedback — a quick scale pulse on tap */
+@keyframes tab-press-pulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.96); }
+  100% { transform: scale(1); }
 }
 
-@keyframes tab-icon-glow {
-  0%, 100% { box-shadow: 0 0 12px rgba(75,200,182,0.1); }
-  50%      { box-shadow: 0 0 22px rgba(75,200,182,0.22); }
+.tab-press {
+  animation: tab-press-pulse 0.3s ease-out;
 }
 
-/* Slow coin rotation */
-@keyframes coin-spin {
-  0%   { transform: rotateY(0deg); }
-  100% { transform: rotateY(360deg); }
-}
-
+/* Coin slow rotation — driven by a shared CSS variable (--coin-angle)
+   written once per frame by coinSpinner.ts. All coins read the same
+   variable so they stay in sync. 20s period = calm exhibition pace. */
 .coin-scene {
   perspective: 600px;
+  contain: layout paint;
 }
 
 .coin-flipper {
@@ -281,7 +286,8 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  animation: coin-spin 8s linear infinite;
+  transform: rotateY(var(--coin-angle, 0deg));
+  will-change: transform;
 }
 
 .coin-face {
@@ -291,10 +297,77 @@ body {
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .coin-face-back {
   transform: rotateY(180deg);
+}
+
+/* Banknote tap-to-flip on the home grid — museum-grade 3D flip.
+   Smooth single-transition rotateY. Coins show static thumbnails (no 3D). */
+
+.banknote-scene {
+  perspective: 1400px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banknote-flipper {
+  position: relative;
+  width: 88%;
+  height: 88%;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.7s cubic-bezier(0.45, 0, 0.55, 1);
+  will-change: transform;
+}
+
+.banknote-flipper.is-flipping {
+  transform: rotateY(180deg);
+  z-index: 10;
+}
+
+.banknote-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.banknote-face-back {
+  transform: rotateY(180deg);
+}
+
+.banknote-scene::after {
+  content: '';
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 2%;
+  height: 10%;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.28), rgba(0,0,0,0.1) 55%, transparent 80%);
+  filter: blur(9px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.2s ease;
+}
+
+.banknote-scene:has(.is-flipping)::after {
+  animation: banknote-shadow-lift 0.7s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+}
+
+@keyframes banknote-shadow-lift {
+  0%   { opacity: 0.7;  transform: scale(1);    filter: blur(9px); }
+  50%  { opacity: 0.35; transform: scale(1.25); filter: blur(14px); }
+  100% { opacity: 0.7;  transform: scale(1);    filter: blur(9px); }
 }
 
 /* Card tap animation */
@@ -307,11 +380,24 @@ body {
   animation: card-tap-pulse 0.3s ease-out;
 }
 
-/* Hide scrollbars on touch kiosk — content still scrollable via touch */
+/* Visible vertical scrollbar so users can see scroll position/length on the kiosk */
 ::-webkit-scrollbar {
-  display: none;
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4BC8B6, #0B9ED0);
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #5DD9C7, #1CAFE1);
 }
 * {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: thin;
+  scrollbar-color: #4BC8B6 rgba(255, 255, 255, 0.04);
 }

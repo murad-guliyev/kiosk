@@ -7,7 +7,7 @@
       "az": "1 AZN",
       "en": "1 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_1_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_1-azn_2006_front.webp",
     "versionCount": 3,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/1",
@@ -23,7 +23,7 @@
       "az": "5 AZN",
       "en": "5 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_2_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_5-azn_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/2",
@@ -38,7 +38,7 @@
       "az": "10 AZN",
       "en": "10 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_3_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_10-azn_2006_front.webp",
     "versionCount": 3,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/3",
@@ -54,7 +54,7 @@
       "az": "20 AZN",
       "en": "20 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_5_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_20-azn_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/5",
@@ -69,7 +69,7 @@
       "az": "50 AZN",
       "en": "50 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_6_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_50-azn_2006_front.webp",
     "versionCount": 3,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/6",
@@ -85,7 +85,7 @@
       "az": "100 AZN",
       "en": "100 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_7_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_100-azn_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/7"
@@ -99,7 +99,7 @@
       "az": "200 AZN",
       "en": "200 AZN"
     },
-    "thumbnailImage": "/assets/money/banknotes_78_front.jpg",
+    "thumbnailImage": "/assets/money/circulation_banknotes_200-azn_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/78"
@@ -113,7 +113,7 @@
       "az": "1 Qəpik",
       "en": "1 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_8_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_1-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/8",
@@ -128,7 +128,7 @@
       "az": "3 Qəpik",
       "en": "3 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_9_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_3-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/9",
@@ -143,7 +143,7 @@
       "az": "5 Qəpik",
       "en": "5 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_10_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_5-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/10",
@@ -158,7 +158,7 @@
       "az": "10 Qəpik",
       "en": "10 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_11_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_10-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/11",
@@ -173,7 +173,7 @@
       "az": "20 Qəpik",
       "en": "20 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_12_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_20-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/12",
@@ -188,7 +188,7 @@
       "az": "50 Qəpik",
       "en": "50 Gapik"
     },
-    "thumbnailImage": "/assets/money/coins_13_front.png",
+    "thumbnailImage": "/assets/money/circulation_coins_50-qəpik_2006_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/13",
@@ -197,13 +197,13 @@
   },
   {
     "familyId": "cat2-banknotes-147",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "banknotes",
     "title": {
       "az": "“ZƏFƏR” mövzusuna həsr olunmuş xatirə pul nişanı",
       "en": "Commemorative banknote dedicated to ‘VICTORY’"
     },
-    "thumbnailImage": "/assets/money/banknotes_147_front.png",
+    "thumbnailImage": "/assets/money/commemorative_banknotes_147_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/147"
@@ -217,7 +217,7 @@
       "az": "Heydər Əliyev – investisiya pul nişanı / 1 troy unsiya - qızıl",
       "en": "Heydar Aliyev – the bullion coin / 1 Oz - gold"
     },
-    "thumbnailImage": "/assets/money/coins_222_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_222_2023_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/222"
@@ -231,7 +231,7 @@
       "az": "Heydər Əliyev – investisiya pul nişanı / 1/2 troy unsiya - qızıl",
       "en": "Heydar Aliyev – the bullion coin / 1/2 Oz - gold"
     },
-    "thumbnailImage": "/assets/money/coins_223_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_223_2023_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/223"
@@ -245,7 +245,7 @@
       "az": "Heydər Əliyev – investisiya pul nişanı / 1/4 troy unsiya- qızıl",
       "en": "Heydar Aliyev – the bullion coin / 1/4 Oz - gold"
     },
-    "thumbnailImage": "/assets/money/coins_224_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_224_2023_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/224"
@@ -259,7 +259,7 @@
       "az": "Heydər Əliyev – investisiya pul nişanı / 1/10 troy unsiya - qızıl",
       "en": "Heydar Aliyev – the bullion coin / 1/10 Oz - gold"
     },
-    "thumbnailImage": "/assets/money/coins_225_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_225_2023_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/225"
@@ -267,13 +267,13 @@
   },
   {
     "familyId": "cat2-coins-221",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Milli Olimpiya Komitəsi 30 il - gümüş",
       "en": "National Olympic Committee 30 years - silver"
     },
-    "thumbnailImage": "/assets/money/coins_221_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_221_2022_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/221"
@@ -281,13 +281,13 @@
   },
   {
     "familyId": "cat2-coins-184",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Qətər 2022 Dünya kuboku – qızıl",
       "en": "World Cup Qatar 2022 – gold"
     },
-    "thumbnailImage": "/assets/money/coins_184_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_184_2022_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/184"
@@ -295,13 +295,13 @@
   },
   {
     "familyId": "cat2-coins-183",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Qətər 2022 Dünya kuboku – gümüş",
       "en": "World Cup Qatar 2022 – silver"
     },
-    "thumbnailImage": "/assets/money/coins_183_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_183_2022_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/183"
@@ -309,13 +309,13 @@
   },
   {
     "familyId": "cat2-coins-149",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "12 ədədlik Zəfər dəsti",
       "en": "12 piece Victory set"
     },
-    "thumbnailImage": "/assets/money/coins_149_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_149_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/149"
@@ -323,13 +323,13 @@
   },
   {
     "familyId": "cat2-coins-148",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "2 ədədlik Zəfər dəsti",
       "en": "2 piece Victory set"
     },
-    "thumbnailImage": "/assets/money/coins_148_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_148_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/148"
@@ -337,13 +337,13 @@
   },
   {
     "familyId": "cat2-coins-135",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "“ZƏFƏR” mövzusuna həsr olunmuş qızıl xatirə sikkəsi",
       "en": "Commemorative coin dedicated to ‘VICTORY’ – gold"
     },
-    "thumbnailImage": "/assets/money/coins_135_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_135_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/135"
@@ -351,13 +351,13 @@
   },
   {
     "familyId": "cat2-coins-136",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "“ZƏFƏR” mövzusuna həsr olunmuş gümüş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to ‘VICTORY’ – silver"
     },
-    "thumbnailImage": "/assets/money/coins_136_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_136_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/136"
@@ -365,13 +365,13 @@
   },
   {
     "familyId": "cat2-coins-137",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "ŞUŞA şəhərinə həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the town of SHUSHA"
     },
-    "thumbnailImage": "/assets/money/coins_137_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_137_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/137"
@@ -379,13 +379,13 @@
   },
   {
     "familyId": "cat2-coins-138",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "CƏBRAYIL rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of JABRAIL"
     },
-    "thumbnailImage": "/assets/money/coins_138_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_138_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/138"
@@ -393,13 +393,13 @@
   },
   {
     "familyId": "cat2-coins-140",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "QUBADLI rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of GUBADLY"
     },
-    "thumbnailImage": "/assets/money/coins_140_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_140_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/140"
@@ -407,13 +407,13 @@
   },
   {
     "familyId": "cat2-coins-139",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "AĞDAM rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of AGDAM"
     },
-    "thumbnailImage": "/assets/money/coins_139_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_139_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/139"
@@ -421,13 +421,13 @@
   },
   {
     "familyId": "cat2-coins-141",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "ZƏNGİLAN rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of ZANGILAN"
     },
-    "thumbnailImage": "/assets/money/coins_141_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_141_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/141"
@@ -435,13 +435,13 @@
   },
   {
     "familyId": "cat2-coins-142",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "FÜZULİ rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of FUZULI"
     },
-    "thumbnailImage": "/assets/money/coins_142_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_142_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/142"
@@ -449,13 +449,13 @@
   },
   {
     "familyId": "cat2-coins-143",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "LAÇIN rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of LACHIN"
     },
-    "thumbnailImage": "/assets/money/coins_143_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_143_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/143"
@@ -463,13 +463,13 @@
   },
   {
     "familyId": "cat2-coins-144",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "KƏLBƏCƏR rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of KALBAJAR"
     },
-    "thumbnailImage": "/assets/money/coins_144_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_144_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/144"
@@ -477,13 +477,13 @@
   },
   {
     "familyId": "cat2-coins-145",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "XOCAVƏND rayonuna həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the district of KHOJAVAND"
     },
-    "thumbnailImage": "/assets/money/coins_145_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_145_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/145"
@@ -491,13 +491,13 @@
   },
   {
     "familyId": "cat2-coins-146",
-    "categoryId": 2,
+    "categoryId": 4,
     "subcategory": "coins",
     "title": {
       "az": "SUQOVUŞAN qəsəbəsinə həsr olunmuş xatirə sikkəsi",
       "en": "Commemorative coin dedicated to the settlement of SUGOVUSHAN"
     },
-    "thumbnailImage": "/assets/money/coins_146_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_146_2021_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/146"
@@ -505,13 +505,13 @@
   },
   {
     "familyId": "cat2-coins-98",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Bakı Dövlət Universiteti 100 il - gümüş",
       "en": "Baku State University 100 years - silver"
     },
-    "thumbnailImage": "/assets/money/coins_98_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_98_2019_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/98"
@@ -519,13 +519,13 @@
   },
   {
     "familyId": "cat2-coins-97",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Azərbaycan Dövlət Neft Fondu 20 il - gümüş",
       "en": "Azerbaijan State Oil Fund 20 years -Silver"
     },
-    "thumbnailImage": "/assets/money/coins_97_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_97_2019_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/97"
@@ -533,13 +533,13 @@
   },
   {
     "familyId": "cat2-coins-96",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Azərbaycan Mərkəzi Bankçılığı 100 il - gümüş",
       "en": "Azerbaijan Central Banking 100 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_96_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_96_2019_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/96"
@@ -553,7 +553,7 @@
       "az": "Heydər Əliyev 95 il - qızıl dəst",
       "en": "Heydar Aliyev 95 years - Gold set"
     },
-    "thumbnailImage": "/assets/money/coins_63_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_63_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/63"
@@ -567,7 +567,7 @@
       "az": "Heydər Əliyev - 95 il qızıl",
       "en": "Heydar Aliyev - 95 years Gold"
     },
-    "thumbnailImage": "/assets/money/coins_64_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_64_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/64"
@@ -581,7 +581,7 @@
       "az": "Heydər Əliyev 95 il - qızıl / platin",
       "en": "Heydar Aliyev 95 years - Gold/Platinum"
     },
-    "thumbnailImage": "/assets/money/coins_65_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_65_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/65"
@@ -589,13 +589,13 @@
   },
   {
     "familyId": "cat2-coins-66",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "AXC 100 il - qızıl dəst",
       "en": "APR 100 years - Gold set"
     },
-    "thumbnailImage": "/assets/money/coins_66_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_66_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/66"
@@ -603,13 +603,13 @@
   },
   {
     "familyId": "cat2-coins-67",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "AXC 100 il - 1 t / unsiya qızıl",
       "en": "APR 100 years 1t/ounce - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_67_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_67_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/67"
@@ -617,13 +617,13 @@
   },
   {
     "familyId": "cat2-coins-68",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "AXC 100 il - ¾ t / unsiya qızıl",
       "en": "APR 100 years - ¾ t / ounce - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_68_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_68_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/68"
@@ -631,13 +631,13 @@
   },
   {
     "familyId": "cat2-coins-69",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "AXC 100 il - 1/2 t / unsiya qızıl",
       "en": "APR 100 years - 1/2 t / ounce - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_69_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_69_2018_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/69"
@@ -651,7 +651,7 @@
       "az": "Əsrin Müqaviləsi 20 il - qızıl",
       "en": "Contract of the Century - 20 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_33_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_33_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/33"
@@ -665,7 +665,7 @@
       "az": "Əsrin Müqaviləsi 20 il - gümüş",
       "en": "Contract of the Century 20 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_49_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_49_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/49"
@@ -673,13 +673,13 @@
   },
   {
     "familyId": "cat2-coins-50",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "TANAP - gümüş",
       "en": "TANAP - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_50_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_50_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/50"
@@ -687,13 +687,13 @@
   },
   {
     "familyId": "cat2-coins-51",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Azərspace - gümüş",
       "en": "Azerspace - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_51_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_51_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/51"
@@ -701,13 +701,13 @@
   },
   {
     "familyId": "cat2-coins-52",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Bakı Tbilisi Qars - gümüş",
       "en": "Baku-Tbilisi-Kars - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_52_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_52_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/52"
@@ -715,13 +715,13 @@
   },
   {
     "familyId": "cat2-coins-53",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "Naxçıvan MR 90 il - qızıl",
       "en": "Nakhchivan AR 90 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_53_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_53_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/53"
@@ -729,13 +729,13 @@
   },
   {
     "familyId": "cat2-coins-54",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - qızıl dəst",
       "en": "European Games - Gold set"
     },
-    "thumbnailImage": "/assets/money/coins_54_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_54_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/54"
@@ -743,13 +743,13 @@
   },
   {
     "familyId": "cat2-coins-70",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş dəst",
       "en": "European Games - Silver set"
     },
-    "thumbnailImage": "/assets/money/coins_70_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_70_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/70"
@@ -757,13 +757,13 @@
   },
   {
     "familyId": "cat2-coins-80",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş / güləş",
       "en": "European Games - Silver/ wrestling"
     },
-    "thumbnailImage": "/assets/money/coins_80_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_80_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/80"
@@ -771,13 +771,13 @@
   },
   {
     "familyId": "cat2-coins-85",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş / oxatma",
       "en": "European Games - Silver/ archery"
     },
-    "thumbnailImage": "/assets/money/coins_85_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_85_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/85"
@@ -785,13 +785,13 @@
   },
   {
     "familyId": "cat2-coins-86",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş / suya tullanma",
       "en": "European Games - Silver/ diving"
     },
-    "thumbnailImage": "/assets/money/coins_86_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_86_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/86"
@@ -799,13 +799,13 @@
   },
   {
     "familyId": "cat2-coins-87",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş / gimnastika",
       "en": "European Games - Silver/ gymnastics"
     },
-    "thumbnailImage": "/assets/money/coins_87_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_87_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/87"
@@ -813,13 +813,13 @@
   },
   {
     "familyId": "cat2-coins-88",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - gümüş / kanoe",
       "en": "European Games - Silver/ canoe"
     },
-    "thumbnailImage": "/assets/money/coins_88_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_88_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/88"
@@ -827,13 +827,13 @@
   },
   {
     "familyId": "cat2-coins-71",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - kupro-nikel / güləş",
       "en": "European Games - Cupro-nickel/ wrestling"
     },
-    "thumbnailImage": "/assets/money/coins_71_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_71_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/71"
@@ -841,13 +841,13 @@
   },
   {
     "familyId": "cat2-coins-81",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - kupro-nikel / oxatma",
       "en": "European Games - Cupro-nickel/ archery"
     },
-    "thumbnailImage": "/assets/money/coins_81_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_81_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/81"
@@ -855,13 +855,13 @@
   },
   {
     "familyId": "cat2-coins-82",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - kupro-nikel / suya tullanma",
       "en": "European Games - Cupro-nickel/ diving"
     },
-    "thumbnailImage": "/assets/money/coins_82_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_82_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/82"
@@ -869,13 +869,13 @@
   },
   {
     "familyId": "cat2-coins-83",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - kupro-nikel / gimnastika",
       "en": "European Games - Cupro-nickel/ gymnastics"
     },
-    "thumbnailImage": "/assets/money/coins_83_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_83_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/83"
@@ -883,13 +883,13 @@
   },
   {
     "familyId": "cat2-coins-84",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "Avropa Oyunları - kupro-nikel / kanoe",
       "en": "European Games - Cupro-nickel/ canoe"
     },
-    "thumbnailImage": "/assets/money/coins_84_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_84_2015_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/84"
@@ -903,7 +903,7 @@
       "az": "Heydər Əliyev 90 il - 32.3 t / unsiya qızıl",
       "en": "Heydar Aliyev 90 years - 32.3 ounces Gold"
     },
-    "thumbnailImage": "/assets/money/coins_72_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_72_2013_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/72"
@@ -917,7 +917,7 @@
       "az": "Heydər Əliyev 90 il - 10 t / unsiya qızıl",
       "en": "Heydar Aliyev 90 years - 10 ounces Gold"
     },
-    "thumbnailImage": "/assets/money/coins_28_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_28_2013_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/28"
@@ -931,7 +931,7 @@
       "az": "Heydər Əliyev 90 il - 1 t / unsiya qızıl",
       "en": "Heydar Aliyev 90 years - 1 ounce Gold"
     },
-    "thumbnailImage": "/assets/money/coins_73_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_73_2013_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/73"
@@ -939,13 +939,13 @@
   },
   {
     "familyId": "cat2-coins-55",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Mərkəzi Bank 20 il - gümüş",
       "en": "Central Bank 20 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_55_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_55_2012_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/55"
@@ -953,13 +953,13 @@
   },
   {
     "familyId": "cat2-coins-31",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "Dövlət Müstəqilliyi 20 il - qızıl",
       "en": "State Independence 20 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_31_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_31_2011_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/31"
@@ -967,13 +967,13 @@
   },
   {
     "familyId": "cat2-coins-56",
-    "categoryId": 2,
+    "categoryId": 6,
     "subcategory": "coins",
     "title": {
       "az": "Milli Mətbuat 135 il - gümüş",
       "en": "National Press 135 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_56_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_56_2010_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/56"
@@ -981,13 +981,13 @@
   },
   {
     "familyId": "cat2-coins-62",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "Naxçıvan MR 85 il - qızıl",
       "en": "Nakhchivan AR 85 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_62_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_62_2009_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/62"
@@ -995,13 +995,13 @@
   },
   {
     "familyId": "cat2-coins-57",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "Naxçıvan MR 85 il - gümüş",
       "en": "Nakhchivan AR 85 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_57_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_57_2009_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/57"
@@ -1009,13 +1009,13 @@
   },
   {
     "familyId": "cat2-coins-34",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Nizami Gəncəvi - qızıl",
       "en": "Nizami Ganjavi - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_34_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_34_2008_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/34"
@@ -1023,13 +1023,13 @@
   },
   {
     "familyId": "cat2-coins-58",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Bülbül - qızıl",
       "en": "Bulbul - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_58_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_58_2008_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/58"
@@ -1037,13 +1037,13 @@
   },
   {
     "familyId": "cat2-coins-59",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Üzeyir Hacıbəyov - qızıl",
       "en": "Uzeyir Hajibayov - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_59_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_59_2008_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/59"
@@ -1057,7 +1057,7 @@
       "az": "Heydər Əliyev 85 il - qızıl",
       "en": "Heydar Aliyev 85 years Gold"
     },
-    "thumbnailImage": "/assets/money/coins_27_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_27_2008_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/27"
@@ -1065,13 +1065,13 @@
   },
   {
     "familyId": "cat2-coins-60",
-    "categoryId": 2,
+    "categoryId": 7,
     "subcategory": "coins",
     "title": {
       "az": "2006 FİFA - gümüş",
       "en": "2006 FIFA - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_60_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_60_2006_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/60"
@@ -1079,13 +1079,13 @@
   },
   {
     "familyId": "cat2-coins-61",
-    "categoryId": 2,
+    "categoryId": 5,
     "subcategory": "coins",
     "title": {
       "az": "Milli valyuta qəpiklər - qızıl dəst",
       "en": "National currency gapiks - Gold set"
     },
-    "thumbnailImage": "/assets/money/coins_61_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_61_2005_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/61"
@@ -1099,7 +1099,7 @@
       "az": "Heydər Əliyev 80 il - dəst",
       "en": "Heydar Aliyev 80 years - set"
     },
-    "thumbnailImage": "/assets/money/coins_26_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_26_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/26"
@@ -1113,7 +1113,7 @@
       "az": "Heydər Əliyev 80 il - platin",
       "en": "Heydar Aliyev 80 years - Platinum"
     },
-    "thumbnailImage": "/assets/money/coins_74_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_74_2004_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/74"
@@ -1127,7 +1127,7 @@
       "az": "Heydər Əliyev 80 il - qızıl",
       "en": "Heydar Aliyev 80 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_75_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_75_2004_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/75"
@@ -1141,7 +1141,7 @@
       "az": "Heydər Əliyev 80 il - gümüş",
       "en": "Heydar Aliyev 80 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_76_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_76_2004_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/76"
@@ -1149,13 +1149,13 @@
   },
   {
     "familyId": "cat2-coins-29",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Kitabi-Dədə Qorqud 1300 il - qızıl",
       "en": "Kitabi-Dede Gorgud 1300 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_29_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_29_1300_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/29"
@@ -1163,13 +1163,13 @@
   },
   {
     "familyId": "cat2-coins-30",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Kitabi-Dədə Qorqud 1300 il - gümüş",
       "en": "Kitabi-Dede Gorgud 1300 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_30_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_30_1300_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/30"
@@ -1177,13 +1177,13 @@
   },
   {
     "familyId": "cat2-coins-32",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Məhəmməd Füzuli 500 il - gümüş",
       "en": "Mahammad Fuzuli 500 years - Silver"
     },
-    "thumbnailImage": "/assets/money/coins_32_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_32_1996_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/32"
@@ -1191,13 +1191,13 @@
   },
   {
     "familyId": "cat2-coins-94",
-    "categoryId": 2,
+    "categoryId": 8,
     "subcategory": "coins",
     "title": {
       "az": "Məhəmməd Füzuli 500 il - qızıl",
       "en": "Mahammad Fuzuli 500 years - Gold"
     },
-    "thumbnailImage": "/assets/money/coins_94_front.png",
+    "thumbnailImage": "/assets/money/commemorative_coins_94_1996_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/94"
@@ -1211,7 +1211,7 @@
       "az": "1 manat",
       "en": "1 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_35_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_1-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/35"
@@ -1225,7 +1225,7 @@
       "az": "5 manat",
       "en": "5 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_36_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_5-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/36"
@@ -1239,7 +1239,7 @@
       "az": "10 manat",
       "en": "10 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_37_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_10-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/37"
@@ -1253,7 +1253,7 @@
       "az": "50 manat",
       "en": "50 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_38_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_50-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/38"
@@ -1267,7 +1267,7 @@
       "az": "100 manat",
       "en": "100 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_39_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_100-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/39"
@@ -1281,7 +1281,7 @@
       "az": "250 manat",
       "en": "250 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_40_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_250-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/40"
@@ -1295,7 +1295,7 @@
       "az": "500 manat",
       "en": "500 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_41_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_500-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/41"
@@ -1309,7 +1309,7 @@
       "az": "1000 manat",
       "en": "1000 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_42_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_1000-manat_1993_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/42",
@@ -1324,7 +1324,7 @@
       "az": "10000 manat",
       "en": "10000 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_43_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_10000-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/43"
@@ -1338,7 +1338,7 @@
       "az": "50000 manat",
       "en": "50000 manat"
     },
-    "thumbnailImage": "/assets/money/banknotes_44_front.jpg",
+    "thumbnailImage": "/assets/money/withdrawn_banknotes_50000-manat_noyear_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/banknotes/detail/44"
@@ -1352,7 +1352,7 @@
       "az": "5 qəpik",
       "en": "5 gapik"
     },
-    "thumbnailImage": "/assets/money/coins_45_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_coins_5-qəpik_1992_front.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/45",
@@ -1367,7 +1367,7 @@
       "az": "10 qəpik",
       "en": "10 gapik"
     },
-    "thumbnailImage": "/assets/money/coins_46_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_coins_10-qəpik_1992_front.webp",
     "versionCount": 1,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/46"
@@ -1381,7 +1381,7 @@
       "az": "20 qəpik",
       "en": "20 gapik"
     },
-    "thumbnailImage": "/assets/money/coins_91_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_coins_20-qəpik_1992_front_coins-91.webp",
     "versionCount": 2,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/91",
@@ -1396,7 +1396,7 @@
       "az": "50 qəpik",
       "en": "50 gapik"
     },
-    "thumbnailImage": "/assets/money/coins_92_front.png",
+    "thumbnailImage": "/assets/money/withdrawn_coins_50-qəpik_1992_front_coins-92.webp",
     "versionCount": 3,
     "sourceUrls": [
       "https://cbar.az/moneymarks/coins/detail/92",

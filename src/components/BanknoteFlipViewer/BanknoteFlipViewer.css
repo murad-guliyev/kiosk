@@ -1,0 +1,110 @@
+/* BanknoteFlipViewer — museum-grade 3D flip for paper currency.
+   The interior is pure CSS 3D transforms; no JS per frame. */
+
+.bv-root {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* perspective is set inline so parents can dial intensity */
+}
+
+.bv-flipper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 2.2 / 1; /* typical banknote proportions; the image itself uses object-contain */
+  transform-style: preserve-3d;
+  /* A single smooth transition drives the rotation so angular velocity is
+     continuous from start to finish — keyframes with intermediate values
+     re-apply the easing on each segment, which reads as jerky. */
+  transition: transform var(--flip-duration, 950ms) cubic-bezier(0.45, 0, 0.55, 1);
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: block;
+  outline: none;
+  will-change: transform;
+}
+
+.bv-flipper:focus-visible {
+  outline: 2px solid rgba(75, 200, 182, 0.6);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.bv-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.bv-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  /* Paper edge — subtle drop shadow that travels with the note. Cheap because
+     the note isn't animating on infinite loop; this filter only pays once per flip. */
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.08));
+}
+
+.bv-face-back {
+  /* The back image is pre-rotated 180° so that when the flipper is at
+     rotateY(180deg) the content reads left-to-right, not mirrored. */
+  transform: rotateY(180deg);
+}
+
+/* Rotation is driven by the transition above — the resting transform set
+   from React (rotateY 0deg or 180deg) is all we need. No keyframes. */
+
+/* ----------------------------------------------------------------
+   Shadow — soft ellipse beneath the note. Softens + widens as the
+   note lifts, tightens back as it settles. Purely decorative.
+   ---------------------------------------------------------------- */
+
+.bv-shadow {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 4%;
+  height: 14%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.22),
+    rgba(0, 0, 0, 0.1) 55%,
+    transparent 80%
+  );
+  filter: blur(10px);
+  transform: scale(1);
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes bv-shadow-lift {
+  0%   { transform: scale(1);    opacity: 0.75; filter: blur(10px); }
+  50%  { transform: scale(1.35); opacity: 0.35; filter: blur(18px); }
+  100% { transform: scale(1);    opacity: 0.75; filter: blur(10px); }
+}
+
+.bv-shadow.is-animating {
+  animation: bv-shadow-lift var(--flip-duration, 950ms) cubic-bezier(0.4, 0.05, 0.2, 1) forwards;
+}
+
+/* Reduce-motion: hard-cut the flip instead of animating */
+@media (prefers-reduced-motion: reduce) {
+  .bv-flipper.flip-to-back,
+  .bv-flipper.flip-to-front,
+  .bv-shadow.is-animating {
+    animation: none !important;
+  }
+}

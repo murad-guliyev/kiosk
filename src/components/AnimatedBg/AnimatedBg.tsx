@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react';
+import { isScrolling } from '../../lib/scrollState';
 
 interface Particle {
   x: number;
@@ -9,19 +10,18 @@ interface Particle {
   layer: 0 | 1; // 0 = back (dim, slow), 1 = front (bright, normal)
 }
 
-// Front layer
-const FRONT_COUNT = 70;
-const FRONT_SPEED = 0.4;
-const FRONT_CONNECT = 200;
+const FRONT_COUNT = 45;
+const FRONT_SPEED = 0.55;
+const FRONT_CONNECT = 160;
 const FRONT_R_MIN = 1.2;
 const FRONT_R_MAX = 3;
 const FRONT_DOT_ALPHA = 0.75;
 const FRONT_LINE_ALPHA = 0.35;
 
 // Back layer — smaller, dimmer, slower
-const BACK_COUNT = 50;
-const BACK_SPEED = 0.15;
-const BACK_CONNECT = 140;
+const BACK_COUNT = 25;
+const BACK_SPEED = 0.22;
+const BACK_CONNECT = 120;
 const BACK_R_MIN = 0.5;
 const BACK_R_MAX = 1.2;
 const BACK_DOT_ALPHA = 0.25;
@@ -38,7 +38,7 @@ const COLORS = [
   [11, 158, 208],  // cyan       #0B9ED0
   [75, 200, 182],  // teal again (smooth loop)
 ];
-const COLOR_CYCLE_DURATION = 600; // frames per color transition (~10s at 60fps)
+const COLOR_CYCLE_DURATION = 300; // frames per color transition (~5s at 60fps)
 
 function lerpColor(a: number[], b: number[], t: number): number[] {
   return [
@@ -96,6 +96,8 @@ export function AnimatedBg() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Pause canvas entirely during scroll so the compositor has full budget.
+
     const parent = canvas.parentElement;
     if (!parent) return;
 
@@ -106,24 +108,26 @@ export function AnimatedBg() {
 
     const initParticles = () => {
       particles.current = [];
-      // Back layer
+      // Back layer — give every particle a full-speed random direction
       for (let i = 0; i < BACK_COUNT; i++) {
+        const angle = Math.random() * Math.PI * 2;
         particles.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * BACK_SPEED,
-          vy: (Math.random() - 0.5) * BACK_SPEED,
+          vx: Math.cos(angle) * BACK_SPEED,
+          vy: Math.sin(angle) * BACK_SPEED,
           r: Math.random() * (BACK_R_MAX - BACK_R_MIN) + BACK_R_MIN,
           layer: 0,
         });
       }
-      // Front layer
+      // Front layer — every particle starts at full base speed
       for (let i = 0; i < FRONT_COUNT; i++) {
+        const angle = Math.random() * Math.PI * 2;
         particles.current.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * FRONT_SPEED,
-          vy: (Math.random() - 0.5) * FRONT_SPEED,
+          vx: Math.cos(angle) * FRONT_SPEED,
+          vy: Math.sin(angle) * FRONT_SPEED,
           r: Math.random() * (FRONT_R_MAX - FRONT_R_MIN) + FRONT_R_MIN,
           layer: 1,
         });
@@ -131,6 +135,10 @@ export function AnimatedBg() {
     };
 
     const draw = () => {
+      if (isScrolling()) {
+        animId.current = requestAnimationFrame(draw);
+        return;
+      }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const pts = particles.current;
       const w = canvas.width;
@@ -164,16 +172,23 @@ export function AnimatedBg() {
         if (tp.fade < 0.01) tp.active = false;
       }
 
-      // Move particles
+      // Move particles — keep each near its base speed so the whole field stays in motion
       for (const p of pts) {
         const baseSpeed = p.layer === 1 ? FRONT_SPEED : BACK_SPEED;
-        p.vx *= 0.99;
-        p.vy *= 0.99;
-        const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-        if (speed < baseSpeed * 0.3) {
-          p.vx += (Math.random() - 0.5) * 0.02;
-          p.vy += (Math.random() - 0.5) * 0.02;
-        }
+
+        // Tiny random jitter so motion doesn't feel mechanical
+        p.vx += (Math.random() - 0.5) * 0.04;
+        p.vy += (Math.random() - 0.5) * 0.04;
+
+        // Light damping, then normalize velocity toward baseSpeed
+        p.vx *= 0.995;
+        p.vy *= 0.995;
+        const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy) || 0.0001;
+        const target = baseSpeed;
+        const blend = 0.05; // pull velocity toward baseSpeed magnitude
+        const factor = (1 - blend) + blend * (target / speed);
+        p.vx *= factor;
+        p.vy *= factor;
 
         p.x += p.vx;
         p.y += p.vy;
@@ -231,59 +246,59 @@ export function AnimatedBg() {
       const color = getLineColor(frame.current);
       const [cr, cg, cb] = color;
 
-      // --- Draw back layer first ---
+      // --- Draw back layer (batched: one beginPath + stroke per layer) ---
+      ctx.lineWidth = 0.4;
+      ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${BACK_LINE_ALPHA})`;
+      ctx.beginPath();
       for (let i = 0; i < pts.length; i++) {
         if (pts[i].layer !== 0) continue;
         for (let j = i + 1; j < pts.length; j++) {
           if (pts[j].layer !== 0) continue;
           const dx = pts[i].x - pts[j].x;
           const dy = pts[i].y - pts[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < BACK_CONNECT) {
-            const alpha = (1 - dist / BACK_CONNECT) * BACK_LINE_ALPHA;
-            ctx.beginPath();
+          if (dx * dx + dy * dy < BACK_CONNECT * BACK_CONNECT) {
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${alpha})`;
-            ctx.lineWidth = 0.4;
-            ctx.stroke();
           }
         }
       }
+      ctx.stroke();
+
+      ctx.fillStyle = `rgba(255, 255, 255, ${BACK_DOT_ALPHA})`;
+      ctx.beginPath();
       for (const p of pts) {
         if (p.layer !== 0) continue;
-        ctx.beginPath();
+        ctx.moveTo(p.x + p.r, p.y);
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${BACK_DOT_ALPHA})`;
-        ctx.fill();
       }
+      ctx.fill();
 
-      // --- Draw front layer on top ---
+      // --- Draw front layer (batched) ---
+      ctx.lineWidth = 0.8;
+      ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${FRONT_LINE_ALPHA})`;
+      ctx.beginPath();
       for (let i = 0; i < pts.length; i++) {
         if (pts[i].layer !== 1) continue;
         for (let j = i + 1; j < pts.length; j++) {
           if (pts[j].layer !== 1) continue;
           const dx = pts[i].x - pts[j].x;
           const dy = pts[i].y - pts[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < FRONT_CONNECT) {
-            const alpha = (1 - dist / FRONT_CONNECT) * FRONT_LINE_ALPHA;
-            ctx.beginPath();
+          if (dx * dx + dy * dy < FRONT_CONNECT * FRONT_CONNECT) {
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(${cr}, ${cg}, ${cb}, ${alpha})`;
-            ctx.lineWidth = 0.8;
-            ctx.stroke();
           }
         }
       }
+      ctx.stroke();
+
+      ctx.fillStyle = `rgba(255, 255, 255, ${FRONT_DOT_ALPHA})`;
+      ctx.beginPath();
       for (const p of pts) {
         if (p.layer !== 1) continue;
-        ctx.beginPath();
+        ctx.moveTo(p.x + p.r, p.y);
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${FRONT_DOT_ALPHA})`;
-        ctx.fill();
       }
+      ctx.fill();
 
       animId.current = requestAnimationFrame(draw);
     };
